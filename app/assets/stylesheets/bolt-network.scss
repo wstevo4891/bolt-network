@@ -81,17 +81,26 @@ header {
 .jumbotron-index {
   @extend .jumbotron;
   background-color: #fff;
+  overflow-y: scroll;
 }
 
 #nav-item {
   margin-top: 0.36em;
-  a:hover {
+  a:hover, a:focus {
     background-color: #0393ff;
   }
 }
 
 .nav-button {
   margin-top: 0.8em;
+}
+
+.dropdown-menu {
+  background-color: #000;
+  border: 2px solid #0393ff;
+  li > a, li > a:hover {
+    color: #fff;
+  }
 }
 
 form {

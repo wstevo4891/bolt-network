@@ -6,6 +6,7 @@
 
 <div class="row text-center">
     <h1>Listing Movies</h1>
+    <br>
 </div>
 
 <div class="row">
@@ -13,19 +14,20 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Rating</th>
-      <th colspan=1></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
+        <td><%= movie.id %></td>
         <td><%= movie.title %></td>
         <td><%= movie.rating %></td>
-        <td class="pull-right">
-          <%= link_to 'Show', movie, class: "btn" %>
+        <td>
           <%= link_to 'Edit', edit_movie_path(movie), class: "btn" %>
           <%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
         </td>

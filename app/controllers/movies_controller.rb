@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    @genres = Genre.all
   end
 
   # GET /movies/1
@@ -15,6 +16,7 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
     @movie = Movie.new
+    @genres = Genre.all
   end
 
   # GET /movies/1/edit
@@ -65,6 +67,7 @@ class MoviesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
       @movie = Movie.find(params[:id])
+      @genres = Genre.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

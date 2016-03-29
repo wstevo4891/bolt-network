@@ -6,73 +6,77 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Genre.create( name: 'Action' ) 
-Genre.create( name: 'Adventure' ) 
-Genre.create( name: 'Animation' ) 
-Genre.create( name: 'Comedy' ) 
-Genre.create( name: 'Drama' ) 
-Genre.create( name: 'Family' ) 
-Genre.create( name: 'Fantasy' ) 
-Genre.create( name: 'Horror' ) 
-Genre.create( name: 'Sci-Fi' )
+def seed_image(file_name)
+  File.open(File.join(Rails.root, "/app/assets/images/#{file_name}.jpg"))
+end
 
-Movie.create(
+Genre.create!( name: 'Action' ) 
+Genre.create!( name: 'Adventure' ) 
+Genre.create!( name: 'Animation' ) 
+Genre.create!( name: 'Comedy' ) 
+Genre.create!( name: 'Drama' ) 
+Genre.create!( name: 'Family' ) 
+Genre.create!( name: 'Fantasy' ) 
+Genre.create!( name: 'Horror' ) 
+Genre.create!( name: 'Sci-Fi' )
+
+Movie.create!(
 	title: 'The Avengers',
-	photo: 'the-avengers.jpg',
+	photo: seed_image('the-avengers'),
 	summary: 'Nick Fury assembles a team of super heroes to battle Loki and his alien army.',
 	rating: 92
 )
-Movie.create(
+Movie.create!(
 	title: 'Harry Potter & The Deathly Hallows Part II',
-	photo: 'harry-potter.jpg',
+	photo: seed_image('harry-potter'),
 	summary: '...',
 	rating: 96
 )
-Movie.create(
+Movie.create!(
 	title: 'Frozen',
-	photo: 'frozen.jpg',
+	photo: seed_image('frozen'),
 	summary: '...',
 	rating: 89
 )
-Movie.create(
+Movie.create!(
 	title: 'Iron Man 3',
-	photo: 'iron-man-3.jpg',
+	photo: seed_image('iron-man-3'),
 	summary: '...',
 	rating: 79
 )
-Movie.create(
+Movie.create!(
 	title: 'Transformers: Dark of the Moon',
-	photo: 'transformers-dark-of-the-moon.jpg',
+	photo: seed_image('transformers-dark-of-the-moon'),
 	summary: '...',
 	rating: 35
 )
-Movie.create(
+Movie.create!(
 	title: 'The Lord of the Rings: The Return of the King',
-	photo: 'the-lord-of-the-rings-return-of-the-king.jpg',
+	photo: seed_image('the-lord-of-the-rings-return-of-the-king'),
 	summary: '...',
 	rating: 95
 )
-Movie.create(
+Movie.create!(
     title: 'Skyfall',
-    photo: 'skyfall.jpg',
+    photo: seed_image('skyfall'),
     summary: '...',
     rating: 93
 )
-Movie.create(
+Movie.create!(
 	title: 'The Dark Knight',
-	photo: 'the-dark-knight.jpg',
+	photo: seed_image('the-dark-knight'),
 	summary: '...',
 	rating: 94
 )
-Movie.create(
-	title: 'Pirates of the Carribean: The Curse of the Black Pearl',
-	photo: 'pirates-of-the-carribean.jpg',
+Movie.create!(
+	title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
+	photo: seed_image('pirates-of-the-caribbean'),
 	summary: '...',
 	rating: 79
 )
-Movie.create(
+Movie.create!(
 	title: 'Toy Story 3',
-	photo: 'toy-story-3.jpg',
+	photo: seed_image('toy-story-3'),
 	summary: '...',
 	rating: 99
 )
