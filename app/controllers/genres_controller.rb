@@ -1,13 +1,19 @@
 class GenresController < ApplicationController
-	before_action :set_genre, only: [:edit, :update, :destroy]
+	before_action :set_genre, only: [:show, :edit, :update, :destroy]
+
+  def new
+    @genre = Genre.new
+  end
 
 	def index
 		@genres = Genre.all
+    new
 	end
 
-	def new
-		@genre = Genre.new
-	end
+  # GET /genres/1
+  # GET /genres/1.json
+  def show
+  end
 
 	def edit
 	end
@@ -19,8 +25,9 @@ class GenresController < ApplicationController
     	if @genre.save
     		format.html { render :index, notice: 'Genre was successfully created'}
     		format.json { render :index, status: :created, location: @genre}
+        format.js
     	else
-    		format.html { render :new }
+    		format.html { render :index }
     		format.json { render json: @genre.errors, status: :unprocessable_entity }
     	end
     end
@@ -45,13 +52,15 @@ class GenresController < ApplicationController
     respond_to do |format|
       format.html { render :index, notice: 'Genre was deleted' }
       format.json { head :no_content }
+      format.js
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_movie
+    def set_genre
       @genre = Genre.find(params[:id])
+      @movies = Movie.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

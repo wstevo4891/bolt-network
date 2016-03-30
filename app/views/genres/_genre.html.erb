@@ -1,0 +1,8 @@
+<tr>
+	<td><%= genre.id %></td>
+	<td><%= genre.name %></td>
+	<td>
+	  <%= link_to 'Edit', edit_genre_path(genre), class: "btn" %>
+	  <%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "btn delete_genre" %>
+	</td>
+</tr>

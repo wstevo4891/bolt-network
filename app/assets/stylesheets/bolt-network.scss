@@ -103,10 +103,6 @@ header {
   }
 }
 
-form {
-  margin-top:80px;
-}
-
 #search {
   background:transparent; 
   border:0px; 
@@ -130,8 +126,13 @@ form {
 
 /* Forms */
 form {
+  margin-top:80px;
   color: #0393ff;
   font-size: 16px;
+}
+
+#genres {
+  list-style-type: none;
 }
 
 

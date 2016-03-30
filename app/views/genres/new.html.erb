@@ -1,5 +1,10 @@
-<h1>New Genre</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', genres_path %>
+<%= form_for(@genre, html: {class: "form-inline"}) do |f| %>
+  <td>Add New</td>
+  <td>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </td>
+  <td><%= f.submit "Add", class: "btn" %></td>
+<% end %>
