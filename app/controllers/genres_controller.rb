@@ -1,5 +1,7 @@
 class GenresController < ApplicationController
 	before_action :set_genre, only: [:show, :edit, :update, :destroy]
+  respond_to :html
+  respond_to :js
 
   def new
     @genre = Genre.new
@@ -7,7 +9,8 @@ class GenresController < ApplicationController
 
 	def index
 		@genres = Genre.all
-    new
+    @genre = Genre.new
+    respond_with(@genres)
 	end
 
   # GET /genres/1
@@ -16,6 +19,9 @@ class GenresController < ApplicationController
   end
 
 	def edit
+    respond_to do |format|
+      format.js { render 'genres/edit'}
+    end
 	end
 
 	def create
@@ -35,9 +41,10 @@ class GenresController < ApplicationController
 
   def update
     respond_to do |format|
-      if @genre.update(movie_params)
+      if @genre.update(genre_params)
         format.html { render :index, notice: 'Genre was successfully updated' }
         format.json { render :index, status: :ok, location: @genre }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @genre.errors, status: :unprocessable_entity }

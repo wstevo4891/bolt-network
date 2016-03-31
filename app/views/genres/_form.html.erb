@@ -1,4 +1,15 @@
-<%= form_for(@genre) do |f| %>
+<%= form_for(@genre, html: {class: "form-inline"}, remote: true) do |f| %>
+  <tr>
+    <td>New Genre</td>
+    <div class="form-group">
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name, class: "form-control" %></td>
+    </div>
+    <td>
+      <%= f.submit "Add", class: "btn" %>
+    </td>
+  </tr>
+
   <% if @genre.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@genre.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -10,8 +21,4 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

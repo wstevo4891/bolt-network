@@ -82,6 +82,7 @@ header {
   @extend .jumbotron;
   background-color: #fff;
   overflow-y: scroll;
+  height: auto;
 }
 
 #nav-item {
@@ -124,15 +125,17 @@ header {
 }
 
 
+/* Tables */
+table {
+  font-weight: bold;
+}
+
+
 /* Forms */
 form {
   margin-top:80px;
   color: #0393ff;
   font-size: 16px;
-}
-
-#genres {
-  list-style-type: none;
 }
 
 

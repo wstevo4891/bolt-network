@@ -15,32 +15,14 @@
     <tr>
       <th>ID</th>
       <th>Name</th>
+      <th class="col-sm-4"></th>
       <th></th>
     </tr>
   </thead>
 
-  <tbody id="genres">
-    <% @genres.each do |genre| %>
-      <tr>
-        <td><%= genre.id %></td>
-        <td><%= genre.name %></td>
-        <td>
-          <%= link_to 'Edit', edit_genre_path(genre), class: "btn" %>
-          <%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: "btn delete_genre" %>
-        </td>
-      </tr>
-    <% end %>
-      <tr>
-        <%= form_for(@genre, html: {class: "form-inline"}, remote: true) do |f| %>
-          <td>New Genre</td>
-          <td class="form-group">
-            <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
-          </td>
-          <td>
-            <%= f.submit "Add", class: "btn" %>
-          </td>
-        <% end %>
-      </tr>
+  <tbody>
+    <%= render @genres %>
+    <%= render "form" %>
   </tbody>
 </table>
 </div>
