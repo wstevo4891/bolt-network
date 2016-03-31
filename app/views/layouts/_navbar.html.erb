@@ -21,7 +21,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <% @genres.each do |genre| %>
-              <li><a href="#"><%= genre.name %></a></li>
+              <li><%= link_to "#{genre.name}", genre_path(genre) %></li>
             <% end %>
           </ul>
         </li>   

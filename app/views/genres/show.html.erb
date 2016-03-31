@@ -1,0 +1,30 @@
+<div class ="container-fluid show-wrap">
+  <br>
+  <div class="row">
+    <div class="col-sm-4 show-title">
+  	  <h1 class="inline"><%= @genre.name %></h1>
+  	  <h3 class="inline">Subgenres</h3>
+  	</div>
+  	<div class="pull-right">
+  		<h3>Sorting Bar Goes Here</h3>
+  	</div>
+  </div>
+  <br>
+  <% @movies.each do |movie| %>
+    <% for i in movie.genres %>
+      <% if i == @genre.id %>
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-1 show-img">
+						<img class="img-responsive" src="<%= movie.photo %>">
+					</div>
+
+					<div class="col-sm-5 col-sm-offset-1 show-info">
+						<h2><%= movie.title %></h2>
+						<p><%= movie.summary %></p>
+						<p><%= movie.rating %></p>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	<% end %>
+</div>

@@ -44,8 +44,8 @@ class MoviesController < ApplicationController
   def update
     respond_to do |format|
       if @movie.update(movie_params)
-        format.html { redirect_to @movie, notice: 'Movie was successfully updated.' }
-        format.json { render :show, status: :ok, location: @movie }
+        format.html { redirect_to movies_url, notice: 'Movie was successfully updated.' }
+        format.json { render :index, status: :ok, location: @movie }
       else
         format.html { render :edit }
         format.json { render json: @movie.errors, status: :unprocessable_entity }

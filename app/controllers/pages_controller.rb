@@ -14,10 +14,6 @@ class PagesController < ApplicationController
   	access_data
   end
 
-  def genre
-    access_data
-  end
-
   def search
     access_data
   end

@@ -25,7 +25,7 @@
 
     <div class="form-group col-sm-4 col-sm-offset-2">
       <%= f.label :genres %><br>
-      <%= f.select :genres, options_for_select(@genres.collect { |genre| genre.name }), multiple: true %>
+      <%= f.select :genres, options_for_select(@genres.collect { |genre| genre.name }), {multiple: true, size: 3} %>
     </div> 
 
     <div class="form-group col-sm-6">
@@ -46,7 +46,7 @@
 
   <br>
   <div class="row actions text-center">
-    <%= f.submit "Add Movie", class: "btn btn-lg btn-primary" %>
+    <%= f.submit "Save", class: "btn btn-lg btn-primary" %>
   </div>
 </div>
 </div>

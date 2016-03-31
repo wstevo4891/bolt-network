@@ -67,6 +67,7 @@ class GenresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_genre
       @genre = Genre.find(params[:id])
+      @genres = Genre.all
       @movies = Movie.all
     end
 
