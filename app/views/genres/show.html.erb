@@ -3,25 +3,25 @@
   <div class="row">
     <div class="col-sm-4 show-title">
   	  <h1 class="inline"><%= @genre.name %></h1>
-  	  <h3 class="inline">Subgenres</h3>
+  	  <!-- <h3 class="inline">Subgenres</h3> -->
   	</div>
   	<div class="pull-right">
-  		<h3>Sorting Bar Goes Here</h3>
+  		<!-- <h3>Sorting Bar Goes Here</h3> -->
   	</div>
   </div>
   <br>
   <% @movies.each do |movie| %>
-    <% for i in movie.genres %>
+    <% for i in movie.genre_ids %>
       <% if i == @genre.id %>
 				<div class="row">
 					<div class="col-sm-4 col-sm-offset-1 show-img">
-						<img class="img-responsive" src="<%= movie.photo %>">
+            <%= link_to image_tag(movie.photo), movie_path(movie), class: "img-responsive" %>
 					</div>
 
 					<div class="col-sm-5 col-sm-offset-1 show-info">
-						<h2><%= movie.title %></h2>
+						<h2><%= link_to "#{movie.title}", movie_path(movie) %></h2>
 						<p><%= movie.summary %></p>
-						<p><%= movie.rating %></p>
+						<p class="blue">Rotten Tomatoes: <%= movie.rating %>%</p>
 					</div>
 				</div>
 			<% end %>

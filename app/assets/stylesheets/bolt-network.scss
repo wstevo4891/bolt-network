@@ -37,10 +37,11 @@ header {
   }
 }
 
+
 /* Jumbotron */
 .jumbotron {
   background-color: #000;
-  height:600px;
+  height:670px;
   h1 {
     font-weight:300; 
     margin-top:80px; 
@@ -69,6 +70,7 @@ header {
 
   @media only screen and (min-width: 1024px) {
     padding: 1em 2em;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   a {

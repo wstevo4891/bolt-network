@@ -1,4 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8">
+			<img class="img-responsive" src="<%= @movie.photo %>">
+		</div>
+		<div class="col-sm-8">
+			<h2><%= @movie.title %></h2>
+			<p><%= @movie.summary %></p>
+			<p>Rotten Tomatoes: <%= @movie.rating %>%</p>
+		</div>
+	</div>
+	<br>
+	<br>
+</div>

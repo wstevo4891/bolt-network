@@ -21,6 +21,7 @@
     <% i = 0 %>
     <% arr = [] %>
     <% movies = [] %>
+    <% movieIds = [] %>
     <% for movie in @movies %>
       <% img = Magick::Image.ping("#{Rails.root}/public#{movie.photo}").first %>
       <% width = img.columns %>
@@ -28,10 +29,12 @@
         <% i += 2 %>
         <% arr.push(2) %>
         <% movies.push(movie.photo) %>
+        <% movieIds.push(movie.id) %>
       <% else %>
         <% i += 1 %>
         <% arr.push(1) %>
         <% movies.push(movie.photo) %>
+        <% movieIds.push(movie.id) %>
       <% end %>
       <% if i == 3 %>
         <div class="row">
@@ -40,13 +43,13 @@
           <% if arr[j] == 2 %>
             <div class="col-md-8">
               <div class="thumbnail">
-                <img src="<%= e %>">
+                <%= link_to image_tag(e), movie_path(movieIds[j]) %>
               </div>
             </div>
           <% elsif arr[j] == 1 %>
             <div class="col-md-4">
               <div class="thumbnail">
-                <img src="<%= e %>">
+                <%= link_to image_tag(e), movie_path(movieIds[j]) %>
               </div>
             </div>
           <% end %>
@@ -56,6 +59,7 @@
         <% i = 0 %>
         <% arr = [] %>
         <% movies = [] %>
+        <% movieIds = [] %>
       <% end %>
     <% end %>
 

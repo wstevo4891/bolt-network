@@ -1,5 +1,4 @@
 class Genre < ActiveRecord::Base
-	has_many :movie_genres
-	has_many :movies, through: :movie_genres
+	has_and_belongs_to_many :movies
 	validates :name, presence: true
 end

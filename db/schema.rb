@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 20160328174913) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "movie_genres", force: :cascade do |t|
-    t.integer "movie_id"
+  create_table "genres_movies", id: false, force: :cascade do |t|
     t.integer "genre_id"
+    t.integer "movie_id"
   end
 
-  add_index "movie_genres", ["genre_id"], name: "index_movie_genres_on_genre_id"
-  add_index "movie_genres", ["movie_id"], name: "index_movie_genres_on_movie_id"
+  add_index "genres_movies", ["genre_id"], name: "index_genres_movies_on_genre_id"
+  add_index "genres_movies", ["movie_id"], name: "index_genres_movies_on_movie_id"
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"

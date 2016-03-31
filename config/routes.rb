@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :movie_genres
   resources :movies
   resources :genres
 
