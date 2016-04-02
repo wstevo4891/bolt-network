@@ -3,12 +3,14 @@
     <div class="main">
       <h1>Watch your favorite movies, instantly.</h1>
       <a class="btn btn-default" href="pages/about">Learn More</a>
-      <form class="form-inline" role="form">
+
+      <%= form_tag(movies_path, method: "get", id: "search-form", class: "form-inline", role: "form") do %> 
         <div class="form-group">
-          <input type="text" class="form-control" id="search" placeholder="Browse the collection">
+          <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Browse the collection") %>
         </div>
-        <button type="submit" class="btn btn-submit">Search</button>
-      </form>          
+        <%= submit_tag "Search", name: nil, class: "btn btn-submit" %>
+      <% end %>
+      
     </div>
   </div>
 </div>

@@ -13,8 +13,4 @@ class PagesController < ApplicationController
   def about
   	access_data
   end
-
-  def search
-    access_data
-  end
 end

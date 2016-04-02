@@ -1,0 +1,48 @@
+<div class="container">
+
+<div class="admin-row text-center">
+  <p id="notice"><%= notice %></p>
+</div>
+
+<div class="admin-row text-center">
+    <h1>Listing Movies</h1>
+    <br>
+</div>
+
+<div class="row">
+<div class="jumbotron-index col-sm-10 col-sm-offset-1">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Rating</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.id %></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.rating %></td>
+        <td>
+          <%= link_to 'Edit', edit_movie_path(movie), class: "btn" %>
+          <%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<br>
+<div class="row text-center">
+  <%= link_to 'New Movie', new_movie_path, class: "btn btn-lg btn-primary" %>
+</div>
+<br>
+
+</div>
+

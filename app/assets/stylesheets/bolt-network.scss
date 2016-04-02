@@ -37,14 +37,26 @@ header {
   }
 }
 
+.search-row {
+  @extend .row;
+  margin-top: 8em;
+  margin-bottom: 5em;
+}
+
+.admin-row {
+  @extend .row;
+  margin-top: 3em;
+}
+
 
 /* Jumbotron */
 .jumbotron {
   background-color: #000;
-  height:670px;
+  min-height:670px;
+  height: auto;
   h1 {
     font-weight:300; 
-    margin-top:80px; 
+    margin-top:140px; 
     margin-bottom:40px;  
   }
 
@@ -64,6 +76,7 @@ header {
 
 .jumbotron-header {
   @extend .jumbotron;
+  min-height: 40px;
   height: auto;
   margin-bottom: 0;
   padding: 1em;
@@ -105,12 +118,13 @@ header {
 .dropdown-menu {
   background-color: #000;
   border: 2px solid #0393ff;
+  border-radius: 5px;
   li > a, li > a:hover {
     color: #fff;
   }
 }
 
-#search {
+.search {
   background:transparent; 
   border:0px; 
   border-radius:0; 
@@ -127,6 +141,13 @@ header {
     border-bottom:1px solid #0393ff;
     box-shadow:0px 0px 0px; 
     outline:0px;
+  }
+}
+
+.search-img {
+  img {
+    width: 15em;
+    height: 10em;
   }
 }
 
