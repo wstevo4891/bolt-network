@@ -130,8 +130,13 @@ header {
   border-radius:0; 
   border-bottom:1px solid #fff;
   color:#fff;
-  font-size:18px; 
-  margin:0 20px;
+  font-size:18px;
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 20px;
+  }
 
   :hover {
     border-bottom:1px solid #0393ff;
