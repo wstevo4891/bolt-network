@@ -1,12 +1,12 @@
 <tr id="edit-genre">
-	<%= form_for(@genre, html: {class: "form-inline"}, remote: true) do |f| %>
-	  <td>Edit Genre</td>
-	  <div class="form-group">
-	    <td><%= f.label :name %></td>
-	    <td><%= f.text_field :name, class: "form-control", placeholder: @genre.name %></td>
-	  </div>
-	  <td>
-	    <%= f.submit "Save", class: "btn" %>
-	  </td>
-	<% end %>
+  <td colspan=12>
+		<%= form_for(@genre, html: {class: "form-inline"}, remote: true) do |f| %>
+			<div class="form-group col-sm-6">
+			  <%= f.label "Edit" %>
+			  <%= f.label :name %>
+			  <%= f.text_field :name, class: "form-control", placeholder: @genre.name %>
+			</div>
+			<%= f.submit "Save", class: "btn" %>
+		<% end %>
+  </td>
 </tr>

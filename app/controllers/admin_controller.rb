@@ -4,10 +4,6 @@ class AdminController < ApplicationController
   def movies_index
   end
 
-  def genres_index
-    @genre = Genre.new
-  end
-
   private
     def set_data
       @movies = Movie.all

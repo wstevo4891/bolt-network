@@ -10,21 +10,19 @@ class GenresController < ApplicationController
 	def index
 		@genres = Genre.all
     @genre = Genre.new
-    respond_with(@genres)
 	end
 
   # GET /genres/1
   # GET /genres/1.json
   def show
+    @genres = Genre.all
+    @movies = Movie.all
   end
 
 	def edit
-    respond_to do |format|
-      format.js { render 'genres/edit'}
-    end
 	end
 
-	def create
+  def create
 		@genre = Genre.new(genre_params)
     
     respond_to do |format|
@@ -33,7 +31,7 @@ class GenresController < ApplicationController
     		format.json { render :index, status: :created, location: @genre}
         format.js
     	else
-    		format.html { render :index }
+    		format.html { render :new }
     		format.json { render json: @genre.errors, status: :unprocessable_entity }
     	end
     end
@@ -42,8 +40,6 @@ class GenresController < ApplicationController
   def update
     respond_to do |format|
       if @genre.update(genre_params)
-        format.html { render :index, notice: 'Genre was successfully updated' }
-        format.json { render :index, status: :ok, location: @genre }
         format.js
       else
         format.html { render :edit }
@@ -67,12 +63,10 @@ class GenresController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_genre
       @genre = Genre.find(params[:id])
-      @genres = Genre.all
-      @movies = Movie.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def genre_params
-      params.require(:genre).permit(:name, movie_ids: [])
+      params.require(:genre).permit(:name)
     end
 end
