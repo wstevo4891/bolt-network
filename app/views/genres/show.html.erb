@@ -21,7 +21,7 @@
 					<div class="col-sm-5 col-sm-offset-1 show-info">
 						<h2><%= link_to "#{movie.title}", movie_path(movie) %></h2>
 						<p><%= movie.summary %></p>
-						<p class="blue">Rotten Tomatoes: <%= movie.rating %>%</p>
+						<h4>Rotten Tomatoes: <%= movie.rating %>%</h4>
 					</div>
 				</div>
 			<% end %>
