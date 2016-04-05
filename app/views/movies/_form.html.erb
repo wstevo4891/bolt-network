@@ -23,18 +23,9 @@
       <%= f.text_field :title, class: "form-control" %>
     </div>
 
-    <div class="form-group col-sm-2 col-sm-offset-2">
+    <div class="form-group col-sm-8 col-sm-offset-2">
       <%= f.label :genre_ids, "Add Genre" %><br>
-      <%= f.collection_select :genre_ids, Genre.order(:name), :id, :name, {}, {multiple: true} %>
-    </div>
-
-    <div class="form-group col-sm-8">
-      <ul>
-      <% for id in @movie.genre_ids %>
-        <% @genre = Genre.find_by id: id %>
-        <li class="genre-name btn"><%= @genre.name %></li>
-      <% end %>
-      </ul>
+      <%= f.collection_select :genre_ids, Genre.order(:name), :id, :name, {}, {class: "form-control genre-select", multiple: "multiple", autofocus: true} %>
     </div>
 
     <div class="form-group col-sm-8 col-sm-offset-2">
@@ -45,7 +36,7 @@
 
     <div class="image-preview col-sm-8 col-sm-offset-2">
       <% if f.object.photo.url.present? %> 
-        <%= image_tag(f.object.photo.url) %>
+        <%= image_tag(f.object.photo.url, class: "img-responsive") %>
       <% else %>
         <img/> 
       <% end %>        
@@ -69,3 +60,9 @@
 </div>
 </div>
 <% end %>
+
+<script type="text/javascript">
+  $(".genre-select").select2();
+</script>
+
+
