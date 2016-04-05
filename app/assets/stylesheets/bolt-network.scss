@@ -37,6 +37,11 @@ header {
   }
 }
 
+.genre-name {
+  min-width: 9em;
+  margin: 0.5em;
+}
+
 .search-row {
   @extend .row;
   margin-top: 8em;
