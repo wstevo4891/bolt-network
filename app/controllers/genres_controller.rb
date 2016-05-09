@@ -31,7 +31,7 @@ class GenresController < ApplicationController
     		format.json { render :index, status: :created, location: @genre}
         format.js
     	else
-    		format.html { render :new }
+    		format.html { render :index }
     		format.json { render json: @genre.errors, status: :unprocessable_entity }
     	end
     end
@@ -40,9 +40,11 @@ class GenresController < ApplicationController
   def update
     respond_to do |format|
       if @genre.update(genre_params)
+        format.html { render :index }
+        format.json { render :index, status: :ok }
         format.js
       else
-        format.html { render :edit }
+        format.html { render :index }
         format.json { render json: @genre.errors, status: :unprocessable_entity }
       end
     end

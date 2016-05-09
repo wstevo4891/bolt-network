@@ -48,6 +48,7 @@ RSpec.describe GenresController, type: :controller do
     end
   end
 
+=begin
   describe "GET #new" do
     it "assigns a new genre as @genre" do
       get :new
@@ -62,77 +63,68 @@ RSpec.describe GenresController, type: :controller do
       expect(assigns(:genre)).to eq(genre)
     end
   end
+=end
 
   describe "POST #create" do
     context "with valid params" do
+      let(:post_create) { post :create, genre: attributes_for(:genre) }
+
       it "creates a new Genre" do
         expect {
-          post :create, {genre: valid_attributes}
+          post_create
         }.to change(Genre, :count).by(1)
       end
 
       it "assigns a newly created genre as @genre" do
-        post :create, {genre: valid_attributes}
+        post_create
         expect(assigns(:genre)).to be_a(Genre)
         expect(assigns(:genre)).to be_persisted
       end
-
-      it "redirects to the created genre" do
-        post :create, {genre: valid_attributes}
-        expect(response).to redirect_to(Genre.last)
-      end
     end
 
+=begin
     context "with invalid params" do
-      it "assigns a newly created but unsaved genre as @genre" do
+      it "renders an error message" do
         post :create, {genre: invalid_attributes}
-        expect(assigns(:genre)).to be_a_new(Genre)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {genre: invalid_attributes}
-        expect(response).to render_template("new")
+        expect(page).to have_content('Name cannot be blank')
       end
     end
+=end
   end
 
   describe "PUT #update" do
+    before(:each) do
+      @genre = create(:genre, valid_attributes)
+    end
+
     context "with valid params" do
-      let(:new_attributes) {
-        name "Mystery"
-      }
+      let(:new_attributes) { attributes_for(:genre, name: "Mystery") }
+      let (:put_update) { put :update, id: @genre, genre: new_attributes }
 
       it "updates the requested genre" do
-        genre = Genre.create! valid_attributes
-        put :update, {id: genre.to_param, genre: new_attributes}
-        genre.reload
-        skip("Add assertions for updated state")
+        put_update
+        @genre.reload
+        expect(@genre.name).to eq("Mystery")
       end
 
       it "assigns the requested genre as @genre" do
-        genre = Genre.create! valid_attributes
-        put :update, {id: genre.to_param, genre: valid_attributes}
-        expect(assigns(:genre)).to eq(genre)
-      end
-
-      it "renders the genres index" do
-        genre = Genre.create! valid_attributes
-        put :update, {id: genre.to_param, genre: valid_attributes}
-        expect(response).to render(:index)
+        put_update
+        expect(assigns(:genre)).to eq(@genre)
       end
     end
 
     context "with invalid params" do
+      let(:put_invalid) { put :update, id: @genre, genre: attributes_for(:genre, :invalid) }
+
       it "assigns the genre as @genre" do
-        genre = Genre.create! valid_attributes
-        put :update, {id: genre.to_param, genre: invalid_attributes}
-        expect(assigns(:genre)).to eq(genre)
+        put_invalid
+        expect(assigns(:genre)).to eq(@genre)
       end
 
-      it "re-renders the 'edit' template" do
-        genre = Genre.create! valid_attributes
-        put :update, {id: genre.to_param, genre: invalid_attributes}
-        expect(response).to render_template("edit")
+      it "does not change @genre's attributes" do
+        put_invalid
+        @genre.reload
+        expect(@genre.name).to_not eq("Mystery")
       end
     end
   end
@@ -143,12 +135,6 @@ RSpec.describe GenresController, type: :controller do
       expect {
         delete :destroy, {id: genre.to_param}
       }.to change(Genre, :count).by(-1)
-    end
-
-    it "renders the genres list" do
-      genre = Genre.create! valid_attributes
-      delete :destroy, {id: genre.to_param}
-      expect(response).to render(:index)
     end
   end
 

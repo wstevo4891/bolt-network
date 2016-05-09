@@ -61,7 +61,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'awesome_print', require: 'ap'
+  gem 'selenium-webdriver'
+  gem 'awesome_print', '~> 1.6.0', require: 'ap'
 end
 
 group :test do
