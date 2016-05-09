@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.5'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'select2-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -43,6 +44,11 @@ group :development do
   gem 'better_errors'
   gem 'meta_request'
   gem 'quiet_assets'
+  gem 'guard'
+  gem 'guard-livereload', '~> 2.5', require: false
+  gem 'rack-livereload'
+  gem 'rack-mini-profiler'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -53,14 +59,12 @@ group :development, :test do
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
   gem 'pry-rails'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'awesome_print', require: 'ap'
 end
 
 group :test do
-  gem 'faker'
   gem 'capybara'
   gem 'shoulda-matchers' 
   gem 'guard-rspec'
