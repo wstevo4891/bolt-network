@@ -67,7 +67,7 @@ RSpec.describe GenresController, type: :controller do
 
   describe "POST #create" do
     context "with valid params" do
-      let(:post_create) { post :create, genre: attributes_for(:genre) }
+      let(:post_create) { post :create, genre: valid_attributes }
 
       it "creates a new Genre" do
         expect {
@@ -82,14 +82,22 @@ RSpec.describe GenresController, type: :controller do
       end
     end
 
-=begin
     context "with invalid params" do
+      let(:post_invalid) { post :create, genre: invalid_attributes }
+
+      it "does not save the new genre" do
+        expect {
+          post_invalid
+        }.to_not change(Genre, :count)
+      end
+
+=begin
       it "renders an error message" do
         post :create, {genre: invalid_attributes}
         expect(page).to have_content('Name cannot be blank')
       end
-    end
 =end
+    end
   end
 
   describe "PUT #update" do
@@ -114,7 +122,7 @@ RSpec.describe GenresController, type: :controller do
     end
 
     context "with invalid params" do
-      let(:put_invalid) { put :update, id: @genre, genre: attributes_for(:genre, :invalid) }
+      let(:put_invalid) { put :update, id: @genre, genre: invalid_attributes }
 
       it "assigns the genre as @genre" do
         put_invalid
