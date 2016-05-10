@@ -54,12 +54,28 @@ header {
   margin-top: 6em;
 }
 
+.slider-frame {
+    width: 100vw;
+    max-height: 530px;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0; /* vertical center */
+    left:0;right:0; /* horizontal center */
+}
 
-/* Jumbotron */
-.jumbotron {
-  background-color: #000;
-  min-height:670px;
-  height: auto;
+/* Jumbotrons */
+
+.jumbotron-header {
+  @extend .jumbotron;
+  min-height: 40px;
+  margin-bottom: 0;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0);
+
+  @media only screen and (min-width: 1024px) {
+    padding: 1em 2em;
+  }
+
   h1 {
     font-weight:300; 
     margin-top:140px; 
@@ -77,18 +93,6 @@ header {
   .btn:hover {
     color:#fff;
     background-color:#0393ff; 
-  }
-}
-
-.jumbotron-header {
-  @extend .jumbotron;
-  min-height: 40px;
-  margin-bottom: 0;
-  padding: 1em;
-  background-color: rgba(0, 0, 0, 0);
-
-  @media only screen and (min-width: 1024px) {
-    padding: 1em 2em;
   }
 
   a {
@@ -129,8 +133,12 @@ header {
   background-color: #000;
   border: 2px solid #0393ff;
   border-radius: 5px;
+  padding: 0;
   li > a, li > a:hover {
     color: #fff;
+  }
+  li:hover {
+    background-color: #0393ff;
   }
 }
 
@@ -195,7 +203,7 @@ form {
 
 .supporting h2, .feature h1 {
   color:#0393ff;
-  margin-top:60px; 
+  margin-top:40px; 
   margin-bottom: 10px;
   font-size: 32px;
   font-weight:300;
