@@ -7,8 +7,6 @@ RSpec.describe "movies/edit", type: :view do
 
   it "renders the edit movie form" do
     render
-
-    assert_select "form[action=edit][method=put]", movie_path(@movie), "post" do
-    end
+    expect(rendered).to match /Star Trek/
   end
 end
