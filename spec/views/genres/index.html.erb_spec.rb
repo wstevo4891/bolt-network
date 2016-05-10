@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "genres/index" do
+RSpec.describe "genres/index", type: :view do
 
   it "renders a list of genres" do
     assign(:genres, [
