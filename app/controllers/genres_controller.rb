@@ -23,17 +23,17 @@ class GenresController < ApplicationController
 	end
 
   def create
-		@genre = Genre.new(genre_params)
+    @genre = Genre.new(genre_params)
     
     respond_to do |format|
-    	if @genre.save
-    		format.html { render :index, notice: 'Genre was successfully created'}
-    		format.json { render :index, status: :created, location: @genre}
+      if @genre.save
+        format.html { render @genre, to_partial_path: "genres/_genre.html.erb" }
+        format.json { render :index, status: :created, location: @genre}
         format.js
-    	else
-    		format.html { render :index }
-    		format.json { render json: @genre.errors, status: :unprocessable_entity }
-    	end
+      else
+        format.html { render :index }
+        format.json { render json: @genre.errors, status: :unprocessable_entity }
+      end
     end
   end
 

@@ -23,4 +23,14 @@ module FeatureHelpers
   	expect(find_field("Password", type: "password").value).to be_nil
   	expect(find_field("Password confirmation", type: "password").value).to be_nil
   end
+
+  def wait_for_ajax
+    Timeout.timeout(Capybara.default_max_wait_time) do
+      loop until finished_all_ajax_requests?
+    end
+  end
+
+  def finished_all_ajax_requests?
+    page.evaluate_script('jquery.ajax.active').zero?
+  end
 end

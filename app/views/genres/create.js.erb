@@ -1,1 +1,1 @@
-$("tbody tr:last").before("<%= j render(@genre) %>").fadeIn("slow");
+$("tbody").find("tr:last").before($("<%= j render(@genre) %>"));
