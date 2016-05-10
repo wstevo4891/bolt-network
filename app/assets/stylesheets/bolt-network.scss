@@ -83,7 +83,6 @@ header {
 .jumbotron-header {
   @extend .jumbotron;
   min-height: 40px;
-  height: auto;
   margin-bottom: 0;
   padding: 1em;
 
@@ -220,6 +219,8 @@ form {
     font-size:18px; 
   }
 }
+
+/* FOOTER */
 
 
 footer {
