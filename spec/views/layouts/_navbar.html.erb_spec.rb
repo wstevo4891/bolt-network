@@ -1,35 +1,18 @@
 require "rails_helper"
 
-RSpec.describe 'Navbar responsive layout', js: true do
-  
-  subject { page }
+RSpec.describe 'layouts/_navbar' do
+  before do
+    assign(:genres, [
+      Genre.create!(name: "Action"),
+      Genre.create!(name: "Comedy")
+    ])
+  end
 
-  describe "Up to mobile view" do
-
-  	before do
-  		resize_window_to_mobile
-  	end
-
-  	after do
-  		resize_window_to_default
-  	end
-
-  	it "collapses the navbar for mobile views" do
-  		it { is_expected.to have_selector('.navbar-collapse'), visible: false }
-  	end
+	it "renders the navbar links" do
+    render
+    expect(rendered).to match /Browse/
+    expect(rendered).to match /Admin/
+    expect(rendered).to match /Log in/
+    expect(rendered).to match /Sign up/
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-

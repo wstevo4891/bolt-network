@@ -13,10 +13,6 @@ RSpec.describe 'Navbar responsive layout' do
   		resize_window_to_mobile
   	end
 
-  	after do
-  		resize_window_default
-  	end
-
   	it "collapses the navbar for mobile views" do
   		expect(page).to have_selector('.navbar-collapse', visible: false)
   	end
@@ -33,13 +29,3 @@ RSpec.describe 'Navbar responsive layout' do
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
