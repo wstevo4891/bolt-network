@@ -1,7 +1,8 @@
-$(document).ready ->
-  $('.dropdown').on 'show.bs.dropdown', (e) ->
-  	$(this).find('.dropdown-menu').first().stop(true, true).slideDown 300
-  	return
-  $('.dropdown').on 'hide.bs.dropdown', (e) ->
-  	$(this).find('.dropdown-menu').first().stop(true, true).slideUp 300
-  	return
+# Navbar background-shadow appears on scrolldown
+
+$(window).scroll ->
+	if $(document).scrollTop() > 20
+		$('nav').addClass 'nav-shadow'
+	else
+		$('nav').removeClass 'nav-shadow'
+	return

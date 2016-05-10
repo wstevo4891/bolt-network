@@ -85,10 +85,10 @@ header {
   min-height: 40px;
   margin-bottom: 0;
   padding: 1em;
+  background-color: rgba(0, 0, 0, 0);
 
   @media only screen and (min-width: 1024px) {
     padding: 1em 2em;
-    background-color: rgba(0, 0, 0, 0.7);
   }
 
   a {
@@ -102,6 +102,10 @@ header {
   }
 }
 
+.nav-shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .jumbotron-index {
   @extend .jumbotron;
   background-color: #fff;
@@ -111,8 +115,9 @@ header {
 
 #nav-item {
   margin-top: 0.36em;
+  text-shadow: 2px 2px #000;
   a:hover, a:focus {
-    background-color: #0393ff;
+    background-color: rgba(0,0,0,0);
   }
 }
 
