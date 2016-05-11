@@ -1,0 +1,28 @@
+
+/* SITE-WIDE LAYOUT 
+========================================*/
+
+html, body {
+  background-image:url(http://s3.amazonaws.com/codecademy-content/projects/bolt-network/diagmonds_@2X.png);
+  background-size:141px 142px;
+  background-color: #000;
+  font-family:"Oxygen"; 
+  font-weight:300;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3, p {
+  color: #fff;
+}
+
+h2, h4 {
+  color: $azure-radiance;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}

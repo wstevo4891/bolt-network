@@ -1,0 +1,28 @@
+
+/* SEARCH BAR STYLES 
+=========================================*/
+
+.search {
+  background:transparent; 
+  border:0px; 
+  border-radius:0; 
+  border-bottom:1px solid #fff;
+  color:#fff;
+  font-size:18px;
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 20px;
+  }
+
+  :hover {
+    border-bottom:1px solid $azure-radiance;
+  }
+
+  :focus {
+    border-bottom:1px solid $azure-radiance;
+    box-shadow:0px 0px 0px; 
+    outline:0px;
+  }
+}

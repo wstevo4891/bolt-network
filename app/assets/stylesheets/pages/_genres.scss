@@ -1,0 +1,33 @@
+
+/* GENRE VIEW STYLES 
+=======================================*/
+
+.show-wrap {
+	margin: 7em 2.5em;
+}
+
+.inline {
+	display: inline;
+	margin-right: 1em;
+}
+
+.show-img {
+	margin: 1em 0;
+	img {
+		width: 25em;
+	}
+}
+
+h2 {
+	a {
+		color: $azure-radiance;
+	}
+	a:hover {
+			text-decoration: none;
+	}
+}
+
+.genre-name {
+  min-width: 9em;
+  margin: 0.5em;
+}

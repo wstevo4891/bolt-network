@@ -1,0 +1,82 @@
+
+/* NAVBAR STYLES 
+==================================*/
+
+.navbar-brand {
+  img {
+    width: 120px;
+    height: 32px;
+
+    @media screen and (min-width: 640px) {
+      width: 180px
+    }
+  }
+}
+
+.jumbotron-header {
+  @extend .jumbotron;
+  min-height: 40px;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+
+  @media only screen and (min-width: 768px) {
+    padding: 1em 2em;
+  }
+
+  h1 {
+    font-weight:300; 
+    margin-top:140px; 
+    margin-bottom:40px;  
+  }
+
+  .btn {
+    color:$azure-radiance;
+    background:transparent;
+    border:1px solid $azure-radiance;
+    border-radius:2px; 
+    padding:8px 20px;
+  }
+
+  .btn:hover {
+    color:#fff;
+    background-color:$azure-radiance; 
+  }
+
+  a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .icon-bar {
+    background-color:$azure-radiance;
+  }
+}
+
+.navbar-toggle {
+  margin: 15px 15px 0 0;
+}
+
+.nav-shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#nav-item {
+  margin-top: 0.36em;
+  text-shadow: 2px 2px #000;
+  a:hover, a:focus {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+.nav-button {
+  margin-top: 0.8em;
+}
+
+.jumbotron-index {
+  @extend .jumbotron;
+  background-color: #fff;
+  overflow-y: scroll;
+  height: auto;
+}

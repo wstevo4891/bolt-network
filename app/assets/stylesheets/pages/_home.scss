@@ -1,0 +1,47 @@
+
+/* HOME PAGE STYLES 
+==========================================*/
+
+/* Supporting */
+.main,
+.supporting h2,
+.supporting p,
+.feature {
+  text-align: center;
+  color:#fff;
+}
+
+.supporting {
+  padding-bottom:80px; 
+}
+
+.supporting h2, .feature h1 {
+  color:$azure-radiance;
+  margin-top:40px; 
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight:300;
+}
+
+.supporting p {
+  margin-bottom: 45px;
+  font-size: 16px;
+}
+
+.supporting .thumbnail {
+  background:transparent; 
+  border: none;
+  padding: 0;
+}
+
+/* Feature */
+.feature {
+  background: url(http://s3.amazonaws.com/codecademy-content/projects/bolt-network/feature.jpg) no-repeat center center;
+  background-size: cover; 
+  height: 380px;
+  padding: 100px 0 0 0;
+
+  p {
+    font-size:18px; 
+  }
+}

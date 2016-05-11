@@ -1,0 +1,16 @@
+
+/* DROPDOWN MENU STYLES 
+=======================================*/
+
+.dropdown-menu {
+  background-color: #000;
+  border: 2px solid $azure-radiance;
+  border-radius: 5px;
+  padding: 0;
+  li > a, li > a:hover {
+    color: #fff;
+  }
+  li:hover {
+    background-color: $azure-radiance;
+  }
+}

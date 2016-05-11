@@ -14,15 +14,17 @@
     <% for i in movie.genre_ids %>
       <% if i == @genre.id %>
 				<div class="row">
-					<div class="col-sm-4 col-sm-offset-1 show-img">
-            <%= link_to image_tag(movie.photo), movie_path(movie), class: "img-responsive" %>
+					<div class="col-sm-4 show-img">
+            <%= link_to image_tag(movie.photo), movie_path(movie) %>
 					</div>
 
-					<div class="col-sm-5 col-sm-offset-1 show-info">
+					<div class="col-sm-4 col-sm-offset-1 show-info">
 						<h2><%= link_to "#{movie.title}", movie_path(movie) %></h2>
 						<p><%= movie.summary %></p>
 						<h4>Rotten Tomatoes: <%= movie.rating %>%</h4>
 					</div>
+
+          <div class="col-sm-3"></div>
 				</div>
 			<% end %>
 		<% end %>
