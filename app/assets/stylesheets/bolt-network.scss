@@ -63,6 +63,42 @@ header {
     left:0;right:0; /* horizontal center */
 }
 
+#slide-info {
+  width: 20%;
+  padding: 1em;
+  color: white;
+  font-size: 4em;
+  position: absolute;
+  top: 4em;
+  right: 0;
+}
+
+.slider-arrow {
+  color: white;
+  font-size: 3em;
+  z-index: 5;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+}
+
+.glyphicon-menu-left {
+  position: absolute;
+  left: 0;
+  top: 260px;
+  margin-left: 10px;
+}
+
+.glyphicon-menu-right {
+  position: absolute;
+  right: 0;
+  top: 260px;
+  margin-right: 10px;
+}
+
 /* Jumbotrons */
 
 .jumbotron-header {

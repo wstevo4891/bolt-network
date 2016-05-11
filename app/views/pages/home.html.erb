@@ -1,18 +1,15 @@
 <div class="slider-frame">
-<!--
-  <div class="container">
-    <div class="main">
-      <h1>Watch your favorite movies, instantly.</h1>
-      <a class="btn btn-default" href="pages/about">Learn More</a>
+  <span class="glyphicon glyphicon-menu-left slider-arrow">
+    <p class="sr-only">Go to previous slide</p>
+  </span>
 
-      <%= form_tag(movies_path, method: "get", id: "search-form", class: "form-inline", role: "form") do %> 
-        <div class="form-group">
-          <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Browse the collection") %>
-        </div>
-        <%= submit_tag "Search", name: nil, class: "btn btn-submit" %>
-      <% end %>
-      
-    </div>
+  <span class="glyphicon glyphicon-menu-right slider-arrow">
+    <p class="sr-only">Go to next slide</p>
+  </span>
+
+<!--
+  <div id="slide-info">
+    <h1>ACE!</h1>
   </div>
 -->
 </div>
