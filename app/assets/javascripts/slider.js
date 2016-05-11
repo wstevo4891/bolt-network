@@ -1,3 +1,5 @@
+// Home Page Slideshow functions
+
 $(document).ready(function($) {
   $('.slider-frame').vegas({
   	transitionDuration: 400,
@@ -10,45 +12,43 @@ $(document).ready(function($) {
 
   $('.slider-frame').vegas('pause');
 
+  function change_info() {
+    var $current = $(".slider-frame").vegas("current");
+
+    if ($current == 0) {
+
+      $('#slide-info h1').text("Avengers");
+
+    } else if ($current == 1) {
+
+      $('#slide-info h1').text("Fall");
+
+    } else if ($current == 2) {
+
+      $('#slide-info h1').text("Pirates");
+    }
+  }
+
   $('.glyphicon-menu-right').on('click', function() {
   	$('.slider-frame').vegas('next');
+  	change_info();
   });
 
   $('.glyphicon-menu-left').on('click', function() {
     $('.slider-frame').vegas('previous');
+    change_info();
   });
 
+  function slider_resize() {
+	  var width = $(window).width() - 200;
+	  $(".slider-frame").height(width);
 
+	  var slider_height = $(".slider-frame").height();
+    $(".slider-arrow").css('margin-top', slider_height * 0.45);
+  }
 
-  var bg = $('.slider-frame:first-child').find('.vegas-inner-slide').css('background-image');
+  $(window).on("load", slider_resize);
+  $(window).on("load", change_info);
 
-  var inner_slide = $('.slider-frame:nth-child(2)').find('.vegas-inner-slide');
-
-  $('.vegas').on('next', function() {
-	  if (inner_slide.css('background-image', 'avengers-slide.jpg')) {
-
-	  	$('#slide-info h1').text("Avengers");
-
-	  } else if (inner_slide.css('background-image', 'skyfall-slide.jpg')) {
-
-	  	$('#slide-info h1').text("Fall");
-
-	  } else if (inner_slide.css('background-image', 'pirates-slide.jpg')) {
-
-	  	$('#slide-info h1').text("Pirates");
-	  }
-  });
-
+  $(window).on("resize", slider_resize);
 });
-
-function slider_resize() {
-	var width = $(window).width() - 200;
-	$(".slider-frame").height(width);
-
-	var slider_height = $(".slider-frame").height();
-  $(".slider-arrow").css('margin-top', slider_height * 0.45);
-}
-
-$(window).on("load", slider_resize);
-
-$(window).on("resize", slider_resize);
