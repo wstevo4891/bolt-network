@@ -44,6 +44,11 @@ $(document).ready(function($) {
 function slider_resize() {
 	var width = $(window).width() - 200;
 	$(".slider-frame").height(width);
+
+  if ($(window).width() < 768) {
+	  var marginVal = width * 0.4;
+	  $(".slider-arrow").css('margin-top', marginVal);
+	}
 }
 
 $(window).on("load", slider_resize);
