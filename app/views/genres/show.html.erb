@@ -1,7 +1,7 @@
 <div class ="container-fluid show-wrap">
   <br>
   <div class="row">
-    <div class="col-sm-4 show-title">
+    <div class="col-sm-4">
   	  <h1 class="inline"><%= @genre.name %></h1>
   	  <!-- <h3 class="inline">Subgenres</h3> -->
   	</div>
@@ -17,14 +17,6 @@
 					<div class="col-sm-4 show-img">
             <%= link_to image_tag(movie.photo), movie_path(movie) %>
 					</div>
-
-					<div class="col-sm-4 col-sm-offset-1 show-info">
-						<h2><%= link_to "#{movie.title}", movie_path(movie) %></h2>
-						<p><%= movie.summary %></p>
-						<h4>Rotten Tomatoes: <%= movie.rating %>%</h4>
-					</div>
-
-          <div class="col-sm-3"></div>
 				</div>
 			<% end %>
 		<% end %>
