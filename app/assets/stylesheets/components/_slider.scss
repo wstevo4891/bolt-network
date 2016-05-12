@@ -13,15 +13,13 @@
 
 #slide-info {
   width: 35%;
-  height: 55%;
-  position: relative;
+  height: 18em;
+  position: absolute;
+  bottom: 0;
   left: 60%;
-  padding: 0.5em;
 //  border: solid 1px #fff;
   color: white;
   text-align: left;
-  margin-top: 18%;
-  margin-right: 5%;
   font-weight: 600;
 
   span {
@@ -34,7 +32,7 @@
 
   p {
     position: absolute;
-    top: 70%;
+    top: 65%;
     margin-left: 1em;
     display: block;
     float: left;
@@ -50,7 +48,25 @@
 #movie-stats {
   position: absolute;
   margin-left: 1em;
-  top: 60%;
+  top: 55%;
+}
+
+#slide-buttons {
+  position: absolute;
+  bottom: 0;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+
+  a {
+    margin-right: 0.5em;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  i {
+    margin-right: 6px;
+  }
 }
 
 .slider-arrow {

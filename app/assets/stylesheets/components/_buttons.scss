@@ -1,0 +1,30 @@
+
+/* BUTTON STYLES 
+=================================*/
+
+.btn-blue {
+  @extend .btn;
+  color: #fff;
+  background-color: #0288ef;
+  border-radius: 0;
+  padding:8px 20px;
+
+  &:hover {
+  	color: #fff;
+  	background-color: $azure-radiance;
+  }
+}
+
+.btn-clear {
+  @extend .btn;
+  color: #fff;
+  background: transparent;
+  border: solid 1px #e0e0e0;
+  border-radius: 0;
+  padding: 8px 20px;
+
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+}

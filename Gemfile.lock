@@ -93,6 +93,8 @@ GEM
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     ffi (1.9.10)
+    font-awesome-sass (4.5.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     git-version-bump (0.15.1)
     globalid (0.3.6)
@@ -309,6 +311,7 @@ DEPENDENCIES
   database_cleaner
   exception_handler (~> 0.4)
   factory_girl_rails (~> 4.5)
+  font-awesome-sass
   guard
   guard-livereload (~> 2.5)
   guard-rspec
