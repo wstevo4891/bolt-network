@@ -3,12 +3,12 @@
 =============================================*/
 
 .slider-frame {
-    width: 100vw;
-    max-height: 530px;
-    margin: auto;
-    position: absolute;
-    top:0;bottom:0; /* vertical center */
-    left:0;right:0; /* horizontal center */
+  width: 100vw;
+  max-height: 530px;
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
 }
 
 #slide-info {
@@ -57,7 +57,7 @@
   color: white;
   font-size: 1em;
   z-index: 5;
-  transition: all .3s ease;
+  @include transitions( all .3s ease );
   position: relative;
 
   &:hover {

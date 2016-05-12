@@ -3,13 +3,20 @@
 // FONT SIZE ############
 
 @function calculateRem($size) {
-	$remSize: $size / 14px;
+	$remSize: $size / 16px;
 	@return $remSize * 1rem;
 }
 
 @mixin font-size($size) {
 	font-size: $size;
 	font-size: calculateRem($size);
+}
+
+
+// SLIDER FONT SIZE ###########
+
+@function pxToPercent($target, $parent: 16) {
+	@return percentage($target / $parent);
 }
 
 

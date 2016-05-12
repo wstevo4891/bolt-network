@@ -54,6 +54,9 @@ var slider_main = function() {
 
 	  var slider_height = $(".slider-frame").height();
     $(".slider-arrow").css('margin-top', slider_height * 0.45);
+
+    var total_width = $(window).width();
+    $("#slide-info").css('font-size', total_width * 0.014);
   }
 
   $(window).on("load", slider_resize);
