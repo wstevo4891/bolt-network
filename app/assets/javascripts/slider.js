@@ -1,6 +1,6 @@
 // Home Page Slideshow functions
 
-$(document).ready(function($) {
+var slider_main = function() {
   $('.slider-frame').vegas({
   	transitionDuration: 400,
     slides: [
@@ -16,27 +16,24 @@ $(document).ready(function($) {
     var $current = $(".slider-frame").vegas("current");
 
     if ($current == 0) {
-
       $('#slide-info h1').text("Avengers");
 
     } else if ($current == 1) {
-
       $('#slide-info h1').text("Fall");
 
     } else if ($current == 2) {
-
       $('#slide-info h1').text("Pirates");
     }
   }
 
   $('.glyphicon-menu-right').on('click', function() {
   	$('.slider-frame').vegas('next');
-  	change_info();
+  	var change_delay = setTimeout(change_info, 400);
   });
 
   $('.glyphicon-menu-left').on('click', function() {
     $('.slider-frame').vegas('previous');
-    change_info();
+    var change_delay = setTimeout(change_info, 400);
   });
 
   function slider_resize() {
@@ -51,4 +48,7 @@ $(document).ready(function($) {
   $(window).on("load", change_info);
 
   $(window).on("resize", slider_resize);
-});
+};
+
+$(document).ready(slider_main);
+
