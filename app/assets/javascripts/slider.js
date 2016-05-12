@@ -16,13 +16,25 @@ var slider_main = function() {
     var $current = $(".slider-frame").vegas("current");
 
     if ($current == 0) {
-      $('#slide-info h1').text("Avengers");
+      $('#movie-logo').attr('src', 'avengers-logo.png');
+      $('#year').text("2012");
+      $('#rating').text("PG-13");
+      $('#movie-length').text("2h 23min");
+      $('#blurb').text("They're the most powerful people on Earth, but cooperation is a touchy subject.");
 
     } else if ($current == 1) {
-      $('#slide-info h1').text("Fall");
+      $('#movie-logo').attr('src', 'skyfall-logo.png');
+      $('#year').text("2012");
+      $('#rating').text("PG-13");
+      $('#movie-length').text("2h 23min");
+      $('#blurb').text("Terror hits London as 007 races to defend M from a tech-savvy former agent out for revenge.")
 
     } else if ($current == 2) {
-      $('#slide-info h1').text("Pirates");
+      $('#movie-logo').attr('src', 'pirates-logo.png');
+      $('#year').text("2003");
+      $('#rating').text("PG-13");
+      $('#movie-length').text("2h 23min");
+      $('#blurb').text("A sword-handy blacksmith teams up with a clever yet eccentric outlaw to rescue his love from a crew of undead pirates.")
     }
   }
 

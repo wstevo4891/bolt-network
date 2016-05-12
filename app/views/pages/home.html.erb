@@ -7,14 +7,18 @@
     <p class="sr-only">Go to next slide</p>
   </span>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-5 col-xs-offset-6">
-        <div id="slide-info">
-          <h1>ACE!</h1>
-        </div>
-      </div>
+  <div id="slide-info">
+    <%= image_tag("avengers-logo.png", class: "img-responsive", id: "movie-logo") %>
+
+    <div id="movie-stats">
+      <span id="year">2012</span>
+      <span id="rating">PG-13</span>
+      <span id="movie-length">2h 23min</span>
     </div>
+
+    <p id="blurb">
+      They're the most powerful people on Earth, but cooperation is a touchy subject.
+    </p>
   </div>
 </div>
 
