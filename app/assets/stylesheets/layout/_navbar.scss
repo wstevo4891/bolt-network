@@ -11,7 +11,7 @@
       width: 180px;
     }
 
-    @include bp-tablet {
+    @include bp-large {
       width: 250px;
       height: auto;
       margin-top: -9px;
