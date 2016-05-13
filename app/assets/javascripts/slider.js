@@ -40,12 +40,12 @@ var slider_main = function() {
 
   $('.glyphicon-menu-right').on('click', function() {
   	$('.slider-frame').vegas('next');
-  	var change_delay = setTimeout(change_info, 400);
+  	var change_delay = setTimeout(change_info, 300);
   });
 
   $('.glyphicon-menu-left').on('click', function() {
     $('.slider-frame').vegas('previous');
-    var change_delay = setTimeout(change_info, 400);
+    var change_delay = setTimeout(change_info, 300);
   });
 
   function slider_resize() {
@@ -57,6 +57,7 @@ var slider_main = function() {
 
     var total_width = $(window).width();
     $("#slide-info").css('font-size', total_width * 0.014);
+    $("#slide-buttons a").css('font-size', total_width * 0.012);
   }
 
   $(window).on("load", slider_resize);

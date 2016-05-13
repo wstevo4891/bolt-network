@@ -31,13 +31,16 @@
   }
 
   p {
-    position: absolute;
-    top: 65%;
-    margin-left: 1em;
-    display: block;
     float: left;
     text-shadow: 2px 2px 4px #333;
+    margin: 0.5em 0 1em 0;
   }
+}
+
+#movie-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: 1em;
 }
 
 #movie-logo {
@@ -45,17 +48,8 @@
   top: 0;
 }
 
-#movie-stats {
-  position: absolute;
-  margin-left: 1em;
-  top: 55%;
-}
-
 #slide-buttons {
-  position: absolute;
-  bottom: 0;
-  margin-left: 1em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 
   a {
     margin-right: 0.5em;
