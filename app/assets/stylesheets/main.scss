@@ -20,18 +20,20 @@
 
 @import "layout/body";
 @import "layout/navbar";
+
+@import "components/dropdown";
+@import "components/search";
+@import "components/buttons";
+@import "components/slider";
+@import "pages/home";
+
 @import "layout/footer";
 @import "layout/forms";
 
-@import "components/buttons";
-@import "components/dropdown";
-@import "components/search";
-@import "components/slider";
 @import "components/tables";
 
 @import "pages/admin";
 @import "pages/genres";
-@import "pages/home";
 @import "pages/movies";
 
 

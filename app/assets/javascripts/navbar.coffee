@@ -8,6 +8,22 @@ $(document).ready ->
     if scroll_length < 20
       $('nav').toggleClass 'nav-shadow'
     return
+
+  input = $('.searchInput')
+  box = $('.searchBox');
+
+  box.bind 'click', ->
+    box.hide()
+    input.show().animate width: '270px'
+    return
+
+  $(document).mouseup (e) ->
+    width = input.css('width')
+    if !input.is(e.target) and input.has(e.target).length == 0 and width == '270px'
+      input.animate width: '0px'
+      input.delay(5).hide 0
+      box.delay(500).show 0
+    return
   return
 
 $(window).scroll ->

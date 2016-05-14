@@ -50,10 +50,15 @@
     background-color:$azure-radiance; 
   }
 
-  a {
+  a, button {
     font-size: 18px;
     font-weight: bold;
     color: white;
+  }
+
+  button {
+    background: none;
+    border: none;
   }
 
   .icon-bar {
@@ -71,10 +76,14 @@
 
 #nav-item {
   margin-top: 0.36em;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px 2px #000;
   a:hover, a:focus {
     background-color: rgba(0,0,0,0);
   }
+}
+
+.empty {
+  display: none;
 }
 
 .nav-button {

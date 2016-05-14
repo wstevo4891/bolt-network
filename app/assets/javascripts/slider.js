@@ -61,8 +61,6 @@ var slider_main = function() {
   }
 
   $(window).on("load", slider_resize);
-  $(window).on("load", change_info);
-
   $(window).on("resize", slider_resize);
 };
 

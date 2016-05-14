@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img src="bolt-network.svg">
+        <%= image_tag("bolt-network.svg") %>
       </a>
     </div>
 
@@ -28,6 +28,18 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button class="searchBox" id="nav-item">
+            <i class="fa fa-search" aria-hidden="true"></i><span>Search</span>
+          </button>
+          <div class="searchWrapper">
+            <div class="searchInput">
+              <i class="fa fa-search" id="searchIcon" aria-hidden="true"></i>
+              <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Browse the collection") %>
+              <i class="fa fa-times empty" id="closeIcon" aria-hidden="true"></i>
+            </div>
+          </div>
+        </li>
         <li class="dropdown" id="nav-item">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu">
