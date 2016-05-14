@@ -1,12 +1,17 @@
 # Navbar background-shadow appears on scrolldown if screen > 768px
 
 scroll_length = 0
+remove_shadow = ->
+  $('nav').removeClass 'nav-shadow'
+  return
 
 $(document).ready ->
   $('button.navbar-toggle').on 'click', ->
     $('nav').toggleClass 'menu-down'
-    if scroll_length < 20
-      $('nav').toggleClass 'nav-shadow'
+    if scroll_length < 20 and !$('nav').hasClass('nav-shadow')
+      $('nav').addClass 'nav-shadow'
+    else if scroll_length < 20 and $('nav').hasClass('nav-shadow')
+      delay_shadow = setTimeout(remove_shadow, 300)
     return
 
   input = $('.searchInput')
