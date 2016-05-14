@@ -35,8 +35,10 @@
           <div class="searchWrapper">
             <div class="searchInput">
               <i class="fa fa-search" id="searchIcon" aria-hidden="true"></i>
-              <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Browse the collection") %>
-              <i class="fa fa-times empty" id="closeIcon" aria-hidden="true"></i>
+              <%= form_tag(movies_path, method: "get", id: "search-form", class: "form-inline", role: "form") do %> 
+                <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Search titles") %>
+              <% end %>
+              <i class="fa fa-times" id="closeIcon" aria-hidden="true"></i>
             </div>
           </div>
         </li>

@@ -24,7 +24,11 @@ $(document).ready ->
       input.delay(5).hide 0
       box.delay(500).show 0
     return
-  return
+
+  $('#closeIcon').on 'click', ->
+    $('#search').val("")
+    $('#closeIcon').hide()
+    return
 
 $(window).scroll ->
 	scroll_length = $(document).scrollTop()
@@ -32,5 +36,13 @@ $(window).scroll ->
 		$('nav').addClass 'nav-shadow'
 	else
 		$('nav').removeClass 'nav-shadow' unless $('nav').hasClass 'menu-down'
+	return
+
+$(document).on 'keyup', 'input', ->
+	foo = $('#search').val().length
+	if foo > 0
+		$('#closeIcon').show()
+	else
+		$('#closeIcon').hide()
 	return
   

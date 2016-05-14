@@ -38,16 +38,19 @@
 
 #searchIcon, #closeIcon {
   color: white;
-  font-size: 18px;
   padding: 8px;
 }
 
 #searchIcon {
   float: left;
+  font-size: 18px;
 }
 
 #closeIcon {
+  display: none;
   float: right;
+  margin-top: -37px;
+  font-size: 23px;
 }
 
 #search {
@@ -55,16 +58,12 @@
   width: 80%;
   height: 34px;
   padding: 6px 12px;
-  margin: 0 auto;
+  margin: 0;
   font-size:18px;
   line-height: 1.42857143;
-  color:#fff;
+  color: white;
   background:transparent; 
   border:0px; 
   border-radius:0;
   box-shadow: 0 0 0;
-
-  @media screen and (min-width: 768px) {
-    margin: 0 20px;
-  }
 }
