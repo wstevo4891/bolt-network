@@ -7,9 +7,8 @@
   <br>
   <div class="search-row">
     <% @movies.each do |movie| %>
-      <div class="search-img thumbnail col-xs-3">
+      <div class="search-img thumbnail col-xs-3 col-xs-offset-1">
         <%= link_to image_tag(movie.photo), movie_path(movie), class: "img-responsive" %>
-        <h2><%= movie.title %></h2>
       </div>
     <% end %>
   </div>

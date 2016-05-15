@@ -5,6 +5,6 @@ class Movie < ActiveRecord::Base
 
 	def self.search(search)
 	#	Movie.find_by title: "#{search}"
-		Movie.where('title REGEXP :search', search: "%#{search}%")
+		Movie.where('title ~* :search', search: "(#{search})")
 	end
 end
