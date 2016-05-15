@@ -13,7 +13,7 @@
 }
 
 
-// SLIDER FONT SIZE ###########
+// PIXEL TO PERCENTAGE ###########
 
 @function pxToPercent($target, $parent: 16) {
 	@return percentage($target / $parent);

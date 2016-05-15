@@ -2,14 +2,15 @@
 /* DROPDOWN MENU STYLES 
 =======================================*/
 
-.open {
-  width: 100%;
+#browse-menu {
+  max-width: inherit;
 }
 
 .dropdown-menu {
   position: static;
   background: transparent;
-  min-width: 100%;
+  min-width: 100px;
+  max-width: 100px;
 
   @include bp-tablet {
     background-color: #000;

@@ -29,7 +29,7 @@
         </li>
         <li class="dropdown" id="nav-item">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" id="browse-menu">
             <% @genres.each do |genre| %>
               <li><%= link_to "#{genre.name}", genre_path(genre) %></li>
             <% end %>
