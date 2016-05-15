@@ -17,6 +17,16 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+        <li class="dropdown visible-xs mobile-search">
+          <span>Search</span>
+          <div class="searchMobile">
+            <i class="fa fa-search" id="searchIcon" aria-hidden="true"></i>
+            <%= form_tag(movies_path, method: "get", id: "search-form", class: "form-inline", role: "form") do %> 
+              <%= text_field_tag(:search, params[:search], class: "form-control search", placeholder: "Search titles") %>
+            <% end %>
+            <i class="fa fa-times" id="closeIcon" aria-hidden="true"></i>
+          </div>
+        </li>
         <li class="dropdown" id="nav-item">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -28,7 +38,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li>
+        <li class="hidden-xs">
           <button class="searchBox" id="nav-item">
             <i class="fa fa-search" aria-hidden="true"></i><span>Search</span>
           </button>

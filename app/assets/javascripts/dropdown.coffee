@@ -1,9 +1,11 @@
 # Sliding effect for navbar links
 
-$(document).ready ->
+dropdown_style = ->
   $('.dropdown').on 'show.bs.dropdown', (e) ->
-  	$(this).find('.dropdown-menu').first().stop(true, true).slideDown 300
-  	return
+	  $(this).find('.dropdown-menu').first().stop(true, true).slideDown 300
+	  return
   $('.dropdown').on 'hide.bs.dropdown', (e) ->
-  	$(this).find('.dropdown-menu').first().stop(true, true).slideUp 300
-  	return
+	  $(this).find('.dropdown-menu').first().stop(true, true).slideUp 300
+	  return
+
+$(document).ready dropdown_style

@@ -53,6 +53,24 @@
   font-size: 23px;
 }
 
+.mobile-search {
+  margin-top: 1em;
+  margin-left: 1em;
+
+  span {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 0.5em;
+  }
+
+  .searchMobile {
+    display: inline-block;
+    width: 50%;
+    border: solid 1px white;
+  }
+}
+
 #search {
   display: block;
   width: 80%;
