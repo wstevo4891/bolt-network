@@ -2,14 +2,26 @@
 /* DROPDOWN MENU STYLES 
 =======================================*/
 
+.open {
+  width: 100%;
+}
+
 .dropdown-menu {
-  background-color: #000;
-  border: 2px solid $azure-radiance;
-  border-radius: 5px;
-  padding: 0;
+  position: static;
+  background: transparent;
+  min-width: 100%;
+
+  @include bp-tablet {
+    background-color: #000;
+    border: 2px solid $azure-radiance;
+    border-radius: 5px;
+    padding: 0;
+  }
+
   li > a, li > a:hover {
     color: #fff;
   }
+
   li:hover {
     background-color: $azure-radiance;
   }
