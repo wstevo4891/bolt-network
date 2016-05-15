@@ -9,23 +9,24 @@
 .dropdown-menu {
   position: static;
   background: transparent;
-
-  @include bp-x-small {
-    width: 100%;
+  width: 100%;
+  
+  li > a {
+    padding: 5px 15px 5px 25px;
+    line-height: 20px; 
   }
 
   @include bp-tablet {
     background-color: #000;
     border: 2px solid $azure-radiance;
     border-radius: 5px;
-    padding: 0;
     min-width: 100px;
     max-width: 100px;
-  }
 
-  li > a {
-    padding: 5px 15px 5px 25px;
-    line-height: 20px;
+    li > a {
+      padding: 5px 15px;
+      line-height: 20px;
+    }
   }
 
   li > a, li > a:hover {
@@ -37,10 +38,16 @@
   }
 }
 
-.navbar-nav .open .dropdown-menu > li > a,
-.navbar-nav .open .dropdown-menu .dropdown-header {
-  padding: 5px 15px 5px 26px;
+@include bp-mobile {
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 26px;
+  }
 }
 
-
-
+@include bp-tablet {
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px;
+  }
+}
