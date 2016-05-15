@@ -32,7 +32,13 @@
   background:transparent; 
   border: none;
   padding: 0;
+
+  &:hover {
+    border: solid 2px $azure-radiance;
+    @include box-shadow(2px 2px 40px $azure-radiance);
+  }
 }
+
 
 /* Feature */
 .feature {
