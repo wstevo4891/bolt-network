@@ -5,10 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @genres = Genre.all
-    @movies = Movie.all
-    if params[:search]
-      @movie = Movie.search(params[:search])
-    end
+    @movies = Movie.search(params[:search])
   end
 
   # GET /movies/1

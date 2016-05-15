@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160328174913) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "genres", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -24,8 +27,8 @@ ActiveRecord::Schema.define(version: 20160328174913) do
     t.integer "movie_id"
   end
 
-  add_index "genres_movies", ["genre_id"], name: "index_genres_movies_on_genre_id"
-  add_index "genres_movies", ["movie_id"], name: "index_genres_movies_on_movie_id"
+  add_index "genres_movies", ["genre_id"], name: "index_genres_movies_on_genre_id", using: :btree
+  add_index "genres_movies", ["movie_id"], name: "index_genres_movies_on_movie_id", using: :btree
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"

@@ -1,4 +1,4 @@
-<% if @movie.blank? %>
+<% if @movies.blank? %>
   <br>
   <div class="search-row text-center">
     <h1>Title not found</h1>
@@ -6,9 +6,11 @@
 <% else %>
   <br>
   <div class="search-row">
-    <div class="search-img col-xs-8 col-xs-offset-2">
-      <%= link_to image_tag(@movie.photo), movie_path(@movie), class: "img-responsive" %>
-      <h2><%= @movie.title %></h2>
-    </div>
+    <% @movies.each do |movie| %>
+      <div class="search-img thumbnail col-xs-3">
+        <%= link_to image_tag(movie.photo), movie_path(movie), class: "img-responsive" %>
+        <h2><%= movie.title %></h2>
+      </div>
+    <% end %>
   </div>
 <% end %>

@@ -4,6 +4,7 @@ class Movie < ActiveRecord::Base
 	mount_uploader :photo, PhotoUploader
 
 	def self.search(search)
-		Movie.find_by title: "#{search}"
+	#	Movie.find_by title: "#{search}"
+		Movie.where('title REGEXP :search', search: "%#{search}%")
 	end
 end

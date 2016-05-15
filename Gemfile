@@ -43,7 +43,6 @@ gem 'responders', '~> 2.0'
 gem 'puma'
 
 group :development do
-  gem 'sqlite3'
   gem 'better_errors'
   gem 'meta_request'
   gem 'quiet_assets'
@@ -55,8 +54,8 @@ group :development do
 end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails', '~> 4.5'
   gem 'pry-rescue'
