@@ -12,7 +12,6 @@
 
   @include bp-x-small {
     width: 100%;
-    padding-left: 1em;
   }
 
   @include bp-tablet {
@@ -24,6 +23,11 @@
     max-width: 100px;
   }
 
+  li > a {
+    padding: 5px 15px 5px 25px;
+    line-height: 20px;
+  }
+
   li > a, li > a:hover {
     color: #fff;
   }
@@ -32,3 +36,11 @@
     background-color: $azure-radiance;
   }
 }
+
+.navbar-nav .open .dropdown-menu > li > a,
+.navbar-nav .open .dropdown-menu .dropdown-header {
+  padding: 5px 15px 5px 26px;
+}
+
+
+
