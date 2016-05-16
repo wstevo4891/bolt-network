@@ -4,12 +4,26 @@
 
 .poster {
   display: inline-block;
+  position: relative;
   margin: 2em 0.05em;
+  background:transparent; 
+  border: none;
+  padding: 0;
+  @include transitions(all 0.5s ease);
+
+  &:hover {
+    @include box-shadow(2px 2px 40px $azure-radiance);
+    @include transform(scale(1.5));
+    z-index: 4;
+    margin: 2em 4em; 
+  }
+
   img {
     width: 16em;
     height: 8.375em;
   }
 }
+
 
 /* Supporting */
 .main,
@@ -36,16 +50,6 @@
 .supporting p {
   margin-bottom: 45px;
   font-size: 16px;
-}
-
-.thumbnail {
-  background:transparent; 
-  border: none;
-  padding: 0;
-
-  &:hover {
-    @include box-shadow(2px 2px 40px $azure-radiance);
-  }
 }
 
 
