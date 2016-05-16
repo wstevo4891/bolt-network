@@ -2,6 +2,15 @@
 /* HOME PAGE STYLES 
 ==========================================*/
 
+.poster {
+  display: inline-block;
+  margin: 2em 0.05em;
+  img {
+    width: 16em;
+    height: 8.375em;
+  }
+}
+
 /* Supporting */
 .main,
 .supporting h2,
@@ -12,7 +21,8 @@
 }
 
 .supporting {
-  padding-bottom:80px; 
+  padding-bottom:80px;
+  margin-left: 3em;
 }
 
 .supporting h2, .feature h1 {
@@ -34,7 +44,6 @@
   padding: 0;
 
   &:hover {
-    border: solid 2px $azure-radiance;
     @include box-shadow(2px 2px 40px $azure-radiance);
   }
 }

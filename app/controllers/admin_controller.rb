@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
 
   def movies_index
-  	@movies = Movie.all
+  	@movies = Movie.order(:id)
   	@genres = Genre.all
   end
 end

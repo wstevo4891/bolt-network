@@ -2,7 +2,11 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
-  	  <h1 class="inline"><%= @genre.name %></h1>
+      <% if @genre.name == "Action" %>
+        <h1 class="inline">Action & Adventure</h1>
+      <% else %>
+  	    <h1 class="inline"><%= @genre.name %></h1>
+      <% end %>
   	  <!-- <h3 class="inline">Subgenres</h3> -->
   	</div>
   	<div class="pull-right">
