@@ -42,7 +42,7 @@
 <div class="row">
   <div class="col-xs-12">
 		<% @genres.each do |genre| %>
-		  <div class="genre-name-row">
+		  <div class="row">
         <% if genre.name == "Action" %>
           <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
         <% else %>
