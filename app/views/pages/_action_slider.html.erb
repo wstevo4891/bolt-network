@@ -1,4 +1,14 @@
-<div class="slider-frame">
+<div class="row">
+  <div class="col-xs-12">
+    <% @movies.each do |movie| %>
+      <div class="poster">
+        <%= image_tag(movie.photo, class: "img-responsive") %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="slider-action">
   <span class="glyphicon glyphicon-menu-left slider-arrow">
     <p class="sr-only">Go to previous slide</p>
   </span>
@@ -27,24 +37,11 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="supporting col-xs-12">
-      <h2>A world of movies at your fingertips.</h2>
-      <p>Choose from the latest titles, with new movies added every day.</p>
-    </div>
-  </div>
-</div>
 
-<div class="carousels-container">
 
-  <%= render "posters" %>
 
-</div>
 
-<div class="feature">
-  <div class="container">
-    <h1>Available everywhere</h1>
-    <p>Start watching on one device, and pick up where you left off on another device.</p>
-  </div>
-</div>
+
+
+
+

@@ -6,16 +6,22 @@
   img {
     width: 120px;
     height: 32px;
+    margin-left: 2.7em;
 
     @include bp-small {
       width: 180px;
+      margin-left: 2.45em;
+    }
+
+    @include bp-tablet {
+      margin-left: 0.6em;
     }
 
     @include bp-large {
-      width: 250px;
+      width: 200px;
       height: auto;
-      margin-top: -9px;
-      margin-left: -16px;
+      margin-top: -3px;
+      margin-left: 0.9em;
     }
   }
 }
