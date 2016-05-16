@@ -1,28 +1,22 @@
-<div class ="container-fluid show-wrap">
+<div class="genres-container">
   <br>
   <div class="row">
-    <div class="col-sm-4">
-      <% if @genre.name == "Action" %>
-        <h1 class="inline">Action & Adventure</h1>
-      <% else %>
-  	    <h1 class="inline"><%= @genre.name %></h1>
-      <% end %>
-  	  <!-- <h3 class="inline">Subgenres</h3> -->
-  	</div>
-  	<div class="pull-right">
-  		<!-- <h3>Sorting Bar Goes Here</h3> -->
-  	</div>
+    <div class="col-xs-12">
+      <div class="row">
+        <% if @genre.name == "Action" %>
+          <h2 class="inline">Action & Adventure</h2>
+        <% else %>
+  	      <h2 class="inline"><%= @genre.name %></h2>
+        <% end %>
+  	    <!-- <h3 class="inline">Subgenres</h3> -->
+  	    <div class="pull-right">
+  		    <!-- <h3>Sorting Bar Goes Here</h3> -->
+  	    </div>
+      </div>
+      
+      <div class="row">
+        <%= render "genre_list" %>
+      </div>
+    </div>
   </div>
-  <br>
-  <% @movies.each do |movie| %>
-    <% for i in movie.genre_ids %>
-      <% if i == @genre.id %>
-				<div class="row">
-					<div class="col-sm-4 show-img thumbnail">
-            <%= link_to image_tag(movie.photo), movie_path(movie) %>
-					</div>
-				</div>
-			<% end %>
-		<% end %>
-	<% end %>
 </div>

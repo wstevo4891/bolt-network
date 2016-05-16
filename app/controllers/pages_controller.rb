@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   
   def home
   	access_data
-    @movie = Movie.find_by id: 9
   end
 
   def about

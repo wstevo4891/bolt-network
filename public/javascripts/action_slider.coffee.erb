@@ -1,0 +1,36 @@
+# Action Genre Slider 
+#===============================================
+
+action_slider = ->
+  $('.slider-action').vegas
+    transitionDuration: 300
+    slides: [
+      {
+        src: 'pirates-slide.jpg'
+      }
+      {
+        src: 'skyfall-slide.jpg'
+      }
+      {
+        src: 'avengers-slide.jpg'
+      }
+    ]
+  $('.slider-frame').vegas 'pause'
+  return
+
+$(document).ready action_slider
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

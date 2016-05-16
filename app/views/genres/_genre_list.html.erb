@@ -1,0 +1,11 @@
+<% @movies.each do |movie| %>
+  <% for i in movie.genre_ids %>
+    <% if i == @genre.id %>
+
+		  <div class="poster">
+        <%= link_to image_tag(movie.photo), movie_path(movie) %>
+		  </div>
+
+		<% end %>
+	<% end %>
+<% end %>

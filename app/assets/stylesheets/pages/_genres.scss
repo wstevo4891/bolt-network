@@ -2,6 +2,20 @@
 /* GENRE VIEW STYLES 
 =======================================*/
 
+.genres-container {
+	@extend .carousels-container;
+	margin-top: 7em;
+	text-align: left;
+
+	h2 {
+		color: white;
+	}
+
+	.row {
+		margin-bottom: 5em;
+	}
+}
+
 .show-wrap {
 	margin-top: 7em;
 	margin-bottom: 7em;

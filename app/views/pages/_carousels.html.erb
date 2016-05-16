@@ -1,3 +1,4 @@
+<!--
 <div class="row">
   <div class="col-xs-12">
     <% @movies.each do |movie| %>
@@ -36,12 +37,30 @@
     </div>
   </div>
 </div>
+-->
 
+<div class="row">
+  <div class="col-xs-12">
+		<% @genres.each do |genre| %>
+		  <div class="genre-name-row">
+        <% if genre.name == "Action" %>
+          <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+        <% else %>
+          <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+        <% end %>
+      </div>
 
+			<% @movies.each do |movie| %>
+			  <% for i in movie.genre_ids %>
+			    <% if i == genre.id %>
 
+					  <div class="poster">
+			        <%= link_to image_tag(movie.photo), movie_path(movie) %>
+					  </div>
 
-
-
-
-
-
+					<% end %>
+				<% end %>
+			<% end %>
+		<% end %>
+  </div>
+</div>
