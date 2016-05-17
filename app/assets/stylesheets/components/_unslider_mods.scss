@@ -13,6 +13,24 @@
 
 .unslider-nav {
 	width: 80%;
+	background-color: #141414;
+
+	ol {
+		position: absolute;
+		top: -29px;
+		left: 80%;
+
+		li {
+			width: 15px;
+			height: 1px;
+			margin: 0 1px;
+			border: solid 1px #939393;
+		}
+
+		li.unslider-active {
+			border: solid 1px white;
+		}
+	}
 }
 
 .unslider-arrow, .next, .prev {

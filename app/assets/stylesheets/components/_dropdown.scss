@@ -7,10 +7,6 @@
 }
 
 .dropdown-menu {
-  position: static;
-  background: transparent;
-  width: 100%;
-  
   li > a {
     padding: 5px 15px 5px 25px;
     line-height: 20px; 
@@ -39,6 +35,12 @@
 }
 
 @include bp-mobile {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    width: 100%;
+  }
+
   .navbar-nav .open .dropdown-menu > li > a,
   .navbar-nav .open .dropdown-menu .dropdown-header {
     padding: 5px 15px 5px 26px;

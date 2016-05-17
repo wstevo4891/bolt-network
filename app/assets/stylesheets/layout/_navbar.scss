@@ -6,22 +6,26 @@
   img {
     width: 120px;
     height: 32px;
-    margin-left: 2.7em;
+    margin-left: 5%;
 
     @include bp-small {
       width: 180px;
-      margin-left: 2.45em;
+      margin-left: 4%;
+    }
+
+    @include bp-medium {
+
     }
 
     @include bp-tablet {
-      margin-left: 0.6em;
+      margin-left: -4%;
     }
 
     @include bp-large {
       width: 200px;
       height: auto;
       margin-top: -3px;
-      margin-left: 1em;
+      margin-left: 9%;
     }
   }
 }
@@ -86,6 +90,10 @@
   a:hover, a:focus {
     background-color: rgba(0,0,0,0);
   }
+}
+
+.browse-link {
+  margin-left: 14em;
 }
 
 .empty {

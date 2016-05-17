@@ -3,9 +3,10 @@
 =======================================*/
 
 .genres-container {
-	@extend .carousels-container;
+	width: 1380px;
 	margin-top: 7em;
 	text-align: left;
+	overflow-x: visible;
 
 	h2 {
 		color: white;
