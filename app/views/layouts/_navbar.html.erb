@@ -10,13 +10,14 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <%= image_tag("bolt-network.svg") %>
+        <%= image_tag("#", id: "fake-logo") %>
+        <%= image_tag("bolt-network.svg", id: "logo") %>
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-left">
         <li class="dropdown visible-xs mobile-search">
           <span>Search</span>
           <div class="searchMobile">
@@ -28,7 +29,7 @@
           </div>
         </li>
         <li class="dropdown" id="nav-item">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle browse-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse <span class="caret"></span></a>
           <ul class="dropdown-menu" id="browse-menu">
             <% @genres.each do |genre| %>
               <li><%= link_to "#{genre.name}", genre_path(genre) %></li>

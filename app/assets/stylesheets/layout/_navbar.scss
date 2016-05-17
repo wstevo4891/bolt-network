@@ -4,13 +4,15 @@
 
 .navbar-brand {
   img {
+    position: absolute;
+    left: 0;
     width: 120px;
     height: 32px;
-    margin-left: 5%;
+    margin-left: 5.4%;
 
     @include bp-small {
       width: 180px;
-      margin-left: 4%;
+      margin-left: 4.6%;
     }
 
     @include bp-medium {
@@ -18,16 +20,30 @@
     }
 
     @include bp-tablet {
-      margin-left: -4%;
+      margin-left: 4.7%;
     }
 
     @include bp-large {
       width: 200px;
       height: auto;
       margin-top: -3px;
-      margin-left: 9%;
+      margin-left: 5%;
     }
   }
+}
+
+.navbar-left {
+  @include bp-large {
+    margin-left: 13em;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 22%;
+  }
+}
+
+.browse-link {
+  margin-left: 14em;
 }
 
 .jumbotron-header {
@@ -90,10 +106,6 @@
   a:hover, a:focus {
     background-color: rgba(0,0,0,0);
   }
-}
-
-.browse-link {
-  margin-left: 14em;
 }
 
 .empty {
