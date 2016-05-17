@@ -1,66 +1,45 @@
-<!--
-<div class="row">
-  <div class="col-xs-12">
-    <% @movies.each do |movie| %>
-      <div class="poster">
-        <%= image_tag(movie.photo, class: "img-responsive") %>
-      </div>
+<% @genres.each do |genre| %>
+  <% arr = [] %>
+  <% movie_ids = [] %>
+  <% @movies.each do |movie| %>
+    <% for i in movie.genre_ids %>
+      <% if i == genre.id %>
+        <% arr.push(movie.photo) %>
+        <% movie_ids.push(movie.id) %>
+      <% end %>
     <% end %>
+  <% end %>
+  <div class="row">
+  <% if genre.name == "Action" %>
+    <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+  <% else %>
+    <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+  <% end %>
   </div>
-</div>
-
-<div class="slider-action">
-  <span class="glyphicon glyphicon-menu-left slider-arrow">
-    <p class="sr-only">Go to previous slide</p>
-  </span>
-
-  <span class="glyphicon glyphicon-menu-right slider-arrow">
-    <p class="sr-only">Go to next slide</p>
-  </span>
-
-  <div id="slide-info">
-    <img src="pirates-logo.png" class="img-responsive" id="movie-logo"/> 
-
-    <div id="movie-content">
-      <span id="year">2003</span>
-      <span id="rating">PG-13</span>
-      <span id="movie-length">2h 23min</span>
-
-      <p id="blurb">
-        A sword-handy blacksmith teams up with a clever yet eccentric outlaw to rescue his love from a crew of undead pirates.
-      </p>
-      
-      <div id="slide-buttons">
-        <a href="/movies/1" class="btn-blue" id="play"><i class="fa fa-play"></i>PLAY</a>
-        <a href="#" class="btn-clear"><i class="fa fa-plus"></i>MY LIST</a>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-<div class="row">
-  <div class="col-xs-12">
-		<% @genres.each do |genre| %>
-		  <div class="row">
-        <% if genre.name == "Action" %>
-          <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
-        <% else %>
-          <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+  <div class="slider-<%= genre.name %> carousel">
+    <ul>
+    <% i = 0 %>
+    <% while arr[i] %>
+      <% count = 0 %>
+      <li id="auto-width">
+      <% while count < 6 %>
+        <% @movie = Movie.find_by(id: movie_ids[i]) %>
+        <% if i < arr.length - 1 %>
+          <div class="poster">
+            <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+          </div>
+          <% i += 1 %>
+          <% count += 1 %>
+        <% elsif i == arr.length - 1 %>
+          <div class="poster">
+            <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+          </div>
+          <% i += 1 %>
+          <% break %>
         <% end %>
-      </div>
-
-			<% @movies.each do |movie| %>
-			  <% for i in movie.genre_ids %>
-			    <% if i == genre.id %>
-
-					  <div class="poster">
-			        <%= link_to image_tag(movie.photo), movie_path(movie) %>
-					  </div>
-
-					<% end %>
-				<% end %>
-			<% end %>
-		<% end %>
+      <% end %>
+      </li>
+    <% end %>
+    </ul>
   </div>
-</div>
+<% end %>

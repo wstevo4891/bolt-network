@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
   
   def home
-  	access_data
+    access_data
   end
 
   def about

@@ -61,6 +61,15 @@ slider_main = ->
     return
   $(window).ready slider_resize
   $(window).resize slider_resize
+
+  $('.slider-Action').unslider()
+  $('.slider-Animation').unslider()
+  $('.slider-Comedy').unslider()
+  $('.slider-Drama').unslider()
+  $('.slider-Family').unslider()
+  $('.slider-Fantasy').unslider()
+  $('.slider-Horror').unslider()
+  $('.slider-Sci-Fi').unslider()
   return
 
 $(document).ready slider_main

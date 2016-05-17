@@ -11,12 +11,12 @@ def seed_image(file_name)
 end
 
 Genre.create!( name: 'Action' )     # 1
-Genre.create!( name: 'Romance' )    # 2
-Genre.create!( name: 'Animation' )  # 3
-Genre.create!( name: 'Comedy' )     # 4
-Genre.create!( name: 'Drama' )      # 5
-Genre.create!( name: 'Family' )     # 6
-Genre.create!( name: 'Fantasy' )    # 7
+Genre.create!( name: 'Comedy' )     # 2
+Genre.create!( name: 'Drama' )      # 3
+Genre.create!( name: 'Animation' )  # 4
+Genre.create!( name: 'Family' )     # 5
+Genre.create!( name: 'Fantasy' )    # 6
+Genre.create!( name: 'Romance' )    # 7
 Genre.create!( name: 'Horror' )     # 8
 Genre.create!( name: 'Sci-Fi' )     # 9
 
@@ -37,7 +37,7 @@ Movie.create!(
 	photo: seed_image('hp7-poster.jpg'),
 	summary: 'Harry, Ron and Hermione search for Voldemort\'s remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.',
 	rating: 96,
-	genre_ids: [1, 7]
+	genre_ids: [1, 6]
 )
 
 
@@ -47,7 +47,7 @@ Movie.create!(
 	photo: seed_image('frozen-poster.png'),
 	summary: 'When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.',
 	rating: 89,
-	genre_ids: [3, 6, 7]
+	genre_ids: [2, 5, 6]
 )
 
 
@@ -77,7 +77,7 @@ Movie.create!(
 	photo: seed_image('return-of-the-king-poster.jpg'),
 	summary: 'Gandalf and Aragorn lead the World of Men against Sauron\'s army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.',
 	rating: 95,
-	genre_ids: [1, 5, 7]
+	genre_ids: [1, 3, 6]
 )
 
 
@@ -97,7 +97,7 @@ Movie.create!(
 	photo: seed_image('the-dark-knight-poster.jpg'),
 	summary: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.',
 	rating: 94,
-	genre_ids: [1, 5]
+	genre_ids: [1, 3]
 )
 
 
@@ -107,7 +107,7 @@ Movie.create!(
 	photo: seed_image('pirates-curse-of-the-black-pearl-poster.jpg'),
 	summary: 'Blacksmith Will Turner teams up with eccentric pirate "Captain" Jack Sparrow to save his love, the governor\'s daughter, from Jack\'s former pirate allies, who are now undead.',
 	rating: 79,
-	genre_ids: [1, 4]
+	genre_ids: [1, 2]
 )
 
 
@@ -117,7 +117,7 @@ Movie.create!(
 	photo: seed_image('toy-story-3-poster.jpg'),
 	summary: 'The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it\'s up to Woody to convince the other toys that they weren\'t abandoned and to return home.',
 	rating: 99,
-	genre_ids: [3, 4, 6]
+	genre_ids: [2, 4, 5]
 )
 
 

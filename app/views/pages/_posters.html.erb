@@ -1,4 +1,3 @@
-<!--
 <% i = 0 %>
 <% arr = [] %>
 <% movies = [] %>
@@ -43,14 +42,3 @@
     <% movieIds = [] %>
   <% end %>
 <% end %>
--->
-
-<div class="row">
-  <div class="col-xs-12">
-    <% @movies.each do |movie| %>
-      <div class="poster">
-        <%= link_to image_tag(movie.photo, class: "img-responsive"), movie_path(movie.id) %>
-      </div>
-    <% end %>
-  </div>
-</div>

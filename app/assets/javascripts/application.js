@@ -16,5 +16,6 @@
 //= require bootstrap
 //= require select2
 //= require vegas
+//= require unslider-min
 //= require turbolinks
 //= require_tree .
