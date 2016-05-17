@@ -37,6 +37,10 @@ slider_main = ->
     $('#slide-buttons a').css 'font-size', total_width * 0.012
     return
 
+  
+  # BANNER SLIDER
+  #========================================
+
   $('.slider-frame').vegas
     transitionDuration: 300
     slides: [
@@ -51,26 +55,59 @@ slider_main = ->
       }
     ]
   $('.slider-frame').vegas 'pause'
-  $('.glyphicon-menu-right').on 'click', ->
+
+  $('.slider-next').on 'click', ->
     $('.slider-frame').vegas 'next'
     change_delay = setTimeout(change_info, 300)
     return
-  $('.glyphicon-menu-left').on 'click', ->
+
+  $('.slider-prev').on 'click', ->
     $('.slider-frame').vegas 'previous'
     change_delay = setTimeout(change_info, 300)
     return
+
   $(window).ready slider_resize
   $(window).resize slider_resize
 
-  $('.slider-Action').unslider()
-  $('.slider-Animation').unslider()
-  $('.slider-Comedy').unslider()
-  $('.slider-Drama').unslider()
-  $('.slider-Family').unslider()
-  $('.slider-Fantasy').unslider()
-  $('.slider-Romance').unslider()
-  $('.slider-Horror').unslider()
-  $('.slider-Sci-Fi').unslider()
+
+  # GENRE CAROUSELS
+  #=======================================
+
+  $('.slider-Action').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Animation').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Comedy').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Drama').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Family').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Fantasy').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Romance').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Horror').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+
+  $('.slider-Sci-Fi').unslider arrows:
+    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
   return
 
 $(document).ready slider_main

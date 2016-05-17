@@ -2,6 +2,11 @@
 /* UNSLIDER MODS 
 =============================================*/
 
+.unslider, .unslider-horizontal {
+	overflow: visible !important;
+	position: relative;
+}
+
 .unslider .unslider-horizontal .unslider-carousel li#auto-width {
 	width: auto !important;
 }
@@ -10,8 +15,35 @@
 	width: 80%;
 }
 
+.unslider-arrow, .next, .prev {
+  position: absolute;
+  top: 3em;
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+  	@include transform(scale(1.3));
+  }
+}
+
+.prev {
+	left: -4em !important;
+}
+
 .next {
-	left: 77% !important;
+	left: 81% !important;
+	right: 0 !important;
+	&:hover {
+		@include transform(translateX(-0.3em));
+	}
 } 
+
+.unslider-arrow i {
+	font-size: 4em !important;
+	color: white;
+}
+
+
+
 
 

@@ -1,38 +1,38 @@
 <% @genres.each do |genre| %>
   <div class="row">
-  <% if genre.name == "Action" %>
-    <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
-  <% else %>
-    <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
-  <% end %>
-  </div>
-  <div class="slider-<%= genre.name %> carousel">
-    <ul>
-      <% arr = [] %>
-      <% movie_ids = [] %>
-      <% carousel_data(@movies, genre, arr, movie_ids) %>
-      <% i = 0 %>
-      <% while arr[i] %>
-        <% count = 0 %>
-        <li id="auto-width">
-        <% while count < 6 %>
-          <% @movie = Movie.find_by(id: movie_ids[i]) %>
-          <% if i < arr.length - 1 %>
-            <div class="poster">
-              <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-            </div>
-            <% i += 1 %>
-            <% count += 1 %>
-          <% elsif i == arr.length - 1 %>
-            <div class="poster">
-              <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-            </div>
-            <% i += 1 %>
-            <% break %>
+    <% if genre.name == "Action" %>
+      <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+    <% else %>
+      <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+    <% end %>
+    <div class="slider-<%= genre.name %> carousel">
+      <ul>
+        <% arr = [] %>
+        <% movie_ids = [] %>
+        <% carousel_data(@movies, genre, arr, movie_ids) %>
+        <% i = 0 %>
+        <% while arr[i] %>
+          <% count = 0 %>
+          <li id="auto-width">
+          <% while count < 6 %>
+            <% @movie = Movie.find_by(id: movie_ids[i]) %>
+            <% if i < arr.length - 1 %>
+              <div class="poster">
+                <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+              </div>
+              <% i += 1 %>
+              <% count += 1 %>
+            <% elsif i == arr.length - 1 %>
+              <div class="poster">
+                <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+              </div>
+              <% i += 1 %>
+              <% break %>
+            <% end %>
           <% end %>
+          </li>
         <% end %>
-        </li>
-      <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
 <% end %>

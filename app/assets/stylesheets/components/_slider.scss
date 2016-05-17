@@ -84,22 +84,22 @@
   }
 }
 
-.glyphicon-menu-left {
+.slider-prev {
   float: left;
   margin-left: 4%;
 }
 
-.glyphicon-menu-right {
+.slider-next {
   float: right;
   margin-right: 4%;
 }
 
 @media screen and (min-width: 640px) {
-  .glyphicon-menu-left {
-    margin-left: 10px;
+  .slider-prev {
+    margin-left: 1.5%;
   }
 
-  .glyphicon-menu-right {
-    margin-right: 10px;
+  .slider-next {
+    margin-right: 1.5%;
   }
 }
