@@ -5,12 +5,12 @@ class PagesController < ApplicationController
   	@genres = Genre.all
   	@movies = Movie.all
   end
-  
-  def home
+
+  def about
     access_data
   end
 
-  def about
-  	access_data
+  def home
+    access_data
   end
 end

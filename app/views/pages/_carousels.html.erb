@@ -1,14 +1,4 @@
 <% @genres.each do |genre| %>
-  <% arr = [] %>
-  <% movie_ids = [] %>
-  <% @movies.each do |movie| %>
-    <% for i in movie.genre_ids %>
-      <% if i == genre.id %>
-        <% arr.push(movie.photo) %>
-        <% movie_ids.push(movie.id) %>
-      <% end %>
-    <% end %>
-  <% end %>
   <div class="row">
   <% if genre.name == "Action" %>
     <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
@@ -18,28 +8,31 @@
   </div>
   <div class="slider-<%= genre.name %> carousel">
     <ul>
-    <% i = 0 %>
-    <% while arr[i] %>
-      <% count = 0 %>
-      <li id="auto-width">
-      <% while count < 6 %>
-        <% @movie = Movie.find_by(id: movie_ids[i]) %>
-        <% if i < arr.length - 1 %>
-          <div class="poster">
-            <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-          </div>
-          <% i += 1 %>
-          <% count += 1 %>
-        <% elsif i == arr.length - 1 %>
-          <div class="poster">
-            <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-          </div>
-          <% i += 1 %>
-          <% break %>
+      <% arr = [] %>
+      <% movie_ids = [] %>
+      <% carousel_data(@movies, genre, arr, movie_ids) %>
+      <% i = 0 %>
+      <% while arr[i] %>
+        <% count = 0 %>
+        <li id="auto-width">
+        <% while count < 6 %>
+          <% @movie = Movie.find_by(id: movie_ids[i]) %>
+          <% if i < arr.length - 1 %>
+            <div class="poster">
+              <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+            </div>
+            <% i += 1 %>
+            <% count += 1 %>
+          <% elsif i == arr.length - 1 %>
+            <div class="poster">
+              <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+            </div>
+            <% i += 1 %>
+            <% break %>
+          <% end %>
         <% end %>
+        </li>
       <% end %>
-      </li>
-    <% end %>
     </ul>
   </div>
 <% end %>

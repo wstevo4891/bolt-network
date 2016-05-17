@@ -68,6 +68,7 @@ slider_main = ->
   $('.slider-Drama').unslider()
   $('.slider-Family').unslider()
   $('.slider-Fantasy').unslider()
+  $('.slider-Romance').unslider()
   $('.slider-Horror').unslider()
   $('.slider-Sci-Fi').unslider()
   return
