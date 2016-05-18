@@ -37,7 +37,7 @@
   }
 }
 
-#searchIcon, #closeIcon {
+#searchIcon, #closeIcon, #closeIcon-mobile {
   color: white;
   padding: 8px;
 }
@@ -47,7 +47,7 @@
   font-size: 18px;
 }
 
-#closeIcon {
+#closeIcon-mobile, #closeIcon {
   display: none;
   float: right;
   margin-top: -37px;

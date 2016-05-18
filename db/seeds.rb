@@ -921,7 +921,27 @@ Movie.create!(
   genre_ids: [3,9]
 )
 
+# MOVIE ID 81
+Movie.create!(
+	title: "Poltergeist",
+	photo: seed_image('poltergeist-poster.jpg'),
+	year: 1982,
+	rating: 'PG',
+	length: '1h 54min',
+	summary: "A family's home is haunted by a host of ghosts. When their daughter is taken over to the other side, they hire a medium to bring her back.",
+  genre_ids: [7,9]
+)
 
+# MOVIE ID 82
+Movie.create!(
+	title: "Poltergeist",
+	photo: seed_image('poltergeist-poster.jpg'),
+	year: 1982,
+	rating: 'PG',
+	length: '1h 54min',
+	summary: "A family's home is haunted by a host of ghosts. When their daughter is taken over to the other side, they hire a medium to bring her back.",
+  genre_ids: [7,9]
+)
 
 
 
