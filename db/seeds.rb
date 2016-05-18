@@ -426,19 +426,500 @@ Movie.create!(
   genre_ids: [3,6]
 )
 
+#MOVIE ID 36
+Movie.create!(
+	title: "Fight Club",
+	photo: seed_image('fight-club-poster.jpg'),
+	year: 1999,
+	rating: 'R',
+	length: '2h 19min',
+	summary: "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soap maker, forming an underground fight club that evolves into something much, much more...",
+  genre_ids: [3]
+)
 
+#MOVIE ID 37
+Movie.create!(
+	title: "The Lion King",
+	photo: seed_image('lion-king-poster.jpg'),
+	year: 1994,
+	rating: 'G',
+	length: '1h 29min',
+	summary: "Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble.",
+  genre_ids: [4]
+)
 
+#MOVIE ID 38
+Movie.create!(
+	title: "Ratatouille",
+	photo: seed_image('ratatouille-poster.jpg'),
+	year: 2007,
+	rating: 'G',
+	length: '1h 51min',
+	summary: "A rat who can cook makes an unusual alliance with a young kitchen worker at a famous restaurant.",
+  genre_ids: [2,4,5]
+)
 
+#MOVIE ID 39
+Movie.create!(
+	title: "Finding Nemo",
+	photo: seed_image('finding-nemo-poster.jpg'),
+	year: 2003,
+	rating: 'G',
+	length: '1h 40min',
+	summary: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+  genre_ids: [2,4,5]
+)
 
+#MOVIE ID 40
+Movie.create!(
+	title: "Spirited Away",
+	photo: seed_image('spirited-away-poster.jpg'),
+	year: 2001,
+	rating: 'PG',
+	length: '2h 5min',
+	summary: "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+  genre_ids: [4,5]
+)
 
+#MOVIE ID 41
+Movie.create!(
+	title: "Shrek 2",
+	photo: seed_image('shrek-2-poster.jpg'),
+	year: 2004,
+	rating: 'PG',
+	length: '1h 33min',
+	summary: "Princess Fiona's parents invite her and Shrek to dinner to celebrate her marriage. If only they knew the newlyweds were both ogres.",
+  genre_ids: [2,4,5]
+)
 
+#MOVIE ID 42
+Movie.create!(
+	title: "The Incredibles",
+	photo: seed_image('the-incredibles-poster.jpg'),
+	year: 2004,
+	rating: 'PG',
+	length: '1h 55min',
+	summary: "A family of undercover superheroes, while trying to live the quiet suburban life, are forced into action to save the world.",
+  genre_ids: [1,4,5]
+)
 
+#MOVIE ID 43
+Movie.create!(
+	title: "Aladdin",
+	photo: seed_image('aladdin-poster.jpg'),
+	year: 1992,
+	rating: 'G',
+	length: '1h 30min',
+	summary: "When a street urchin vies for the love of a beautiful princess, he uses a genie's magic power to make himself off as a prince in order to marry her.",
+  genre_ids: [2,4,5]
+)
 
+#MOVIE ID 44
+Movie.create!(
+	title: "The Nightmare Before Christmas",
+	photo: seed_image('nightmare-before-christmas-poster.jpg'),
+	year: 1993,
+	rating: 'PG',
+	length: '1h 16min',
+	summary: "Jack Skellington, king of Halloween Town, discovers Christmas Town, but doesn't quite understand the concept.",
+  genre_ids: [4,5,7]
+)
 
+#MOVIE ID 45
+Movie.create!(
+	title: "E.T.",
+	photo: seed_image('et-poster.jpg'),
+	year: 1982,
+	rating: 'PG',
+	length: '1h 55min',
+	summary: "A troubled child summons the courage to help a friendly alien escape Earth and return to his home-world.",
+  genre_ids: [5]
+)
 
+#MOVIE ID 46
+Movie.create!(
+	title: "Explorers",
+	photo: seed_image('explorers-poster.jpg'),
+	year: 1985,
+	rating: 'PG',
+	length: '1h 49min',
+	summary: "A boy obsessed with 50s sci-fi movies about aliens has a recurring dream about a blueprint of some kind, which he draws for his inventor friend. With the help of a third kid, they follow it and build themselves a spaceship.",
+  genre_ids: [1,5]
+)
 
+#MOVIE ID 47
+Movie.create!(
+	title: "The Sandlot",
+	photo: seed_image('sandlot-poster.jpg'),
+	year: 1993,
+	rating: 'PG',
+	length: '1h 41min',
+	summary: "A new kid in town is taken under the wing of a young baseball prodigy and his team in this coming of age movie set in the summer of 1962. Together, they get themselves into many adventures involving rival teams, lifeguards, and a vicious dog.",
+  genre_ids: [2,5]
+)
 
+#MOVIE ID 48
+Movie.create!(
+	title: "The Goonies",
+	photo: seed_image('goonies-poster.jpg'),
+	year: 1985,
+	rating: 'PG',
+	length: '1h 54min',
+	summary: "In order to save their home from foreclosure, a group of misfits set out to find a pirate's ancient treasure.",
+  genre_ids: [1,2,5]
+)
 
+#MOVIE ID 49
+Movie.create!(
+	title: "Love Actually",
+	photo: seed_image('love-actually-poster.jpg'),
+	year: 2003,
+	rating: 'R',
+	length: '2h 15min',
+	summary: "Follows the lives of eight very different couples in dealing with their love lives in various loosely interrelated tales all set during a frantic month before Christmas in London, England.",
+  genre_ids: [2,3,6]
+)
+
+#MOVIE ID 50
+Movie.create!(
+	title: "When Harry Met Sally",
+	photo: seed_image('when-harry-met-sally-poster.jpg'),
+	year: 1989,
+	rating: 'R',
+	length: '1h 36min',
+	summary: "Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship.",
+  genre_ids: [2,3,6]
+)
+
+#MOVIE ID 51
+Movie.create!(
+	title: "Gone with the Wind",
+	photo: seed_image('gone-with-the-wind-poster.jpg'),
+	year: 1939,
+	rating: 'G',
+	length: '3h 58min',
+	summary: "A manipulative Southern belle carries on a turbulent affair with a blockade runner during the American Civil War.",
+  genre_ids: [3,6]
+)
+
+#MOVIE ID 52
+Movie.create!(
+	title: "Dirty Dancing",
+	photo: seed_image('dirty-dancing-poster.jpg'),
+	year: 1987,
+	rating: 'PG-13',
+	length: '1h 40min',
+	summary: 'Spending the summer at a Catskills resort with her family, Frances "Baby" Houseman falls in love with the camp\'s dance instructor, Johnny Castle.',
+  genre_ids: [3,6]
+)
+
+#MOVIE ID 53
+Movie.create!(
+	title: "Titanic",
+	photo: seed_image('titanic-poster.jpg'),
+	year: 1997,
+	rating: 'PG-13',
+	length: '3h 14min',
+	summary: "A seventeen-year-old aristocrat falls in love with a kind, but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+  genre_ids: [3,6]
+)
+
+#MOVIE ID 54
+Movie.create!(
+	title: "Amelie",
+	photo: seed_image('amelie-poster.jpg'),
+	year: 2001,
+	rating: 'R',
+	length: '2h 2min',
+	summary: "Amelie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.",
+  genre_ids: [2,6]
+)
+
+#MOVIE ID 55
+Movie.create!(
+	title: "Before Sunrise",
+	photo: seed_image('before-sunrise-poster.jpg'),
+	year: 1995,
+	rating: 'R',
+	length: '1h 45min',
+	summary: "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
+  genre_ids: [3,6]
+)
+
+#MOVIE ID 56
+Movie.create!(
+	title: "Before Sunrise",
+	photo: seed_image('before-sunrise-poster.jpg'),
+	year: 1995,
+	rating: 'R',
+	length: '1h 45min',
+	summary: "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
+  genre_ids: [3,6]
+)
+
+#MOVIE ID 57
+Movie.create!(
+	title: "Breakfast at Tiffany's",
+	photo: seed_image('breakfast-at-tiffanys-poster.jpg'),
+	year: 1961,
+	rating: 'NR',
+	length: '1h 55min',
+	summary: "A young New York socialite becomes interested in a young man who has moved into her apartment building.",
+  genre_ids: [2,3,6]
+)
+
+#MOVIE ID 58
+Movie.create!(
+	title: "Willow",
+	photo: seed_image('willow-poster.jpg'),
+	year: 1988,
+	rating: 'PG',
+	length: '2h 6min',
+	summary: "A reluctant dwarf must play a critical role in protecting a special baby from an evil queen.",
+  genre_ids: [1,7]
+)
+
+#MOVIE ID 59
+Movie.create!(
+	title: "Time Bandits",
+	photo: seed_image('time-bandits-poster.jpg'),
+	year: 1981,
+	rating: 'PG',
+	length: '1h 50min',
+	summary: "A young boy accidentally joins a band of dwarves as they jump from era to era looking for treasure to steal.",
+  genre_ids: [1,2,7]
+)
+
+#MOVIE ID 60
+Movie.create!(
+	title: "The Wizard of Oz",
+	photo: seed_image('wizard-of-oz-poster.jpg'),
+	year: 1939,
+	rating: 'G',
+	length: '1h 42min',
+	summary: "Dorothy Gale is swept away to a magical land in a tornado and embarks on a quest to see the Wizard who can help her return home.",
+  genre_ids: [5,7]
+)
+
+# MOVIE ID 61
+Movie.create!(
+	title: "The NeverEnding Story",
+	photo: seed_image('neverending-story-poster.jpg'),
+	year: 1984,
+	rating: 'PG',
+	length: '1h 42min',
+	summary: "A troubled boy dives into a wonderous fantasy world through the pages of a mysterious book.",
+  genre_ids: [1,5,7]
+)
+
+# MOVIE ID 62
+Movie.create!(
+	title: "Star Wars",
+	photo: seed_image('star-wars-poster.jpg'),
+	year: 1977,
+	rating: 'PG',
+	length: '2h 1min',
+	summary: "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the galaxy from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.",
+  genre_ids: [1,7,8]
+)
+
+# MOVIE ID 63
+Movie.create!(
+	title: "Alien",
+	photo: seed_image('alien-poster.jpg'),
+	year: 1979,
+	rating: 'R',
+	length: '1h 57min',
+	summary: "After a space merchant vessel perceives an unknown transmission as distress call, their landing on the source planet finds one of the crew attacked by a mysterious lifeform. Continuing their journey back to Earth with the attacked crew having recovered and the critter deceased, they soon realize that its life cycle has merely begun.",
+  genre_ids: [8,9]
+)
+
+# MOVIE ID 64
+Movie.create!(
+	title: "Blade Runner",
+	photo: seed_image('blade-runner-poster.jpg'),
+	year: 1982,
+	rating: 'R',
+	length: '1h 57min',
+	summary: "A blade runner must pursue and try to terminate four replicants who stole a ship in space and have returned to Earth to find their creator.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 65
+Movie.create!(
+	title: "The Terminator",
+	photo: seed_image('terminator-poster.jpg'),
+	year: 1984,
+	rating: 'R',
+	length: '1h 47min',
+	summary: "A human-looking indestructible cyborg is sent from 2029 to 1984 to assassinate a waitress, whose unborn son will lead humanity in a war against the machines, while a soldier from that war is sent to protect her at all costs.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 66
+Movie.create!(
+	title: "The Matrix",
+	photo: seed_image('the-matrix-poster.jpg'),
+	year: 1999,
+	rating: 'R',
+	length: '2h 16min',
+	summary: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 67
+Movie.create!(
+	title: "2001: A Space Odyssey",
+	photo: seed_image('2001-poster.jpg'),
+	year: 1968,
+	rating: 'G',
+	length: '2h 29min',
+	summary: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 68
+Movie.create!(
+	title: "District 9",
+	photo: seed_image('district9-poster.jpg'),
+	year: 2009,
+	rating: 'R',
+	length: '1h 52min',
+	summary: "An extraterrestrial race forced to live in slum-like conditions on Earth suddenly finds a kindred spirit in a government agent who is exposed to their biotechnology.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 69
+Movie.create!(
+	title: "Serenity",
+	photo: seed_image('serenity-poster.jpg'),
+	year: 2005,
+	rating: 'PG-13',
+	length: '1h 59min',
+	summary: "The crew of the ship Serenity tries to evade an assassin sent to recapture one of their number who is telepathic.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 70
+Movie.create!(
+	title: "Inception",
+	photo: seed_image('inception-poster.jpg'),
+	year: 2010,
+	rating: 'PG-13',
+	length: '2h 28min',
+	summary: "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 71
+Movie.create!(
+	title: "Star Trek II: The Wrath of Khan",
+	photo: seed_image('star-trek-2-poster.jpg'),
+	year: 1982,
+	rating: 'PG',
+	length: '1h 53min',
+	summary: "With the assistance of the Enterprise crew, Admiral Kirk must stop an old nemesis, Khan Noonien Singh, from using the life-generating Genesis Device as the ultimate weapon.",
+  genre_ids: [1,8]
+)
+
+# MOVIE ID 72
+Movie.create!(
+	title: "The Shining",
+	photo: seed_image('the-shining-poster.jpg'),
+	year: 1980,
+	rating: 'R',
+	length: '2h 26min',
+	summary: "A family heads to an isolated hotel for the winter where an evil and spiritual presence influences the father into violence, while his psychic son sees horrific forebodings from the past and of the future.",
+  genre_ids: [3,9]
+)
+
+# MOVIE ID 73
+Movie.create!(
+	title: "Halloween",
+	photo: seed_image('halloween-poster.jpg'),
+	year: 1978,
+	rating: 'R',
+	length: '1h 31min',
+	summary: "On Halloween night of 1963, six-year-old Michael Myers stabbed his sister to death. After sitting in a mental hospital for 15 years, Myers escapes and returns to Haddonfield to kill.",
+  genre_ids: [9]
+)
+
+# MOVIE ID 74
+Movie.create!(
+	title: "The Silence of the Lambs",
+	photo: seed_image('silence-of-the-lambs-poster.jpg'),
+	year: 1991,
+	rating: 'R',
+	length: '1h 58min',
+	summary: "A young F.B.I. cadet must confide in an incarcerated and manipulative killer to receive his help on catching another serial killer who skins his victims.",
+  genre_ids: [3,9]
+)
+
+# MOVIE ID 75
+Movie.create!(
+	title: "Psycho",
+	photo: seed_image('psycho-poster.jpg'),
+	year: 1960,
+	rating: 'R',
+	length: '1h 49min',
+	summary: "A Phoenix secretary steals $40,000 from her employer's client, goes on the run and checks into a remote motel run by a young man under the domination of his mother.",
+  genre_ids: [9]
+)
+
+# MOVIE ID 76
+Movie.create!(
+	title: "The Babadook",
+	photo: seed_image('the-babadook-poster.jpg'),
+	year: 2014,
+	rating: 'NR',
+	length: '1h 33min',
+	summary: "A single mother, plagued by the violent death of her husband, battles with her son's fear of a monster lurking in the house, but soon discovers a sinister presence all around her.",
+  genre_ids: [3,9]
+)
+
+# MOVIE ID 77
+Movie.create!(
+	title: "The Exorcist",
+	photo: seed_image('the-exorcist-poster.jpg'),
+	year: 1973,
+	rating: 'R',
+	length: '2h 2min',
+	summary: "When a teenage girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her daughter.",
+  genre_ids: [9]
+)
+
+# MOVIE ID 78
+Movie.create!(
+	title: "The Ring",
+	photo: seed_image('the-ring-poster.jpg'),
+	year: 2002,
+	rating: 'PG-13',
+	length: '1h 55min',
+	summary: "A journalist must investigate a mysterious videotape which seems to cause the death of anyone in a week of viewing it.",
+  genre_ids: [9]
+)
+
+# MOVIE ID 79
+Movie.create!(
+	title: "The Thing",
+	photo: seed_image('the-thing-poster.jpg'),
+	year: 1982,
+	rating: 'R',
+	length: '1h 49min',
+	summary: "It's the first week of winter in 1982. An American Research Base is greeted by an alien force, that can assimilate anything it touches. It's up to the members to stay alive, and be sure of who is human, and who has become one of the Things.",
+  genre_ids: [8,9]
+)
+
+# MOVIE ID 80
+Movie.create!(
+	title: "The Orphanage",
+	photo: seed_image('the-orphanage-poster.jpg'),
+	year: 2007,
+	rating: 'R',
+	length: '1h 45min',
+	summary: "A woman brings her family back to her childhood home, which used to be an orphanage for handicapped children. Before long, her son starts to communicate with an invisible new friend.",
+  genre_ids: [3,9]
+)
 
 
 
