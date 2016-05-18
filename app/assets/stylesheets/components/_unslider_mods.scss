@@ -2,6 +2,10 @@
 /* UNSLIDER MODS 
 =============================================*/
 
+.unslider {
+	width: 100vw;
+}
+
 .unslider, .unslider-horizontal {
 	overflow: visible !important;
 	position: relative;
@@ -19,6 +23,7 @@
 		position: absolute;
 		top: -29px;
 		left: 80%;
+		display: none;
 
 		li {
 			width: 15px;
@@ -38,19 +43,20 @@
   top: 3em;
   z-index: 20;
   cursor: pointer;
+  font-size: small;
   transition: all 0.2s ease;
   &:hover {
   	@include transform(scale(1.3));
   }
 }
 
-.prev {
-	left: -4em !important;
+.unslider-arrow.prev {
+	left: -4.8% !important;
 }
 
-.next {
-	left: 81% !important;
-	right: 0 !important;
+.unslider-arrow.next {
+	left: auto;
+	right: 5.5%;
 	&:hover {
 		@include transform(translateX(-0.3em));
 	}

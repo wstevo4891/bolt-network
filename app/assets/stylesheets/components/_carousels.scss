@@ -4,10 +4,10 @@
 
 .carousels-container {
   width: 1380px;
-  margin-left: 5%;
+  margin-left: 4%;
   overflow-x: visible;
 
-  .row div .row {
+  .row > div > .row {
     margin-left: 0.1em;
     i {
       display: none;
@@ -41,7 +41,7 @@
 .poster {
   display: inline-block;
   position: relative;
-  margin: 0.5em 0.05em 3em;
+  margin: 0 0.05em 1em;
   background:transparent; 
   border: none;
   padding: 0;

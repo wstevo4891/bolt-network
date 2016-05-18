@@ -8,26 +8,22 @@
     left: 0;
     width: 120px;
     height: 32px;
-    margin-left: 5.4%;
+    margin-left: 4.5%;
 
     @include bp-small {
       width: 180px;
-      margin-left: 4.6%;
-    }
-
-    @include bp-medium {
-
+      margin-left: 3.7%;
     }
 
     @include bp-tablet {
-      margin-left: 4.7%;
+      margin-left: 3.8%;
     }
 
     @include bp-large {
       width: 200px;
       height: auto;
       margin-top: -3px;
-      margin-left: 5%;
+      margin-left: 4%;
     }
   }
 }
@@ -40,10 +36,6 @@
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     margin-left: 22%;
   }
-}
-
-.browse-link {
-  margin-left: 14em;
 }
 
 .jumbotron-header {
