@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 def seed_image(file_name)
-  File.open(File.join(Rails.root, "/public/#{file_name}"))
+  File.open(File.join(Rails.root, "/app/assets/images/#{file_name}"))
 end
 
 Genre.create!( name: 'Action' )     # 1
