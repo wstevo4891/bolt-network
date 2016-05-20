@@ -21,7 +21,6 @@ Genre.create!( name: 'Sci-Fi' )     # 8
 Genre.create!( name: 'Horror' )     # 9
 
 
-
 # MOVIE ID 1
 Movie.create!(
 	title: 'The Avengers',
@@ -33,7 +32,6 @@ Movie.create!(
 	tomato_meter: 92,
 	genre_ids: [1]
 )
-
 
 # MOVIE ID 2
 Movie.create!(
@@ -47,7 +45,6 @@ Movie.create!(
 	genre_ids: [1,7]
 )
 
-
 # MOVIE ID 3
 Movie.create!(
 	title: 'Frozen',
@@ -59,7 +56,6 @@ Movie.create!(
 	tomato_meter: 89,
 	genre_ids: [4,5]
 )
-
 
 # MOVIE ID 4
 Movie.create!(
@@ -73,19 +69,17 @@ Movie.create!(
 	genre_ids: [1]
 )
 
-
 # MOVIE ID 5
 Movie.create!(
-	title: 'Transformers: Dark of the Moon',
-	photo: seed_image('transformers-3-poster.jpg'),
-	year: 2011,
+	title: 'Transformers: Age of Extinction',
+	photo: seed_image('transformers-4-poster.jpg'),
+	year: 2014,
 	rating: 'PG-13',
-	length: '2h 34min',
-	summary: 'The Autobots learn of a Cybertronian spacecraft hidden on the moon, and race against the Decepticons to reach it and to learn its secrets.',
-	tomato_meter: 35,
+	length: '2h 45min',
+	summary: 'Autobots must escape sight from a bounty hunter who has taken control of the human serendipity: Unexpectedly, Optimus Prime and his remaining gang turn to a mechanic, his daughter, and her back street racing boyfriend for help.',
+	tomato_meter: 18,
 	genre_ids: [1]
 )
-
 
 # MOVIE ID 6
 Movie.create!(
@@ -99,7 +93,6 @@ Movie.create!(
 	genre_ids: [1,7]
 )
 
-
 # MOVIE ID 7
 Movie.create!(
     title: 'Skyfall',
@@ -111,7 +104,6 @@ Movie.create!(
     tomato_meter: 93,
     genre_ids: [1]
 )
-
 
 # MOVIE ID 8
 Movie.create!(
@@ -125,7 +117,6 @@ Movie.create!(
 	genre_ids: [1]
 )
 
-
 # MOVIE ID 9
 Movie.create!(
 	title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
@@ -137,7 +128,6 @@ Movie.create!(
 	tomato_meter: 79,
 	genre_ids: [1]
 )
-
 
 # MOVIE ID 10
 Movie.create!(
