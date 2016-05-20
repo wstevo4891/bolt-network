@@ -25,11 +25,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# User carrierwave for image uploads, fog for AWS support, and asset-sync for precompiling to S3
+# User carrierwave for image uploads, fog for AWS support
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-gem 'asset_sync'
 
 # Use Font-Awesome for icons
 gem 'font-awesome-sass'

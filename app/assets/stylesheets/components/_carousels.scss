@@ -56,6 +56,12 @@
   background: rgba(20, 20, 20, 0.4);
   z-index: 5;
 
+  &:hover {
+    .unslider-arrow {
+      display:block;
+    }
+  }
+
   @include bp-tablet {
     width: 4%;
   }
