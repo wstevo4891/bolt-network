@@ -54,19 +54,31 @@ a.unslider-arrow {
   	@include transform(scale(1.3));
   }
 
-  @include bp-large {
+  @include bp-tablet {
+  	top: 50%;
   	font-size: small;
   }
 }
 
 .unslider-arrow.prev {
-	top: 50%;
-	left: -4.8% !important;
+	left: -4.2em;
+
+	@include bp-medium {
+		left: -4.6em;
+	}
+
+	@include bp-tablet {
+		left: -4.3em;
+	}
+
+	@include bp-large {
+		left: -4.9em;
+	}
 }
 
 .unslider-arrow.next {
 	left: auto;
-	right: 5.5%;
+	right: 5.3%;
 } 
 
 .unslider-arrow i {

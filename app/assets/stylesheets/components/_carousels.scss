@@ -3,7 +3,7 @@
 ==============================*/
 
 .carousels-container {
-  width: 1380px;
+  width: 100vw;
   position: relative;
   margin-left: 4%;
   overflow-x: visible;
@@ -44,32 +44,29 @@
   }
 }
 
+.borders-container {
+  position: relative;
+  padding-bottom: 3em;
+}
+
 .border-left, .border-right {
   position: absolute;
-  width: 4%;
+  width: 5%;
   height: 125%;
   background: rgba(20, 20, 20, 0.4);
   z-index: 5;
 
-  @include bp-large {
+  @include bp-tablet {
     width: 4%;
   }
 }
 
 .border-left {
-  left: -4.5%;
-
-  @include bp-large {
-    left: -4%;
-  }
+  left: 0;
 }
 
 .border-right {
-  left: 90.5%;
-
-  @include bp-large {
-    left: 92%;
-  }
+  right: 0;
 }
 
 .poster {
@@ -94,7 +91,7 @@
     height: 6.5em;
   }
 
-  @include bp-large {
+  @include bp-tablet {
     &:hover {
       margin: 2em 5.5em;
     }
@@ -114,14 +111,3 @@
     @include transform(translateX(-4em));
   }
 }
-
-
-
-
-
-
-
-
-
-
-

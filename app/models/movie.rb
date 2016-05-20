@@ -7,12 +7,4 @@ class Movie < ActiveRecord::Base
 	def self.search(search)
 		Movie.where('title ~* :search', search: "(#{search})")
 	end
-
-	def self.carousel_data(genre, array1, array2)
-		@carousel_movies = Movie.where( Movie.genre_ids.include?(genre.id) )
-		@carousel_movies.each do |movie|
-			array1.push(movie.photo)
-			array2.push(movie.id)
-		end
-	end
 end

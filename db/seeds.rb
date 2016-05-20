@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 def seed_image(file_name)
-  File.open(File.join(Rails.root, "/app/assets/images/#{file_name}"))
+  "https://s3-us-west-2.amazonaws.com/bolt-network/#{file_name}"
 end
 
 Genre.create!( name: 'Action' )     # 1
@@ -24,7 +24,7 @@ Genre.create!( name: 'Horror' )     # 9
 # MOVIE ID 1
 Movie.create!(
 	title: 'The Avengers',
-	photo: seed_image('avengers-poster.jpeg'),
+	remote_photo_url: seed_image('avengers-poster.jpeg'),
 	year: 2012,
 	rating: 'PG-13',
 	length: '2h 23min',
@@ -36,7 +36,7 @@ Movie.create!(
 # MOVIE ID 2
 Movie.create!(
 	title: 'Harry Potter & The Deathly Hallows Part II',
-	photo: seed_image('hp7-poster.jpg'),
+	remote_photo_url: seed_image('hp7-poster.jpg'),
 	year: 2011,
 	rating: 'PG-13',
 	length: '2h 10min',
@@ -48,7 +48,7 @@ Movie.create!(
 # MOVIE ID 3
 Movie.create!(
 	title: 'Frozen',
-	photo: seed_image('frozen-poster.png'),
+	remote_photo_url: seed_image('frozen-poster.png'),
 	year: 2013,
 	rating: 'PG',
 	length: '1h 42min',
@@ -60,7 +60,7 @@ Movie.create!(
 # MOVIE ID 4
 Movie.create!(
 	title: 'Iron Man 3',
-	photo: seed_image('iron-man-3-poster.jpg'),
+	remote_photo_url: seed_image('iron-man-3-poster.jpg'),
 	year: 2013,
 	rating: 'PG-13',
 	length: '2h 10min',
@@ -72,7 +72,7 @@ Movie.create!(
 # MOVIE ID 5
 Movie.create!(
 	title: 'Transformers: Age of Extinction',
-	photo: seed_image('transformers-4-poster.jpg'),
+	remote_photo_url: seed_image('transformers-4-poster.jpg'),
 	year: 2014,
 	rating: 'PG-13',
 	length: '2h 45min',
@@ -84,7 +84,7 @@ Movie.create!(
 # MOVIE ID 6
 Movie.create!(
 	title: 'The Lord of the Rings: The Return of the King',
-	photo: seed_image('return-of-the-king-poster.jpg'),
+	remote_photo_url: seed_image('return-of-the-king-poster.jpg'),
 	year: 2003,
 	rating: 'PG-13',
 	length: '3h 21min',
@@ -96,7 +96,7 @@ Movie.create!(
 # MOVIE ID 7
 Movie.create!(
     title: 'Skyfall',
-    photo: seed_image('skyfall-poster.jpg'),
+    remote_photo_url: seed_image('skyfall-poster.jpg'),
     year: 2012,
     rating: 'PG-13',
     length: '2h 23min',
@@ -108,7 +108,7 @@ Movie.create!(
 # MOVIE ID 8
 Movie.create!(
 	title: 'The Dark Knight',
-	photo: seed_image('the-dark-knight-poster.jpg'),
+	remote_photo_url: seed_image('the-dark-knight-poster.jpg'),
 	year: 2008,
 	rating: 'PG-13',
 	length: '2h 32min',
@@ -120,7 +120,7 @@ Movie.create!(
 # MOVIE ID 9
 Movie.create!(
 	title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
-	photo: seed_image('pirates-curse-of-the-black-pearl-poster.jpg'),
+	remote_photo_url: seed_image('pirates-curse-of-the-black-pearl-poster.jpg'),
 	year: 2003,
 	rating: 'PG-13',
 	length: '2h 23min',
@@ -132,7 +132,7 @@ Movie.create!(
 # MOVIE ID 10
 Movie.create!(
 	title: 'Toy Story 3',
-	photo: seed_image('toy-story-3-poster.jpg'),
+	remote_photo_url: seed_image('toy-story-3-poster.jpg'),
 	year: 2010,
 	rating: 'G',
 	length: '1h 43min',
@@ -144,7 +144,7 @@ Movie.create!(
 # MOVIE ID 11
 Movie.create!(
 	title: 'Conan the Barbarian',
-	photo: seed_image('conan-the-barbarian-poster.jpg'),
+	remote_photo_url: seed_image('conan-the-barbarian-poster.jpg'),
 	year: 1982,
 	rating: 'R',
 	length: '2h 9min',
@@ -155,7 +155,7 @@ Movie.create!(
 #MOVIE ID 12
 Movie.create!(
 	title: 'Braveheart',
-	photo: seed_image('braveheart-poster.jpg'),
+	remote_photo_url: seed_image('braveheart-poster.jpg'),
 	year: 1995,
 	rating: 'R',
 	length: '2h 58min',
@@ -166,7 +166,7 @@ Movie.create!(
 #MOVIE ID 13
 Movie.create!(
 	title: 'Die Hard',
-	photo: seed_image('die-hard-poster.jpg'),
+	remote_photo_url: seed_image('die-hard-poster.jpg'),
 	year: 1988,
 	rating: 'R',
 	length: '2h 11min',
@@ -177,7 +177,7 @@ Movie.create!(
 #MOVIE ID 14
 Movie.create!(
 	title: 'The 40 Year-Old Virgin',
-	photo: seed_image('40-year-old-virgin-poster.jpg'),
+	remote_photo_url: seed_image('40-year-old-virgin-poster.jpg'),
 	year: 2005,
 	rating: 'R',
 	length: '1h 56min',
@@ -188,7 +188,7 @@ Movie.create!(
 #MOVIE ID 15
 Movie.create!(
 	title: 'Superbad',
-	photo: seed_image('superbad-poster.jpg'),
+	remote_photo_url: seed_image('superbad-poster.jpg'),
 	year: 2007,
 	rating: 'R',
 	length: '1h 53min',
@@ -199,7 +199,7 @@ Movie.create!(
 #MOVIE ID 16
 Movie.create!(
 	title: 'The Interview',
-	photo: seed_image('the-interview-poster.jpg'),
+	remote_photo_url: seed_image('the-interview-poster.jpg'),
 	year: 2014,
 	rating: 'R',
 	length: '1h 52min',
@@ -210,7 +210,7 @@ Movie.create!(
 #MOVIE ID 17
 Movie.create!(
 	title: 'Deadpool',
-	photo: seed_image('deadpool-poster.jpg'),
+	remote_photo_url: seed_image('deadpool-poster.jpg'),
 	year: 2016,
 	rating: 'R',
 	length: '1h 48min',
@@ -221,7 +221,7 @@ Movie.create!(
 #MOVIE ID 18
 Movie.create!(
 	title: 'Wedding Crashers',
-	photo: seed_image('wedding-crashers-poster.jpg'),
+	remote_photo_url: seed_image('wedding-crashers-poster.jpg'),
 	year: 2005,
 	rating: 'R',
 	length: '1h 59min',
@@ -232,7 +232,7 @@ Movie.create!(
 #MOVIE ID 19
 Movie.create!(
 	title: 'Bridesmaids',
-	photo: seed_image('bridesmaids-poster.jpg'),
+	remote_photo_url: seed_image('bridesmaids-poster.jpg'),
 	year: 2011,
 	rating: 'R',
 	length: '2h 5min',
@@ -243,7 +243,7 @@ Movie.create!(
 #MOVIE ID 20
 Movie.create!(
 	title: 'Shaun of the Dead',
-	photo: seed_image('shaun-of-the-dead-poster.jpg'),
+	remote_photo_url: seed_image('shaun-of-the-dead-poster.jpg'),
 	year: 2004,
 	rating: 'R',
 	length: '1h 39min',
@@ -254,7 +254,7 @@ Movie.create!(
 #MOVIE ID 21
 Movie.create!(
 	title: 'Borat',
-	photo: seed_image('borat-poster.jpg'),
+	remote_photo_url: seed_image('borat-poster.jpg'),
 	year: 2006,
 	rating: 'R',
 	length: '1h 24min',
@@ -265,7 +265,7 @@ Movie.create!(
 #MOVIE ID 22
 Movie.create!(
 	title: 'The Hangover',
-	photo: seed_image('the-hangover-poster.jpg'),
+	remote_photo_url: seed_image('the-hangover-poster.jpg'),
 	year: 2009,
 	rating: 'R',
 	length: '1h 40min',
@@ -276,7 +276,7 @@ Movie.create!(
 #MOVIE ID 23
 Movie.create!(
 	title: 'Ghostbusters',
-	photo: seed_image('ghostbusters-poster.jpg'),
+	remote_photo_url: seed_image('ghostbusters-poster.jpg'),
 	year: 1984,
 	rating: 'PG',
 	length: '1h 45min',
@@ -287,7 +287,7 @@ Movie.create!(
 #MOVIE ID 24
 Movie.create!(
 	title: 'Maverick',
-	photo: seed_image('maverick-poster.jpg'),
+	remote_photo_url: seed_image('maverick-poster.jpg'),
 	year: 1994,
 	rating: 'PG',
 	length: '2h 7min',
@@ -298,7 +298,7 @@ Movie.create!(
 #MOVIE ID 25
 Movie.create!(
 	title: 'The Princess Bride',
-	photo: seed_image('the-princess-bride-poster.jpg'),
+	remote_photo_url: seed_image('the-princess-bride-poster.jpg'),
 	year: 1987,
 	rating: 'PG',
 	length: '1h 38min',
@@ -309,7 +309,7 @@ Movie.create!(
 #MOVIE ID 26
 Movie.create!(
 	title: 'American Psycho',
-	photo: seed_image('american-psycho-poster.jpg'),
+	remote_photo_url: seed_image('american-psycho-poster.jpg'),
 	year: 2000,
 	rating: 'R',
 	length: '1h 42min',
@@ -320,7 +320,7 @@ Movie.create!(
 #MOVIE ID 27
 Movie.create!(
 	title: 'Forest Gump',
-	photo: seed_image('forest-gump-poster.jpg'),
+	remote_photo_url: seed_image('forest-gump-poster.jpg'),
 	year: 1994,
 	rating: 'PG-13',
 	length: '2h 22min',
@@ -331,7 +331,7 @@ Movie.create!(
 #MOVIE ID 28
 Movie.create!(
 	title: 'The Shawshank Redemption',
-	photo: seed_image('shawshank-poster.jpg'),
+	remote_photo_url: seed_image('shawshank-poster.jpg'),
 	year: 1994,
 	rating: 'R',
 	length: '2h 22min',
@@ -342,7 +342,7 @@ Movie.create!(
 #MOVIE ID 29
 Movie.create!(
 	title: 'The Godfather',
-	photo: seed_image('the-godfather-poster.png'),
+	remote_photo_url: seed_image('the-godfather-poster.png'),
 	year: 1972,
 	rating: 'R',
 	length: '2h 55min',
@@ -353,7 +353,7 @@ Movie.create!(
 #MOVIE ID 30
 Movie.create!(
 	title: "Schindler's List",
-	photo: seed_image('schindlers-list-poster.png'),
+	remote_photo_url: seed_image('schindlers-list-poster.png'),
 	year: 1993,
 	rating: 'R',
 	length: '3h 15min',
@@ -364,7 +364,7 @@ Movie.create!(
 #MOVIE ID 31
 Movie.create!(
 	title: "Slumdog Millionaire",
-	photo: seed_image('slumdog-millionaire-poster.jpg'),
+	remote_photo_url: seed_image('slumdog-millionaire-poster.jpg'),
 	year: 2008,
 	rating: 'R',
 	length: '2h',
@@ -375,7 +375,7 @@ Movie.create!(
 #MOVIE ID 32
 Movie.create!(
 	title: "Good Will Hunting",
-	photo: seed_image('good-will-hunting-poster.jpg'),
+	remote_photo_url: seed_image('good-will-hunting-poster.jpg'),
 	year: 1997,
 	rating: 'R',
 	length: '2h 6min',
@@ -386,7 +386,7 @@ Movie.create!(
 #MOVIE ID 33
 Movie.create!(
 	title: "12 Angry Men",
-	photo: seed_image('12-angry-men-poster.jpg'),
+	remote_photo_url: seed_image('12-angry-men-poster.jpg'),
 	year: 1957,
 	rating: 'NR',
 	length: '1h 36min',
@@ -397,7 +397,7 @@ Movie.create!(
 #MOVIE ID 34
 Movie.create!(
 	title: "Inherit the Wind",
-	photo: seed_image('inherit-the-wind-poster.png'),
+	remote_photo_url: seed_image('inherit-the-wind-poster.png'),
 	year: 1960,
 	rating: 'NR',
 	length: '2h 8min',
@@ -408,7 +408,7 @@ Movie.create!(
 #MOVIE ID 35
 Movie.create!(
 	title: "Casablanca",
-	photo: seed_image('casablanca-poster.jpg'),
+	remote_photo_url: seed_image('casablanca-poster.jpg'),
 	year: 1942,
 	rating: 'PG',
 	length: '1h 42min',
@@ -419,7 +419,7 @@ Movie.create!(
 #MOVIE ID 36
 Movie.create!(
 	title: "Fight Club",
-	photo: seed_image('fight-club-poster.jpg'),
+	remote_photo_url: seed_image('fight-club-poster.jpg'),
 	year: 1999,
 	rating: 'R',
 	length: '2h 19min',
@@ -430,7 +430,7 @@ Movie.create!(
 #MOVIE ID 37
 Movie.create!(
 	title: "The Lion King",
-	photo: seed_image('the-lion-king-poster.jpg'),
+	remote_photo_url: seed_image('the-lion-king-poster.jpg'),
 	year: 1994,
 	rating: 'G',
 	length: '1h 29min',
@@ -441,7 +441,7 @@ Movie.create!(
 #MOVIE ID 38
 Movie.create!(
 	title: "Ratatouille",
-	photo: seed_image('ratatouille-poster.jpg'),
+	remote_photo_url: seed_image('ratatouille-poster.jpg'),
 	year: 2007,
 	rating: 'G',
 	length: '1h 51min',
@@ -452,7 +452,7 @@ Movie.create!(
 #MOVIE ID 39
 Movie.create!(
 	title: "Finding Nemo",
-	photo: seed_image('finding-nemo-poster.jpg'),
+	remote_photo_url: seed_image('finding-nemo-poster.jpg'),
 	year: 2003,
 	rating: 'G',
 	length: '1h 40min',
@@ -463,7 +463,7 @@ Movie.create!(
 #MOVIE ID 40
 Movie.create!(
 	title: "Spirited Away",
-	photo: seed_image('spirited-away-poster.jpg'),
+	remote_photo_url: seed_image('spirited-away-poster.jpg'),
 	year: 2001,
 	rating: 'PG',
 	length: '2h 5min',
@@ -474,7 +474,7 @@ Movie.create!(
 #MOVIE ID 41
 Movie.create!(
 	title: "Shrek 2",
-	photo: seed_image('shrek-2-poster.jpg'),
+	remote_photo_url: seed_image('shrek-2-poster.jpg'),
 	year: 2004,
 	rating: 'PG',
 	length: '1h 33min',
@@ -485,7 +485,7 @@ Movie.create!(
 #MOVIE ID 42
 Movie.create!(
 	title: "The Incredibles",
-	photo: seed_image('the-incredibles-poster.jpg'),
+	remote_photo_url: seed_image('the-incredibles-poster.jpg'),
 	year: 2004,
 	rating: 'PG',
 	length: '1h 55min',
@@ -496,7 +496,7 @@ Movie.create!(
 #MOVIE ID 43
 Movie.create!(
 	title: "Aladdin",
-	photo: seed_image('aladdin-poster.jpg'),
+	remote_photo_url: seed_image('aladdin-poster.jpg'),
 	year: 1992,
 	rating: 'G',
 	length: '1h 30min',
@@ -507,7 +507,7 @@ Movie.create!(
 #MOVIE ID 44
 Movie.create!(
 	title: "The Nightmare Before Christmas",
-	photo: seed_image('nightmare-before-christmas-poster.jpg'),
+	remote_photo_url: seed_image('nightmare-before-christmas-poster.jpg'),
 	year: 1993,
 	rating: 'PG',
 	length: '1h 16min',
@@ -518,7 +518,7 @@ Movie.create!(
 #MOVIE ID 45
 Movie.create!(
 	title: "E.T.",
-	photo: seed_image('ET-poster.jpg'),
+	remote_photo_url: seed_image('ET-poster.jpg'),
 	year: 1982,
 	rating: 'PG',
 	length: '1h 55min',
@@ -529,7 +529,7 @@ Movie.create!(
 #MOVIE ID 46
 Movie.create!(
 	title: "Explorers",
-	photo: seed_image('explorers-poster.jpg'),
+	remote_photo_url: seed_image('explorers-poster.jpg'),
 	year: 1985,
 	rating: 'PG',
 	length: '1h 49min',
@@ -540,7 +540,7 @@ Movie.create!(
 #MOVIE ID 47
 Movie.create!(
 	title: "The Sandlot",
-	photo: seed_image('sandlot-poster.jpg'),
+	remote_photo_url: seed_image('sandlot-poster.jpg'),
 	year: 1993,
 	rating: 'PG',
 	length: '1h 41min',
@@ -551,7 +551,7 @@ Movie.create!(
 #MOVIE ID 48
 Movie.create!(
 	title: "The Goonies",
-	photo: seed_image('goonies-poster.jpg'),
+	remote_photo_url: seed_image('goonies-poster.jpg'),
 	year: 1985,
 	rating: 'PG',
 	length: '1h 54min',
@@ -562,7 +562,7 @@ Movie.create!(
 #MOVIE ID 49
 Movie.create!(
 	title: "Love Actually",
-	photo: seed_image('love-actually-poster.png'),
+	remote_photo_url: seed_image('love-actually-poster.png'),
 	year: 2003,
 	rating: 'R',
 	length: '2h 15min',
@@ -573,7 +573,7 @@ Movie.create!(
 #MOVIE ID 50
 Movie.create!(
 	title: "When Harry Met Sally",
-	photo: seed_image('when-harry-met-sally-poster.jpg'),
+	remote_photo_url: seed_image('when-harry-met-sally-poster.jpg'),
 	year: 1989,
 	rating: 'R',
 	length: '1h 36min',
@@ -584,7 +584,7 @@ Movie.create!(
 #MOVIE ID 51
 Movie.create!(
 	title: "Gone with the Wind",
-	photo: seed_image('gone-with-the-wind-poster.jpg'),
+	remote_photo_url: seed_image('gone-with-the-wind-poster.jpg'),
 	year: 1939,
 	rating: 'G',
 	length: '3h 58min',
@@ -595,7 +595,7 @@ Movie.create!(
 #MOVIE ID 52
 Movie.create!(
 	title: "Dirty Dancing",
-	photo: seed_image('dirty-dancing-poster.jpg'),
+	remote_photo_url: seed_image('dirty-dancing-poster.jpg'),
 	year: 1987,
 	rating: 'PG-13',
 	length: '1h 40min',
@@ -606,7 +606,7 @@ Movie.create!(
 #MOVIE ID 53
 Movie.create!(
 	title: "Titanic",
-	photo: seed_image('titanic-poster.jpg'),
+	remote_photo_url: seed_image('titanic-poster.jpg'),
 	year: 1997,
 	rating: 'PG-13',
 	length: '3h 14min',
@@ -617,7 +617,7 @@ Movie.create!(
 #MOVIE ID 54
 Movie.create!(
 	title: "Amelie",
-	photo: seed_image('amelie-poster.jpg'),
+	remote_photo_url: seed_image('amelie-poster.jpg'),
 	year: 2001,
 	rating: 'R',
 	length: '2h 2min',
@@ -628,7 +628,7 @@ Movie.create!(
 #MOVIE ID 55
 Movie.create!(
 	title: "Before Sunrise",
-	photo: seed_image('before-sunrise-poster.jpg'),
+	remote_photo_url: seed_image('before-sunrise-poster.jpg'),
 	year: 1995,
 	rating: 'R',
 	length: '1h 45min',
@@ -639,7 +639,7 @@ Movie.create!(
 #MOVIE ID 56
 Movie.create!(
 	title: "Breakfast at Tiffany's",
-	photo: seed_image('breakfast-at-tiffanys-poster.jpg'),
+	remote_photo_url: seed_image('breakfast-at-tiffanys-poster.jpg'),
 	year: 1961,
 	rating: 'NR',
 	length: '1h 55min',
@@ -650,7 +650,7 @@ Movie.create!(
 #MOVIE ID 57
 Movie.create!(
 	title: "Willow",
-	photo: seed_image('willow-poster.jpg'),
+	remote_photo_url: seed_image('willow-poster.jpg'),
 	year: 1988,
 	rating: 'PG',
 	length: '2h 6min',
@@ -661,7 +661,7 @@ Movie.create!(
 #MOVIE ID 58
 Movie.create!(
 	title: "Time Bandits",
-	photo: seed_image('time-bandits-poster.jpg'),
+	remote_photo_url: seed_image('time-bandits-poster.jpg'),
 	year: 1981,
 	rating: 'PG',
 	length: '1h 50min',
@@ -672,7 +672,7 @@ Movie.create!(
 #MOVIE ID 59
 Movie.create!(
 	title: "The Wizard of Oz",
-	photo: seed_image('wizard-of-oz-poster.jpg'),
+	remote_photo_url: seed_image('wizard-of-oz-poster.jpg'),
 	year: 1939,
 	rating: 'G',
 	length: '1h 42min',
@@ -683,7 +683,7 @@ Movie.create!(
 # MOVIE ID 60
 Movie.create!(
 	title: "The NeverEnding Story",
-	photo: seed_image('neverending-story-poster.jpg'),
+	remote_photo_url: seed_image('neverending-story-poster.jpg'),
 	year: 1984,
 	rating: 'PG',
 	length: '1h 42min',
@@ -694,7 +694,7 @@ Movie.create!(
 # MOVIE ID 61
 Movie.create!(
 	title: "Star Wars",
-	photo: seed_image('star-wars-poster.jpg'),
+	remote_photo_url: seed_image('star-wars-poster.jpg'),
 	year: 1977,
 	rating: 'PG',
 	length: '2h 1min',
@@ -705,7 +705,7 @@ Movie.create!(
 # MOVIE ID 62
 Movie.create!(
 	title: "Alien",
-	photo: seed_image('alien-poster.jpg'),
+	remote_photo_url: seed_image('alien-poster.jpg'),
 	year: 1979,
 	rating: 'R',
 	length: '1h 57min',
@@ -716,7 +716,7 @@ Movie.create!(
 # MOVIE ID 63
 Movie.create!(
 	title: "Blade Runner",
-	photo: seed_image('blade-runner-poster.jpg'),
+	remote_photo_url: seed_image('blade-runner-poster.jpg'),
 	year: 1982,
 	rating: 'R',
 	length: '1h 57min',
@@ -727,7 +727,7 @@ Movie.create!(
 # MOVIE ID 64
 Movie.create!(
 	title: "The Terminator",
-	photo: seed_image('the-terminator-poster.jpg'),
+	remote_photo_url: seed_image('the-terminator-poster.jpg'),
 	year: 1984,
 	rating: 'R',
 	length: '1h 47min',
@@ -738,7 +738,7 @@ Movie.create!(
 # MOVIE ID 65
 Movie.create!(
 	title: "The Matrix",
-	photo: seed_image('the-matrix-poster.jpg'),
+	remote_photo_url: seed_image('the-matrix-poster.jpg'),
 	year: 1999,
 	rating: 'R',
 	length: '2h 16min',
@@ -749,7 +749,7 @@ Movie.create!(
 # MOVIE ID 66
 Movie.create!(
 	title: "2001: A Space Odyssey",
-	photo: seed_image('2001-poster.jpg'),
+	remote_photo_url: seed_image('2001-poster.jpg'),
 	year: 1968,
 	rating: 'G',
 	length: '2h 29min',
@@ -760,7 +760,7 @@ Movie.create!(
 # MOVIE ID 67
 Movie.create!(
 	title: "District 9",
-	photo: seed_image('district-9-poster.jpg'),
+	remote_photo_url: seed_image('district-9-poster.jpg'),
 	year: 2009,
 	rating: 'R',
 	length: '1h 52min',
@@ -771,7 +771,7 @@ Movie.create!(
 # MOVIE ID 68
 Movie.create!(
 	title: "Serenity",
-	photo: seed_image('serenity-poster.jpg'),
+	remote_photo_url: seed_image('serenity-poster.jpg'),
 	year: 2005,
 	rating: 'PG-13',
 	length: '1h 59min',
@@ -782,7 +782,7 @@ Movie.create!(
 # MOVIE ID 69
 Movie.create!(
 	title: "Inception",
-	photo: seed_image('inception-poster.jpg'),
+	remote_photo_url: seed_image('inception-poster.jpg'),
 	year: 2010,
 	rating: 'PG-13',
 	length: '2h 28min',
@@ -793,7 +793,7 @@ Movie.create!(
 # MOVIE ID 70
 Movie.create!(
 	title: "Star Trek II: The Wrath of Khan",
-	photo: seed_image('star-trek-2-poster.jpg'),
+	remote_photo_url: seed_image('star-trek-2-poster.jpg'),
 	year: 1982,
 	rating: 'PG',
 	length: '1h 53min',
@@ -804,7 +804,7 @@ Movie.create!(
 # MOVIE ID 71
 Movie.create!(
 	title: "The Shining",
-	photo: seed_image('the-shining-poster.jpg'),
+	remote_photo_url: seed_image('the-shining-poster.jpg'),
 	year: 1980,
 	rating: 'R',
 	length: '2h 26min',
@@ -815,7 +815,7 @@ Movie.create!(
 # MOVIE ID 72
 Movie.create!(
 	title: "Halloween",
-	photo: seed_image('halloween-poster.jpg'),
+	remote_photo_url: seed_image('halloween-poster.jpg'),
 	year: 1978,
 	rating: 'R',
 	length: '1h 31min',
@@ -826,7 +826,7 @@ Movie.create!(
 # MOVIE ID 73
 Movie.create!(
 	title: "The Silence of the Lambs",
-	photo: seed_image('silence-of-the-lambs-poster.jpg'),
+	remote_photo_url: seed_image('silence-of-the-lambs-poster.jpg'),
 	year: 1991,
 	rating: 'R',
 	length: '1h 58min',
@@ -837,7 +837,7 @@ Movie.create!(
 # MOVIE ID 74
 Movie.create!(
 	title: "Psycho",
-	photo: seed_image('psycho-poster.jpg'),
+	remote_photo_url: seed_image('psycho-poster.jpg'),
 	year: 1960,
 	rating: 'R',
 	length: '1h 49min',
@@ -848,7 +848,7 @@ Movie.create!(
 # MOVIE ID 75
 Movie.create!(
 	title: "The Babadook",
-	photo: seed_image('the-babadook-poster.jpg'),
+	remote_photo_url: seed_image('the-babadook-poster.jpg'),
 	year: 2014,
 	rating: 'NR',
 	length: '1h 33min',
@@ -859,7 +859,7 @@ Movie.create!(
 # MOVIE ID 76
 Movie.create!(
 	title: "The Exorcist",
-	photo: seed_image('the-exorcist-poster.jpg'),
+	remote_photo_url: seed_image('the-exorcist-poster.jpg'),
 	year: 1973,
 	rating: 'R',
 	length: '2h 2min',
@@ -870,7 +870,7 @@ Movie.create!(
 # MOVIE ID 77
 Movie.create!(
 	title: "The Ring",
-	photo: seed_image('the-ring-poster.jpg'),
+	remote_photo_url: seed_image('the-ring-poster.jpg'),
 	year: 2002,
 	rating: 'PG-13',
 	length: '1h 55min',
@@ -881,7 +881,7 @@ Movie.create!(
 # MOVIE ID 78
 Movie.create!(
 	title: "The Thing",
-	photo: seed_image('the-thing-poster.jpg'),
+	remote_photo_url: seed_image('the-thing-poster.jpg'),
 	year: 1982,
 	rating: 'R',
 	length: '1h 49min',
@@ -892,7 +892,7 @@ Movie.create!(
 # MOVIE ID 79
 Movie.create!(
 	title: "The Orphanage",
-	photo: seed_image('the-orphanage-poster.jpg'),
+	remote_photo_url: seed_image('the-orphanage-poster.jpg'),
 	year: 2007,
 	rating: 'R',
 	length: '1h 45min',
@@ -903,7 +903,7 @@ Movie.create!(
 # MOVIE ID 80
 Movie.create!(
 	title: "Poltergeist",
-	photo: seed_image('poltergeist-poster.jpg'),
+	remote_photo_url: seed_image('poltergeist-poster.jpg'),
 	year: 1982,
 	rating: 'PG',
 	length: '1h 54min',
