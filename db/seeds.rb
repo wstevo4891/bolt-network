@@ -21,7 +21,6 @@ Genre.create!( name: 'Sci-Fi' )     # 8
 Genre.create!( name: 'Horror' )     # 9
 
 
-
 # MOVIE ID 1
 Movie.create!(
 	title: 'The Avengers',
@@ -33,7 +32,6 @@ Movie.create!(
 	tomato_meter: 92,
 	genre_ids: [1]
 )
-
 
 # MOVIE ID 2
 Movie.create!(
@@ -47,7 +45,6 @@ Movie.create!(
 	genre_ids: [1,7]
 )
 
-
 # MOVIE ID 3
 Movie.create!(
 	title: 'Frozen',
@@ -59,33 +56,6 @@ Movie.create!(
 	tomato_meter: 89,
 	genre_ids: [4,5]
 )
-
-
-# MOVIE ID 4
-Movie.create!(
-	title: 'Iron Man 3',
-	photo: seed_image('iron-man-3-poster.jpg'),
-	year: 2013,
-	rating: 'PG-13',
-	length: '2h 10min',
-	summary: 'When Tony Stark\'s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.',
-	tomato_meter: 79,
-	genre_ids: [1]
-)
-
-
-# MOVIE ID 5
-Movie.create!(
-	title: 'Transformers: Dark of the Moon',
-	photo: seed_image('transformers-3-poster.jpg'),
-	year: 2011,
-	rating: 'PG-13',
-	length: '2h 34min',
-	summary: 'The Autobots learn of a Cybertronian spacecraft hidden on the moon, and race against the Decepticons to reach it and to learn its secrets.',
-	tomato_meter: 35,
-	genre_ids: [1]
-)
-
 
 # MOVIE ID 6
 Movie.create!(
@@ -99,7 +69,6 @@ Movie.create!(
 	genre_ids: [1,7]
 )
 
-
 # MOVIE ID 7
 Movie.create!(
     title: 'Skyfall',
@@ -111,7 +80,6 @@ Movie.create!(
     tomato_meter: 93,
     genre_ids: [1]
 )
-
 
 # MOVIE ID 8
 Movie.create!(
@@ -125,7 +93,6 @@ Movie.create!(
 	genre_ids: [1]
 )
 
-
 # MOVIE ID 9
 Movie.create!(
 	title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
@@ -137,7 +104,6 @@ Movie.create!(
 	tomato_meter: 79,
 	genre_ids: [1]
 )
-
 
 # MOVIE ID 10
 Movie.create!(
@@ -261,17 +227,6 @@ Movie.create!(
   genre_ids: [2,9]
 )
 
-#MOVIE ID 21
-Movie.create!(
-	title: 'Borat',
-	photo: seed_image('borat-poster.jpg'),
-	year: 2006,
-	rating: 'R',
-	length: '1h 24min',
-	summary: 'Kazakh TV talking head Borat is dispatched to the United States to report on the greatest country in the world. With a documentary crew in tow, Borat becomes more interested in locating and marrying Pamela Anderson.',
-  genre_ids: [2]
-)
-
 #MOVIE ID 22
 Movie.create!(
 	title: 'The Hangover',
@@ -281,17 +236,6 @@ Movie.create!(
 	length: '1h 40min',
 	summary: 'Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.',
   genre_ids: [2]
-)
-
-#MOVIE ID 23
-Movie.create!(
-	title: 'Ghostbusters',
-	photo: seed_image('ghostbusters-poster.jpg'),
-	year: 1984,
-	rating: 'PG',
-	length: '1h 45min',
-	summary: 'Three former parapsychology professors set up shop as a unique ghost removal service.',
-  genre_ids: [1,2,7]
 )
 
 #MOVIE ID 24
@@ -863,7 +807,7 @@ Movie.create!(
 	rating: 'NR',
 	length: '1h 33min',
 	summary: "A single mother, plagued by the violent death of her husband, battles with her son's fear of a monster lurking in the house, but soon discovers a sinister presence all around her.",
-  genre_ids: [3,9]
+  genre_ids: [9]
 )
 
 # MOVIE ID 76
@@ -907,7 +851,7 @@ Movie.create!(
 	rating: 'R',
 	length: '1h 45min',
 	summary: "A woman brings her family back to her childhood home, which used to be an orphanage for handicapped children. Before long, her son starts to communicate with an invisible new friend.",
-  genre_ids: [3,9]
+  genre_ids: [9]
 )
 
 # MOVIE ID 80
