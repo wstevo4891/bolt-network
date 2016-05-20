@@ -4,10 +4,11 @@
 
 .carousels-container {
   width: 1380px;
+  position: relative;
   margin-left: 4%;
   overflow-x: visible;
 
-  .row > div > .row {
+  .carousel-row {
     margin-left: 0.1em;
     i {
       display: none;
@@ -20,11 +21,16 @@
   }
 
   h3 {
-    font-size: 1.3em;
+    position: absolute;
+    line-height: 2;
+    width: 100%;
+    margin: auto;
+    font-size: 1.2em;
     font-weight: bold;
+    z-index: 6;
   }
 
-  a {
+  h3 a {
     color: #939393;
     &:hover {
       color: white;
@@ -38,24 +44,84 @@
   }
 }
 
+.border-left, .border-right {
+  position: absolute;
+  width: 4%;
+  height: 125%;
+  background: rgba(20, 20, 20, 0.4);
+  z-index: 5;
+
+  @include bp-large {
+    width: 4%;
+  }
+}
+
+.border-left {
+  left: -4.5%;
+
+  @include bp-large {
+    left: -4%;
+  }
+}
+
+.border-right {
+  left: 90.5%;
+
+  @include bp-large {
+    left: 92%;
+  }
+}
+
 .poster {
   display: inline-block;
   position: relative;
-  margin: 0 0.05em 1em;
+  margin: 3em 0.02em 2em;
   background:transparent; 
   border: none;
   padding: 0;
   @include transitions(all 0.5s ease);
+  @include transition-delay(0.5s);
 
   &:hover {
     @include box-shadow(2px 2px 40px $azure-radiance);
     @include transform(scale(1.75));
-    z-index: 4;
-    margin: 2em 6em; 
+    z-index: 7;
+    margin: 2em 4.2em;
   }
 
   img {
-    width: 14.46975em;
-    height: 8.13868em;
+    width: 11em;
+    height: 6.5em;
+  }
+
+  @include bp-large {
+    &:hover {
+      margin: 2em 5.5em;
+    }
+
+    img {
+      width: 14.46975em;
+      height: 8.13868em;
+    }
   }
 }
+
+#slide-list {
+  @include transitions(all 0.5s ease);
+  @include transition-delay(0.5s);
+
+  &:hover {
+    @include transform(translateX(-4em));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

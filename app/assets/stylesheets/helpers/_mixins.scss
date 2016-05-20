@@ -98,6 +98,14 @@
 	transition: $args;
 }
 
+@mixin transition-delay($str) {
+	-webkit-transition-delay: $str;
+	-moz-transition-delay: $str;
+	-ms-transition-delay: $str;
+	-o-transition-delay: $str;
+	transition-delay: $str;
+}
+
 
 // TRANSFORMS #############
 

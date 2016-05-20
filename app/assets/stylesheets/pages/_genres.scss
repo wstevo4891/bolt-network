@@ -5,15 +5,19 @@
 .genres-container {
 	width: 1380px;
 	margin-top: 7em;
+	margin-left: 5.2%;
 	text-align: left;
 	overflow-x: visible;
 
-	h2 {
-		color: white;
+	.row {
+		margin-bottom: 2em;
 	}
 
-	.row {
-		margin-bottom: 5em;
+	.poster {
+		margin: 3em 0.016em 2em;
+		&:hover {
+			margin: 2em 6em;
+		}
 	}
 }
 

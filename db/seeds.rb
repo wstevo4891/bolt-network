@@ -57,7 +57,7 @@ Movie.create!(
 	length: '1h 42min',
 	summary: 'When the newly crowned Queen Elsa accidentally uses her power to turn things into ice to curse her home in infinite winter, her sister, Anna, teams up with a mountain man, his playful reindeer, and a snowman to change the weather condition.',
 	tomato_meter: 89,
-	genre_ids: [2,4,5,7]
+	genre_ids: [4,5]
 )
 
 
@@ -135,7 +135,7 @@ Movie.create!(
 	length: '2h 23min',
 	summary: 'Blacksmith Will Turner teams up with eccentric pirate "Captain" Jack Sparrow to save his love, the governor\'s daughter, from Jack\'s former pirate allies, who are now undead.',
 	tomato_meter: 79,
-	genre_ids: [1,2]
+	genre_ids: [1]
 )
 
 
@@ -148,7 +148,7 @@ Movie.create!(
 	length: '1h 43min',
 	summary: 'The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it\'s up to Woody to convince the other toys that they weren\'t abandoned and to return home.',
 	tomato_meter: 99,
-	genre_ids: [2,4,5]
+	genre_ids: [4,5]
 )
 
 # MOVIE ID 11
@@ -176,7 +176,7 @@ Movie.create!(
 #MOVIE ID 13
 Movie.create!(
 	title: 'Die Hard',
-	photo: seed_image('die-hard.jpg'),
+	photo: seed_image('die-hard-poster.jpg'),
 	year: 1988,
 	rating: 'R',
 	length: '2h 11min',
@@ -192,21 +192,10 @@ Movie.create!(
 	rating: 'R',
 	length: '1h 56min',
 	summary: 'Goaded by his buddies, a nerdy guy who\'s never "done the deed" only finds the pressure mounting when he meets a single mother.',
-  genre_ids: [2,6]
+  genre_ids: [2]
 )
 
 #MOVIE ID 15
-Movie.create!(
-	title: 'Ghostbusters',
-	photo: seed_image('ghostbusters-poster.jpg'),
-	year: 1984,
-	rating: 'PG',
-	length: '1h 45min',
-	summary: 'Three former parapsychology professors set up shop as a unique ghost removal service.',
-  genre_ids: [1,2,7]
-)
-
-#MOVIE ID 16
 Movie.create!(
 	title: 'Superbad',
 	photo: seed_image('superbad-poster.jpg'),
@@ -217,18 +206,7 @@ Movie.create!(
   genre_ids: [2]
 )
 
-#MOVIE ID 17
-Movie.create!(
-	title: 'Maverick',
-	photo: seed_image('maverick-poster.jpg'),
-	year: 1994,
-	rating: 'PG',
-	length: '2h 7min',
-	summary: 'Bret Maverick, needing money for a poker tournament, faces various comic mishaps and challenges, including a charming woman thief.',
-  genre_ids: [1,2]
-)
-
-#MOVIE ID 18
+#MOVIE ID 16
 Movie.create!(
 	title: 'The Interview',
 	photo: seed_image('the-interview-poster.jpg'),
@@ -239,7 +217,7 @@ Movie.create!(
   genre_ids: [2]
 )
 
-#MOVIE ID 19
+#MOVIE ID 17
 Movie.create!(
 	title: 'Deadpool',
 	photo: seed_image('deadpool-poster.jpg'),
@@ -250,7 +228,7 @@ Movie.create!(
   genre_ids: [1,2]
 )
 
-#MOVIE ID 20
+#MOVIE ID 18
 Movie.create!(
 	title: 'Wedding Crashers',
 	photo: seed_image('wedding-crashers-poster.jpg'),
@@ -258,10 +236,10 @@ Movie.create!(
 	rating: 'R',
 	length: '1h 59min',
 	summary: 'John Beckwith and Jeremy Grey, a pair of committed womanizers who sneak into weddings to take advantage of the romantic tinge in the air, find themselves at odds with one another when John meets and falls for Claire Cleary.',
-  genre_ids: [2,6]
+  genre_ids: [2]
 )
 
-#MOVIE ID 21
+#MOVIE ID 19
 Movie.create!(
 	title: 'Bridesmaids',
 	photo: seed_image('bridesmaids-poster.jpg'),
@@ -269,10 +247,10 @@ Movie.create!(
 	rating: 'R',
 	length: '2h 5min',
 	summary: 'Competition between the maid of honor and a bridesmaid, over who is the bride\'s best friend, threatens to upend the life of an out-of-work pastry chef.',
-  genre_ids: [2,6]
+  genre_ids: [2]
 )
 
-#MOVIE ID 22
+#MOVIE ID 20
 Movie.create!(
 	title: 'Shaun of the Dead',
 	photo: seed_image('shaun-of-the-dead-poster.jpg'),
@@ -283,7 +261,7 @@ Movie.create!(
   genre_ids: [2,9]
 )
 
-#MOVIE ID 23
+#MOVIE ID 21
 Movie.create!(
 	title: 'Borat',
 	photo: seed_image('borat-poster.jpg'),
@@ -294,7 +272,7 @@ Movie.create!(
   genre_ids: [2]
 )
 
-#MOVIE ID 24
+#MOVIE ID 22
 Movie.create!(
 	title: 'The Hangover',
 	photo: seed_image('the-hangover-poster.jpg'),
@@ -303,6 +281,28 @@ Movie.create!(
 	length: '1h 40min',
 	summary: 'Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing. They make their way around the city in order to find their friend before his wedding.',
   genre_ids: [2]
+)
+
+#MOVIE ID 23
+Movie.create!(
+	title: 'Ghostbusters',
+	photo: seed_image('ghostbusters-poster.jpg'),
+	year: 1984,
+	rating: 'PG',
+	length: '1h 45min',
+	summary: 'Three former parapsychology professors set up shop as a unique ghost removal service.',
+  genre_ids: [1,2,7]
+)
+
+#MOVIE ID 24
+Movie.create!(
+	title: 'Maverick',
+	photo: seed_image('maverick-poster.jpg'),
+	year: 1994,
+	rating: 'PG',
+	length: '2h 7min',
+	summary: 'Bret Maverick, needing money for a poker tournament, faces various comic mishaps and challenges, including a charming woman thief.',
+  genre_ids: [1,2]
 )
 
 #MOVIE ID 25
@@ -324,7 +324,7 @@ Movie.create!(
 	rating: 'R',
 	length: '1h 42min',
 	summary: 'A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies.',
-  genre_ids: [2,3,9]
+  genre_ids: [2,9]
 )
 
 #MOVIE ID 27
@@ -335,7 +335,7 @@ Movie.create!(
 	rating: 'PG-13',
 	length: '2h 22min',
 	summary: 'Forrest Gump, while not intelligent, has accidentally been present at many historic moments, but his true love, Jenny Curran, eludes him.',
-  genre_ids: [3,6]
+  genre_ids: [3]
 )
 
 #MOVIE ID 28
@@ -352,7 +352,7 @@ Movie.create!(
 #MOVIE ID 29
 Movie.create!(
 	title: 'The Godfather',
-	photo: seed_image('godfather-poster.jpg'),
+	photo: seed_image('the-godfather-poster.png'),
 	year: 1972,
 	rating: 'R',
 	length: '2h 55min',
@@ -363,7 +363,7 @@ Movie.create!(
 #MOVIE ID 30
 Movie.create!(
 	title: "Schindler's List",
-	photo: seed_image('schindlers-list-poster.jpg'),
+	photo: seed_image('schindlers-list-poster.png'),
 	year: 1993,
 	rating: 'R',
 	length: '3h 15min',
@@ -379,7 +379,7 @@ Movie.create!(
 	rating: 'R',
 	length: '2h',
 	summary: 'A Mumbai teen reflects on his upbringing in the slums when he is accused of cheating on the Indian Version of "Who Wants to be a Millionaire?"',
-  genre_ids: [3,6]
+  genre_ids: [3]
 )
 
 #MOVIE ID 32
@@ -407,7 +407,7 @@ Movie.create!(
 #MOVIE ID 34
 Movie.create!(
 	title: "Inherit the Wind",
-	photo: seed_image('inherit-the-wind-poster.jpg'),
+	photo: seed_image('inherit-the-wind-poster.png'),
 	year: 1960,
 	rating: 'NR',
 	length: '2h 8min',
@@ -440,7 +440,7 @@ Movie.create!(
 #MOVIE ID 37
 Movie.create!(
 	title: "The Lion King",
-	photo: seed_image('lion-king-poster.jpg'),
+	photo: seed_image('the-lion-king-poster.jpg'),
 	year: 1994,
 	rating: 'G',
 	length: '1h 29min',
@@ -467,7 +467,7 @@ Movie.create!(
 	rating: 'G',
 	length: '1h 40min',
 	summary: "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
-  genre_ids: [2,4,5]
+  genre_ids: [4,5]
 )
 
 #MOVIE ID 40
@@ -528,7 +528,7 @@ Movie.create!(
 #MOVIE ID 45
 Movie.create!(
 	title: "E.T.",
-	photo: seed_image('et-poster.jpg'),
+	photo: seed_image('ET-poster.jpg'),
 	year: 1982,
 	rating: 'PG',
 	length: '1h 55min',
@@ -572,7 +572,7 @@ Movie.create!(
 #MOVIE ID 49
 Movie.create!(
 	title: "Love Actually",
-	photo: seed_image('love-actually-poster.jpg'),
+	photo: seed_image('love-actually-poster.png'),
 	year: 2003,
 	rating: 'R',
 	length: '2h 15min',
@@ -648,17 +648,6 @@ Movie.create!(
 
 #MOVIE ID 56
 Movie.create!(
-	title: "Before Sunrise",
-	photo: seed_image('before-sunrise-poster.jpg'),
-	year: 1995,
-	rating: 'R',
-	length: '1h 45min',
-	summary: "A young man and woman meet on a train in Europe, and wind up spending one evening together in Vienna. Unfortunately, both know that this will probably be their only night together.",
-  genre_ids: [3,6]
-)
-
-#MOVIE ID 57
-Movie.create!(
 	title: "Breakfast at Tiffany's",
 	photo: seed_image('breakfast-at-tiffanys-poster.jpg'),
 	year: 1961,
@@ -668,7 +657,7 @@ Movie.create!(
   genre_ids: [2,3,6]
 )
 
-#MOVIE ID 58
+#MOVIE ID 57
 Movie.create!(
 	title: "Willow",
 	photo: seed_image('willow-poster.jpg'),
@@ -679,7 +668,7 @@ Movie.create!(
   genre_ids: [1,7]
 )
 
-#MOVIE ID 59
+#MOVIE ID 58
 Movie.create!(
 	title: "Time Bandits",
 	photo: seed_image('time-bandits-poster.jpg'),
@@ -690,7 +679,7 @@ Movie.create!(
   genre_ids: [1,2,7]
 )
 
-#MOVIE ID 60
+#MOVIE ID 59
 Movie.create!(
 	title: "The Wizard of Oz",
 	photo: seed_image('wizard-of-oz-poster.jpg'),
@@ -701,7 +690,7 @@ Movie.create!(
   genre_ids: [5,7]
 )
 
-# MOVIE ID 61
+# MOVIE ID 60
 Movie.create!(
 	title: "The NeverEnding Story",
 	photo: seed_image('neverending-story-poster.jpg'),
@@ -712,7 +701,7 @@ Movie.create!(
   genre_ids: [1,5,7]
 )
 
-# MOVIE ID 62
+# MOVIE ID 61
 Movie.create!(
 	title: "Star Wars",
 	photo: seed_image('star-wars-poster.jpg'),
@@ -723,7 +712,7 @@ Movie.create!(
   genre_ids: [1,7,8]
 )
 
-# MOVIE ID 63
+# MOVIE ID 62
 Movie.create!(
 	title: "Alien",
 	photo: seed_image('alien-poster.jpg'),
@@ -734,7 +723,7 @@ Movie.create!(
   genre_ids: [8,9]
 )
 
-# MOVIE ID 64
+# MOVIE ID 63
 Movie.create!(
 	title: "Blade Runner",
 	photo: seed_image('blade-runner-poster.jpg'),
@@ -745,10 +734,10 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 65
+# MOVIE ID 64
 Movie.create!(
 	title: "The Terminator",
-	photo: seed_image('terminator-poster.jpg'),
+	photo: seed_image('the-terminator-poster.jpg'),
 	year: 1984,
 	rating: 'R',
 	length: '1h 47min',
@@ -756,7 +745,7 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 66
+# MOVIE ID 65
 Movie.create!(
 	title: "The Matrix",
 	photo: seed_image('the-matrix-poster.jpg'),
@@ -767,21 +756,21 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 67
+# MOVIE ID 66
 Movie.create!(
 	title: "2001: A Space Odyssey",
 	photo: seed_image('2001-poster.jpg'),
 	year: 1968,
 	rating: 'G',
 	length: '2h 29min',
-	summary: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+	summary: "Humanity finds a mysterious, obviously artificial object buried beneath the Lunar surface and, with the intelligent computer H.A.L. 9000, sets off on a quest.",
   genre_ids: [1,8]
 )
 
-# MOVIE ID 68
+# MOVIE ID 67
 Movie.create!(
 	title: "District 9",
-	photo: seed_image('district9-poster.jpg'),
+	photo: seed_image('district-9-poster.jpg'),
 	year: 2009,
 	rating: 'R',
 	length: '1h 52min',
@@ -789,7 +778,7 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 69
+# MOVIE ID 68
 Movie.create!(
 	title: "Serenity",
 	photo: seed_image('serenity-poster.jpg'),
@@ -800,7 +789,7 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 70
+# MOVIE ID 69
 Movie.create!(
 	title: "Inception",
 	photo: seed_image('inception-poster.jpg'),
@@ -811,7 +800,7 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 71
+# MOVIE ID 70
 Movie.create!(
 	title: "Star Trek II: The Wrath of Khan",
 	photo: seed_image('star-trek-2-poster.jpg'),
@@ -822,7 +811,7 @@ Movie.create!(
   genre_ids: [1,8]
 )
 
-# MOVIE ID 72
+# MOVIE ID 71
 Movie.create!(
 	title: "The Shining",
 	photo: seed_image('the-shining-poster.jpg'),
@@ -833,7 +822,7 @@ Movie.create!(
   genre_ids: [3,9]
 )
 
-# MOVIE ID 73
+# MOVIE ID 72
 Movie.create!(
 	title: "Halloween",
 	photo: seed_image('halloween-poster.jpg'),
@@ -844,7 +833,7 @@ Movie.create!(
   genre_ids: [9]
 )
 
-# MOVIE ID 74
+# MOVIE ID 73
 Movie.create!(
 	title: "The Silence of the Lambs",
 	photo: seed_image('silence-of-the-lambs-poster.jpg'),
@@ -855,7 +844,7 @@ Movie.create!(
   genre_ids: [3,9]
 )
 
-# MOVIE ID 75
+# MOVIE ID 74
 Movie.create!(
 	title: "Psycho",
 	photo: seed_image('psycho-poster.jpg'),
@@ -866,7 +855,7 @@ Movie.create!(
   genre_ids: [9]
 )
 
-# MOVIE ID 76
+# MOVIE ID 75
 Movie.create!(
 	title: "The Babadook",
 	photo: seed_image('the-babadook-poster.jpg'),
@@ -877,7 +866,7 @@ Movie.create!(
   genre_ids: [3,9]
 )
 
-# MOVIE ID 77
+# MOVIE ID 76
 Movie.create!(
 	title: "The Exorcist",
 	photo: seed_image('the-exorcist-poster.jpg'),
@@ -888,7 +877,7 @@ Movie.create!(
   genre_ids: [9]
 )
 
-# MOVIE ID 78
+# MOVIE ID 77
 Movie.create!(
 	title: "The Ring",
 	photo: seed_image('the-ring-poster.jpg'),
@@ -899,7 +888,7 @@ Movie.create!(
   genre_ids: [9]
 )
 
-# MOVIE ID 79
+# MOVIE ID 78
 Movie.create!(
 	title: "The Thing",
 	photo: seed_image('the-thing-poster.jpg'),
@@ -910,7 +899,7 @@ Movie.create!(
   genre_ids: [8,9]
 )
 
-# MOVIE ID 80
+# MOVIE ID 79
 Movie.create!(
 	title: "The Orphanage",
 	photo: seed_image('the-orphanage-poster.jpg'),
@@ -921,7 +910,7 @@ Movie.create!(
   genre_ids: [3,9]
 )
 
-# MOVIE ID 81
+# MOVIE ID 80
 Movie.create!(
 	title: "Poltergeist",
 	photo: seed_image('poltergeist-poster.jpg'),
@@ -931,17 +920,3 @@ Movie.create!(
 	summary: "A family's home is haunted by a host of ghosts. When their daughter is taken over to the other side, they hire a medium to bring her back.",
   genre_ids: [7,9]
 )
-
-# MOVIE ID 82
-Movie.create!(
-	title: "Poltergeist",
-	photo: seed_image('poltergeist-poster.jpg'),
-	year: 1982,
-	rating: 'PG',
-	length: '1h 54min',
-	summary: "A family's home is haunted by a host of ghosts. When their daughter is taken over to the other side, they hire a medium to bring her back.",
-  genre_ids: [7,9]
-)
-
-
-

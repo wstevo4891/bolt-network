@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328174913) do
+ActiveRecord::Schema.define(version: 20160518225330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,25 @@ ActiveRecord::Schema.define(version: 20160328174913) do
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "photo"
+    t.integer  "year"
+    t.string   "rating"
+    t.string   "length"
+    t.string   "blurb"
     t.string   "summary"
-    t.integer  "rating"
+    t.integer  "tomato_meter"
+    t.json     "scenes",       default: [],              array: true
+    t.json     "people",       default: [],              array: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "subgenres", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "subgenres", ["genre_id"], name: "index_subgenres_on_genre_id", using: :btree
 
 end

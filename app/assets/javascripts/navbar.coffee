@@ -46,10 +46,10 @@ navbar_main = ->
       $box.delay(500).show 0
     return
 
-  toggle_closeIcon = ($foo, $icon)->
-    $foo.on 'keyup', (e)->
-      $bar = $(e.target).val().length
-      if $bar > 0
+  toggle_closeIcon = ($parent, $icon)->
+    $parent.on 'keyup', (e)->
+      $search_length = $(e.target).val().length
+      if $search_length > 0
         $icon.show()
       else
         $icon.hide()
@@ -62,15 +62,15 @@ navbar_main = ->
   $close = $('#closeIcon')
   toggle_closeIcon($('.searchInput'), $close)
 
-  reset_value = ($icon, $value)->
+  reset_search_value = ($icon, $value)->
     $icon.bind 'click', ->
       $value.val("")
       $icon.hide()
       return
     return
 
-  reset_value($closeMobile, $('.search-input-mobile'))
-  reset_value($close, $('.search-input-large'))
+  reset_search_value($closeMobile, $('.search-input-mobile'))
+  reset_search_value($close, $('.search-input-large'))
   return
 
 $(document).ready navbar_main

@@ -1,12 +1,14 @@
 <div class="container">
-	<div class="admin-row">
+	<div class="admin-row show-movie">
 		<div class="col-sm-8">
 			<img class="img-responsive" src="<%= @movie.photo %>">
 		</div>
 		<div class="col-sm-8">
 			<h2><%= @movie.title %></h2>
 			<p><%= @movie.summary %></p>
-			<h4>Rotten Tomatoes: <%= @movie.rating %>%</h4>
+			<span><%= @movie.year %></span>
+			<span><%= @movie.rating %></span>
+			<span><%= @movie.length %></span>
 		</div>
 	</div>
 	<br>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :subgenres
   root 'pages#home'
 
   resources :movies

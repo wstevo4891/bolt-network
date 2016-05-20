@@ -1,12 +1,64 @@
-<% @genres.each do |genre| %>
+<!--
+<% @genre = Genre.find_by(id: 1) %>
+<div class="row">
   <div class="row">
+    <h3>
+      <a href=<%= genre_path(@genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a>
+    </h3>
+
+    <ol></ol>
+  </div>
+
+  <div class="carousel">
+    <div class="shadow-left">
+      <a class="carousel-arrow previous">
+        <i class="fa fa-angle-left"></i>
+      </a>
+    </div>
+    <div class="shadow-right">
+      <a class="carousel-arrow forward">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+    <ul>
+      <% @movies.each do |movie| %>
+        <% if movie.genre_ids.include?(@genre.id) %>
+          <li>
+            <div class="poster">
+              <%= link_to image_tag(movie.photo, class: "img-responsive"), movie_path(movie) %>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+<% @genres.each do |genre| %>
+  <div class="row carousel-row">
     <% if genre.name == "Action" %>
-      <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+      <h3>
+        <a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a>
+      </h3>
     <% else %>
-      <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a></h3>
+      <h3>
+        <a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a>
+      </h3>
     <% end %>
-    <div class="slider-<%= genre.name %> carousel">
-      <ul>
+    <div class="slider-<%= genre.name %>">
+      <div class="border-left"></div>
+      <div class="border-right"></div>
+      <ul id="slide-list">
         <% arr = [] %>
         <% movie_ids = [] %>
         <% carousel_data(@movies, genre, arr, movie_ids) %>
@@ -14,7 +66,7 @@
         <% while arr[i] %>
           <% count = 0 %>
           <li id="auto-width">
-          <% while count < 6 %>
+          <% while count < 5 %>
             <% @movie = Movie.find_by(id: movie_ids[i]) %>
             <% if i < arr.length - 1 %>
               <div class="poster">
