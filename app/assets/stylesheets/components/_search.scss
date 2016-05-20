@@ -11,6 +11,10 @@
   i {
     margin-right: 0.5em;
   }
+
+  &:hover i {
+    @include transform(scale(1.3));
+  }
 }
 
 .searchWrapper {

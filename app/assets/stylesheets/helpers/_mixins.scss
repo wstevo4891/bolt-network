@@ -22,6 +22,12 @@
 
 // BREAKPOINTS ##########
 
+@mixin bp-x-large {
+	@media only screen and (min-width: 1150px) {
+		@content;
+	}
+}
+
 @mixin bp-large {
 	@media only screen and (min-width: 1024px) {
 		@content;
