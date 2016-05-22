@@ -12,7 +12,7 @@
     <div class="slider-<%= genre.name %>">
       <div class="border-left"></div>
       <div class="border-right"></div>
-      <ul id="slide-list">
+      <ul>
         <% arr = [] %>
         <% movie_ids = [] %>
         <% carousel_data(@movies, genre, arr, movie_ids) %>
@@ -23,11 +23,19 @@
           <% while count < 5 %>
             <% @movie = Movie.find_by(id: movie_ids[i]) %>
             <% if i < arr.length - 1 %>
-              <div class="poster">
-                <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-              </div>
-              <% i += 1 %>
-              <% count += 1 %>
+              <% if count == 0 %>
+                <div class="poster first-poster">
+                  <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+                </div>
+                <% i += 1 %>
+                <% count += 1 %>
+              <% else %>
+                <div class="poster">
+                  <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+                </div>
+                <% i += 1 %>
+                <% count += 1 %>
+              <% end %>
             <% elsif i == arr.length - 1 %>
               <div class="poster">
                 <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
