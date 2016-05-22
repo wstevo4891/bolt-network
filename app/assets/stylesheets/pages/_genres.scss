@@ -9,6 +9,10 @@
 	text-align: left;
 	overflow-x: visible;
 
+	li {
+		display: inline-block;
+	}
+
 	.row {
 		margin-bottom: 2em;
 	}
@@ -19,6 +23,10 @@
 			margin: 2em 6em;
 		}
 	}
+}
+
+.poster-wrapper {
+	display: inline-block;
 }
 
 .show-wrap {

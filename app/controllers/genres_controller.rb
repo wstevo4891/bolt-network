@@ -16,7 +16,6 @@ class GenresController < ApplicationController
   # GET /genres/1.json
   def show
     @genres = Genre.all
-    @movies = Movie.all
   end
 
 	def edit

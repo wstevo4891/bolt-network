@@ -1,42 +1,34 @@
-<% @movies.each do |movie| %>
-  <% for i in movie.genre_ids %>
-    <% if i == @genre.id %>
-
-		  <div class="poster">
-        <%= link_to image_tag(movie.photo), movie_path(movie) %>
-		  </div>
-
-		<% end %>
-	<% end %>
+<% arr = [] %>
+<% movie_ids = [] %>
+<% index = 1 %>
+<% i = 0 %>
+<% Movie.find_each do |movie| %>
+  <% if movie.genre_ids.include?(@genre.id) %>
+    <% arr.push(movie.photo) %>
+    <% movie_ids.push(movie.id) %>
+  <% end %>
 <% end %>
-
-<!--
-<ul id="slide-list">
-  <% arr = [] %>
-  <% movie_ids = [] %>
-  <% @movies.each do |movie| %>
-    <% for i in 
-  <% i = 0 %>
-  <% while arr[i] %>
-    <% count = 0 %>
-    <li id="auto-width">
+<% print arr %>
+<% print movie_ids %>
+<% while arr[i] %>
+  <% count = 0 %>
+  <div class="posters-wrapper">
     <% while count < 5 %>
       <% @movie = Movie.find_by(id: movie_ids[i]) %>
       <% if i < arr.length - 1 %>
-        <div class="poster">
-          <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+        <div class="poster poster-<%= index %>">
+          <%= link_to image_tag(arr[i], class: 'img-responsive'), movie_path(@movie) %>
         </div>
         <% i += 1 %>
+        <% index += 1 %>
         <% count += 1 %>
       <% elsif i == arr.length - 1 %>
-        <div class="poster">
-          <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+        <div class="poster poster-<%= index %>">
+          <%= link_to image_tag(arr[i], class: 'img-responsive'), movie_path(@movie) %>
         </div>
         <% i += 1 %>
         <% break %>
       <% end %>
-    <% end %>
-    </li>
-  <% end %>
-</ul>
--->
+    <% end %> 
+  </div>
+<% end %>
