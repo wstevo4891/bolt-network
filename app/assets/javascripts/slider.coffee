@@ -1,9 +1,12 @@
-# Home Page Slideshow functions
+
+# HOME PAGE SLIDER FUNCTIONS
+#=================================================
 
 slider_main = ->
 
   change_info = ->
     $current = $('.slider-frame').vegas('current')
+
     if $current == 0
       $('#movie-logo').attr 'src', 'pirates-logo.png'
       $('#year').text '2003'
@@ -11,6 +14,7 @@ slider_main = ->
       $('#movie-length').text '2h 23min'
       $('#blurb').text 'A sword-handy blacksmith teams up with a clever yet eccentric outlaw to rescue his love from a crew of undead pirates.'
       $('#play').attr 'href', '/movies/9'
+
     else if $current == 1
       $('#movie-logo').attr 'src', 'skyfall-logo.png'
       $('#year').text '2012'
@@ -18,6 +22,7 @@ slider_main = ->
       $('#movie-length').text '2h 23min'
       $('#blurb').text 'Terror hits London as 007 races to defend M from a tech-savvy former agent out for revenge.'
       $('#play').attr 'href', '/movies/7'
+
     else if $current == 2
       $('#movie-logo').attr 'src', 'avengers-logo.png'
       $('#year').text '2012'
@@ -30,8 +35,10 @@ slider_main = ->
   slider_resize = ->
     width = $(window).width() - 200
     $('.slider-frame').height width
+
     slider_height = $('.slider-frame').height()
     $('.slider-arrow').css 'margin-top', slider_height * 0.45
+    
     total_width = $(window).width()
     $('#slide-info').css 'font-size', total_width * 0.014
     $('#slide-buttons a').css 'font-size', total_width * 0.012
@@ -73,41 +80,21 @@ slider_main = ->
   # GENRE CAROUSELS
   #=======================================
 
-  $('.slider-Action').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+  make_carousel = ($target)->
+    $target.unslider arrows:
+      prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+      next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+    return
 
-  $('.slider-Animation').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Comedy').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Drama').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Family').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Fantasy').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Romance').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Horror').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-
-  $('.slider-Sci-Fi').unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+  make_carousel($('.slider-Action'))
+  make_carousel($('.slider-Comedy'))
+  make_carousel($('.slider-Drama'))
+  make_carousel($('.slider-Animation'))
+  make_carousel($('.slider-Family'))
+  make_carousel($('.slider-Fantasy'))
+  make_carousel($('.slider-Romance'))
+  make_carousel($('.slider-Horror'))
+  make_carousel($('.slider-Sci-Fi'))
   return
 
 $(document).ready slider_main
