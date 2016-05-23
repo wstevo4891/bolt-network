@@ -85,6 +85,10 @@
     }
   }
 
+  .last-slide:hover {
+    margin: 2em 0 2em 4.2em;
+  }
+
   img {
     width: 11.2em;
     height: 6.5em;
@@ -108,5 +112,14 @@
 
   &:hover {
     @include transform(translateX(-4em));
+  }
+}
+
+.last-slide-translate {
+  @include transitions(all 0.5s ease);
+  @include transition-delay(0.5s);
+
+  &:hover {
+    @include transform(translateX(-10em));
   }
 }
