@@ -2,11 +2,11 @@
   <div class="row carousel-row">
     <% if genre.name == "Action" %>
       <h3>
-        <a href=<%= genre_path(genre) %> >Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a href=<%= genre_path(genre) %>>Action & Adventure<i class="glyphicon glyphicon-chevron-right"></i></a>
       </h3>
     <% else %>
       <h3>
-        <a href=<%= genre_path(genre) %> ><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a>
+        <a href=<%= genre_path(genre) %>><%= genre.name %><i class="glyphicon glyphicon-chevron-right"></i></a>
       </h3>
     <% end %>
     <div class="slider-<%= genre.name %>">
@@ -17,27 +17,21 @@
         <% movie_ids = [] %>
         <% carousel_data(@movies, genre, arr, movie_ids) %>
         <% i = 0 %>
+        <% index = 1 %>
         <% while arr[i] %>
           <% count = 0 %>
           <li id="auto-width">
           <% while count < 5 %>
             <% @movie = Movie.find_by(id: movie_ids[i]) %>
             <% if i < arr.length - 1 %>
-              <% if count == 0 %>
-                <div class="poster first-poster">
-                  <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-                </div>
-                <% i += 1 %>
-                <% count += 1 %>
-              <% else %>
-                <div class="poster">
-                  <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
-                </div>
-                <% i += 1 %>
-                <% count += 1 %>
-              <% end %>
+              <div class="poster poster-<%= index %>">
+                <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
+              </div>
+              <% i += 1 %>
+              <% index += 1 %>
+              <% count += 1 %>
             <% elsif i == arr.length - 1 %>
-              <div class="poster">
+              <div class="poster poster-<%= index %>">
                 <%= link_to image_tag(arr[i], class: "img-responsive"), movie_path(@movie) %>
               </div>
               <% i += 1 %>
