@@ -196,8 +196,8 @@
 					prop = 'height';
 				}
 
-				self.$container.css(prop, (self.total * 100) + '%').addClass(self.prefix + 'carousel');
-				self.$slides.css(prop, (100 / self.total) + '%');
+				self.$container.css(prop, (self.total * 92) + '%').addClass(self.prefix + 'carousel');
+				self.$slides.css(prop, (92 / self.total) + '%');
 			}
 		};
 
@@ -319,7 +319,7 @@
 					},
 
 					move: function(e) {
-						self.$container.css('left', -(100 * self.current) + (100 * e.distX / width) + '%');
+						self.$container.css('left', -(92 * self.current) + (92 * e.distX / width) + '%');
 					},
 
 					moveend: function(e) {
@@ -333,7 +333,7 @@
 						}
 						else {
 
-							self.$container.animate({left: -(100 * self.current) + '%' }, self.options.speed / 2 );
+							self.$container.animate({left: -(92 * self.current) + '%' }, self.options.speed / 2 );
 						}
 					}
 				});
@@ -480,7 +480,7 @@
 
 			if(self.options.infinite) {
 				//  So then we need to hide the first slide
-				self.$container.css('margin-' + prop, '-100%');
+				self.$container.css('margin-' + prop, '-92%');
 			}
 
 			return self.slide(prop, to);
@@ -542,7 +542,7 @@
 					//  this whole mess up.
 					self.$context.on(self._ + '.moved', function() {
 						if(self.current === dummy) {
-							self.$container.css(prop, -(100 * dummy) + '%').off(self._ + '.moved');
+							self.$container.css(prop, -(92 * dummy) + '%').off(self._ + '.moved');
 						}
 					});
 				}
@@ -553,7 +553,7 @@
 			var obj = {};
 
 			//  Manually create it here
-			obj[prop] = -(100 * to) + '%';
+			obj[prop] = -(92 * to) + '%';
 
 			//  And animate using our newly-created object
 			return self._move(self.$container, obj);
