@@ -81,6 +81,10 @@ navbar_main = ->
 
   $(document).mouseup (e) ->
     width = $input.css('width')
+
+    #  If the mouseup target is not the search bar input, has a length of 0, and 
+    #  the search bar width is 270px, shrink and hide that search bar!
+
     if !$input.is(e.target) and $input.has(e.target).length == 0 and width == '270px'
       $input.animate width: '0px'
       $input.delay(5).hide 0
