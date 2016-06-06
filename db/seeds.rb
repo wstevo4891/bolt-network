@@ -302,7 +302,7 @@ Movie.create!(
 	year: 1987,
 	rating: 'PG',
 	length: '1h 38min',
-	summary: 'While home sick in bed, a young boy\'s grandfather reads him a story called The Princess Bride.',
+	summary: "This cult classic comedy-romance follows a peasant farmhand as he battles bumbling outlaws and an evil prince to win the hand of his one true love.",
   genre_ids: [1,2,5]
 )
 
