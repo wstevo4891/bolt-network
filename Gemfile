@@ -30,9 +30,6 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
 
-# Use Font-Awesome for icons
-gem 'font-awesome-sass'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
