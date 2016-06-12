@@ -13,23 +13,22 @@
       <div class="border-left"></div>
       <div class="border-right"></div>
       <ul>
-        <% movie_ids = [] %>
-        <% carousel_data(@movies, genre, movie_ids) %>
+        <% @movie_ids = genre.movie_ids %>
         <% i = 0 %>
         <% index = 1 %>
-        <% while movie_ids[i] %>
+        <% while @movie_ids[i] %>
           <% count = 0 %>
           <li id="auto-width">
             <% while count < 5 %>
-              <% @movie = Movie.find_by(id: movie_ids[i]) %>
-              <% if i < movie_ids.length - 1 %>
+              <% @movie = Movie.find_by(id: @movie_ids[i]) %>
+              <% if i < @movie_ids.length - 1 %>
                 <div class="poster poster-<%= index %>">
                   <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
                 </div>
                 <% i += 1 %>
                 <% index += 1 %>
                 <% count += 1 %>
-              <% elsif i == movie_ids.length - 1 %>
+              <% elsif i == @movie_ids.length - 1 %>
                 <div class="poster poster-<%= index %>">
                   <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
                 </div>

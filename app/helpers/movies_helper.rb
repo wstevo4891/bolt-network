@@ -8,28 +8,28 @@ module MoviesHelper
     end
   end
 
-  def carousel(array1, array2)
+  def carousel(array)
     i = 0
     index = 1
     @li_begin = "<li id='auto-width'>".html_safe
     @li_end = "</li>".html_safe
     @div_begin = "<div class='poster poster-#{index}'>".html_safe
     @div_end = "</div>".html_safe 
-    while array1[i]
+    while array[i]
       count = 0
       @li_begin
 	      while count < 6
-	        movie = Movie.find_by(id: array2[i])
-	        if i < array1.length - 1
+	        @movie = Movie.find_by(id: array[i])
+	        if i < array.length - 1
 	        	@div_begin
-	        	  link_to image_tag(array1[i], class: "img-responsive"), movie_path(movie)
+	        	  link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie)
 	        	@div_end
 	          i += 1
 	          index += 1
 	          count += 1
-	        elsif i == array1.length - 1
+	        elsif i == array.length - 1
 	          @div_begin
-	            link_to image_tag(array1[i], class: "img-responsive"), movie_path(movie)
+	            link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie)
 	          @div_end
 	          i += 1
 	          break

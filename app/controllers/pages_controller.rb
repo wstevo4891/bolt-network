@@ -11,6 +11,6 @@ class PagesController < ApplicationController
   end
 
   def home
-    access_data
+    @genres = Genre.all
   end
 end
