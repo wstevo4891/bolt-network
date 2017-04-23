@@ -9,14 +9,20 @@ carousels_main =->
   # console.log "posters_count: #{JSON.stringify(posters_count)}"
   # console.log "posters_count_length: #{posters_count.length}"
 
-  $('li.auto-width').each ->
+  $('li.max-92').each ->
+    $(this).css('width', '92vw')
     $(this).children(':first').addClass 'first-poster'
     $(this).children(':last').addClass 'last-poster'
   
   carousels_container_exists = document.getElementById('carousels-container')
   genres_container_exists = document.getElementById('genres-container')
 
-  $('.poster').hover ->
+  $('.poster').hover (->
+    parent_li =  $(this).parent()
+    setTimeout (->
+      parent_li.addClass('auto-width')
+    ), 500
+
     if carousels_container_exists
       if $(this).hasClass 'first-poster'
         $(this).closest('ul').removeClass 'last-slide-translate'
@@ -29,7 +35,6 @@ carousels_main =->
       else
         $(this).closest('ul').removeClass 'last-slide-translate'
         $(this).closest('ul').addClass 'slide-list'
-      return
       
     else if genres_container_exists
       if $(this).hasClass 'first-poster'
@@ -43,8 +48,14 @@ carousels_main =->
       else
         $(this).parent().removeClass 'last-slide-translate'
         $(this).parent().addClass 'slide-list'
-      return
-    return
-  return
+
+  ), ->
+    parent_li = $(this).parent()
+    parent_li.mouseleave ->
+      # parent_li.animate width: '92vw'
+      setTimeout (->
+        parent_li.removeClass('auto-width')
+      ), 1100
 
 $(document).ready carousels_main
+

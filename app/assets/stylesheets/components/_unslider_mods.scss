@@ -14,12 +14,16 @@
 	height: 11em;
 }
 
-.unslider .unslider-horizontal .unslider-carousel li.auto-width {
-	width: auto !important;
+body .unslider .unslider-horizontal .unslider-carousel li {
 	display: flex;
 }
 
-.max-92 {
+body .unslider .unslider-horizontal .unslider-carousel li.auto-width {
+	width: auto !important;
+	max-width: none !important;
+}
+
+.unslider .unslider-horizontal .unslider-carousel li.max-92 {
 	max-width: 92vw;
 }
 

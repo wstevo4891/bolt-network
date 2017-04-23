@@ -15,7 +15,7 @@
       <ul>
         <% movie_ids = genre.movie_ids %>
         <% movie_ids.each_slice(4) do |batch| %>
-          <li class="auto-width max-92">
+          <li class="max-92">
             <% batch.each do |movie_id| %>
               <% @movie = Movie.find(movie_id) %>
               <div class="poster">

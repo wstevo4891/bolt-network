@@ -69,7 +69,6 @@
   border: none;
   padding: 0;
   transition: all 0.5s ease;
-  // @include transition-delay(0.5s);
   transition-delay: 0.5s;
 
   .poster-inner {
@@ -113,19 +112,19 @@
 }
 
 .slide-list {
-  @include transitions(all 0.5s ease);
-  @include transition-delay(0.5s);
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
 
   &:hover {
-    @include transform(translateX(-4em));
+    transform: translateX(-4em);
   }
 }
 
 .last-slide-translate {
-  @include transitions(all 0.5s ease);
-  @include transition-delay(0.5s);
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
 
   &:hover {
-    @include transform(translateX(-11em));
+    transform: translateX(-11em);
   }
 }
