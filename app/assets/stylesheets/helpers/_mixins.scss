@@ -20,7 +20,7 @@
 }
 
 
-// BREAKPOINTS ##########
+//  MAIN BREAKPOINTS =====================================
 
 @mixin bp-x-large {
 	@media only screen and (min-width: 1150px) {
@@ -63,6 +63,30 @@
 		@content;
 	}
 }
+
+
+// POSTER WIDTH BREAKPOINTS =========================
+
+@mixin bp-poster-width {
+	@media screen and (max-width: 499px) {
+		width: 50%;
+	}
+	@media screen and (min-width: 500px) and (max-width: 799px) {
+		width: 33.333333%;
+	}
+	@media screen and (min-width: 800px) and (max-width: 1099px) {
+		width: 25%;
+	}
+	@media screen and (min-width: 1200px) and (max-width: 1399px) {
+		width: 20%;
+	}
+	@media screen and (min-width: 1400px) {
+		width: 16.6666667%;
+	}
+}
+
+
+
 
 
 // ANIMATIONS AND KEYFRAMES ############

@@ -13,28 +13,14 @@
       <div class="border-left"></div>
       <div class="border-right"></div>
       <ul>
-        <% @movie_ids = genre.movie_ids %>
-        <% i = 0 %>
-        <% index = 1 %>
-        <% while @movie_ids[i] %>
-          <% count = 0 %>
+        <% movie_ids = genre.movie_ids %>
+        <% movie_ids.each_slice(5) do |batch| %>
           <li class="auto-width">
-            <% while count < 5 %>
-              <% @movie = Movie.find( @movie_ids[i] ) %>
-              <% if i < @movie_ids.length - 1 %>
-                <div class="poster poster-<%= index %>">
-                  <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
-                </div>
-                <% i += 1 %>
-                <% index += 1 %>
-                <% count += 1 %>
-              <% elsif i == @movie_ids.length - 1 %>
-                <div class="poster poster-<%= index %>">
-                  <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
-                </div>
-                <% i += 1 %>
-                <% break %>
-              <% end %>
+            <% batch.each do |movie_id| %>
+              <% @movie = Movie.find(movie_id) %>
+              <div class="poster">
+                <%= link_to image_tag(@movie.photo, class: 'img-responsive'), movie_path(@movie) %>
+              </div>
             <% end %>
           </li>
         <% end %>
