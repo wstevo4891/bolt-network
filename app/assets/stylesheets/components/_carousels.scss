@@ -46,33 +46,37 @@
 
 .border-left, .border-right {
   position: absolute;
+  bottom: -2px;
   width: 4%;
-  height: 122%;
-  background: rgba(20, 20, 20, 0.4);
-  z-index: 8;
-
-  @include bp-tablet {
-    width: 4.1%;
-  }
+  height: 75%;
+  background: rgba(20, 20, 20, 0.5);
+  z-index: 20;
 }
 
 .border-left {
-  left: -2px;
+  left: -4.2%;
 }
 
 .border-right {
-  right: 2px;
+  right: 4%;
 }
 
 .poster {
   display: inline-block;
   position: relative;
-  margin: 3em 0.02em 2em;
+  margin: 3em 0 2em;
   background:transparent; 
   border: none;
   padding: 0;
-  @include transitions(all 0.5s ease);
-  @include transition-delay(0.5s);
+  transition: all 0.5s ease;
+  // @include transition-delay(0.5s);
+  transition-delay: 0.5s;
+
+  .poster-inner {
+    margin: 0 2px;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+  }
 
   img {
     width: 11.2em;
@@ -80,10 +84,14 @@
   }
 
   &:hover {
-    @include box-shadow(2px 2px 40px $azure-radiance);
-    @include transform(scale(1.75));
+    box-shadow: 2px 2px 40px $azure-radiance;
+    transform: scale(1.75);
     z-index: 8;
     margin: 2em 4.2em;
+
+    .poster-inner {
+      margin: 0;
+    }
 
     img {
       z-index: 8;
@@ -100,6 +108,8 @@
       height: 8.13868em;
     }
   }
+
+  @include bp-poster-width;
 }
 
 .slide-list {

@@ -4,6 +4,7 @@
 
 .unslider {
 	width: 100vw;
+	padding: 0 4%;
 }
 
 .unslider, .unslider-horizontal {
@@ -15,6 +16,11 @@
 
 .unslider .unslider-horizontal .unslider-carousel li.auto-width {
 	width: auto !important;
+	display: flex;
+}
+
+.max-92 {
+	max-width: 92vw;
 }
 
 .unslider-nav {
@@ -119,9 +125,8 @@ a.unslider-arrow {
 
 ul.unslider-wrap {
 	width: 1500% !important;
-	margin-left: 4%;
 }
 
-.unslider li, .unslider ol {
-	margin-left: 0;
-}
+// .unslider li, .unslider ol {
+// 	margin-left: -0.26%;
+// }
