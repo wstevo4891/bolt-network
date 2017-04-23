@@ -4,19 +4,14 @@
 
 carousels_main =->
 
-  posters_count = document.getElementsByClassName('poster');
-  i = 0
-  j = 1
-  h = 5
-  while i < posters_count.length
-    if $(posters_count[i]).hasClass "poster-#{j}"
-      $(".poster-#{j}").addClass 'first-poster'
-      j += 5
-      
-    else if $(posters_count[i]).hasClass "poster-#{h}"
-      $(".poster-#{h}").addClass "last-poster"
-      h += 5
-    i++
+  # posters_count = document.getElementsByClassName('poster');
+  # posters_count = $('.poster');
+  # console.log "posters_count: #{JSON.stringify(posters_count)}"
+  # console.log "posters_count_length: #{posters_count.length}"
+
+  $('li.auto-width').each ->
+    $(this).children(':first').addClass 'first-poster'
+    $(this).children(':last').addClass 'last-poster'
   
   carousels_container_exists = document.getElementById('carousels-container')
   genres_container_exists = document.getElementById('genres-container')
