@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   
   resources :subgenres
-  root 'pages#home'
-
   resources :movies
   resources :genres
   
   get 'pages/about'
+  get 'pages/debug'
   get 'admin/movies_index'
+
+  root 'pages#home'
 end
