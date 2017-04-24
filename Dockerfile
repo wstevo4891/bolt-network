@@ -21,6 +21,16 @@ WORKDIR /bolt-network
 COPY Gemfile Gemfile.lock ./ 
 RUN gem install bundler && bundle install --jobs 20 --retry 5
 
+# Store the bundler cache
+# To run bundle install: docker-compose run app bundle
+# If you intend on deploying the web container you’ll need 
+# to rebuild it WITHOUT linking the bundle data container, 
+# but that’s not a big deal since you’d have to rebuild the 
+# container anyway with your code changes.
+ENV BUNDLE_GEMFILE=bolt-network/Gemfile \
+  BUNDLE_JOBS=2 \
+  BUNDLE_PATH=/bundle
+
 # Copy the main application.
 COPY . ./
 

@@ -11,3 +11,11 @@ postgres:
   image: postgres:9.4
   ports:
     - "5432"
+bundle:
+  # 'image' will vary depending on your docker-compose 
+  # project name. You may need to run `docker-compose build app
+  # before this works.
+  image: boltnetwork_app
+  command: echo I'm a little data container, short and stout...
+  volumes:
+    - /bundle

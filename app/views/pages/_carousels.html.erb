@@ -14,7 +14,7 @@
       <div class="border-right"></div>
       <ul>
         <% movie_ids = genre.movie_ids %>
-        <% movie_ids.each_slice(4) do |batch| %>
+        <% movie_ids.each_slice(@batch) do |batch| %>
           <li class="max-92">
             <% batch.each do |movie_id| %>
               <% @movie = Movie.find(movie_id) %>
@@ -30,3 +30,20 @@
     </div>
   </div>
 <% end %>
+
+
+        <%# movie_ids = genre.movie_ids %>
+        <%# movie_ids.each do |movie_id| %>
+          <%# @movie = Movie.find(movie_id) %>
+          <!-- <div class="poster">
+            <div class="poster-inner">
+              <%#= link_to image_tag(@movie.photo), movie_path(@movie) %>
+            </div>
+          </div> -->
+        <%# end %>
+
+
+
+
+
+

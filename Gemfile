@@ -43,6 +43,9 @@ gem 'responders', '~> 2.0'
 # Use Puma for a server
 gem 'puma'
 
+# Makes logs manageable
+# gem "lograge"
+
 group :development do
   gem 'better_errors'
   gem 'meta_request'

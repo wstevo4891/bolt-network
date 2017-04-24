@@ -86,6 +86,11 @@ slider_main = ->
       next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
     return
 
+  # carousel_regex = /\.slider-[A-Z][a-z]+/
+
+  # $("#{carousel_regex}").each ->
+  #   make_carousel($(this))
+
   make_carousel($('.slider-Action'))
   make_carousel($('.slider-Comedy'))
   make_carousel($('.slider-Drama'))
