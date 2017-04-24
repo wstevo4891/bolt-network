@@ -62,6 +62,8 @@
 }
 
 .poster {
+  @include bp-poster-width;
+  height: 6.5em;
   display: inline-block;
   position: relative;
   margin: 3em 0 2em;
@@ -98,17 +100,17 @@
   }
 
   @include bp-tablet {
+    height: 8.13868em;
+
     &:hover {
       margin: 2em 5.5em;
     }
 
     img {
-      width: 14.46975em;
+      width: 14em;
       height: 8.13868em;
     }
   }
-
-  @include bp-poster-width;
 }
 
 .slide-list {

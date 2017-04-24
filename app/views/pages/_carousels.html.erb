@@ -20,7 +20,7 @@
               <% @movie = Movie.find(movie_id) %>
               <div class="poster">
                 <div class="poster-inner">
-                  <%= link_to image_tag(@movie.photo, class: 'img-responsive'), movie_path(@movie) %>
+                  <%= link_to image_tag(@movie.photo), movie_path(@movie) %>
                 </div>
               </div>
             <% end %>
