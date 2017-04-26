@@ -1,21 +1,25 @@
 app:
   build: .
   command: rails server -p 3000 -b '0.0.0.0'
-  volumes:
-    - .:/bolt-network
   ports:
     - "3000:3000"
   links:
     - postgres
+  volumes:
+    - .:/bolt-network
+  # This tells the web container to mount the `bundle` images'
+  # /bundle volume to the `web` containers /bundle path.
+  volumes_from:
+    - bundle
 postgres:
   image: postgres:9.4
   ports:
     - "5432"
 bundle:
-  # 'image' will vary depending on your docker-compose 
+  # image will vary depending on your docker-compose 
   # project name. You may need to run `docker-compose build app
   # before this works.
   image: boltnetwork_app
-  command: echo I'm a little data container, short and stout...
+  command: echo "I'm a little data container, short and stout..."
   volumes:
     - /bundle

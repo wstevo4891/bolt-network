@@ -14,25 +14,33 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /bolt-network
 WORKDIR /bolt-network
 
+ADD Gemfile* /bolt-network/
+
 # Copy the Gemfile as well as the Gemfile.lock and install 
 # the RubyGems. This is a separate step so the dependencies 
 # will be cached unless changes to one of those two files 
 # are made.
-COPY Gemfile Gemfile.lock ./ 
-RUN gem install bundler && bundle install --jobs 20 --retry 5
+# COPY Gemfile Gemfile.lock ./ 
+# RUN gem install bundler && bundle install --jobs 20 --retry 5
 
-# Store the bundler cache
+# Store the bundler cache so I can run bundle install
+# without having to re-build the container
+# ====================================================
 # To run bundle install: docker-compose run app bundle
 # If you intend on deploying the web container you’ll need 
 # to rebuild it WITHOUT linking the bundle data container, 
 # but that’s not a big deal since you’d have to rebuild the 
 # container anyway with your code changes.
-ENV BUNDLE_GEMFILE=bolt-network/Gemfile \
+ENV BUNDLE_GEMFILE=/bolt-network/Gemfile \
   BUNDLE_JOBS=2 \
   BUNDLE_PATH=/bundle
 
+RUN bundle install
+
+ADD . /bolt-network
+
 # Copy the main application.
-COPY . ./
+# COPY . ./
 
 # Expose port 3000 to the Docker host, so we can access it 
 # from the outside.
