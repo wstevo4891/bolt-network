@@ -19,7 +19,7 @@ carousels_resize = ->
 
 	console.log "batch: #{batch}"
 
-	ajax:
+	$.ajax
 		type: 'GET'
 		url: "/pages/slide_batch"
 		data: data
@@ -29,7 +29,7 @@ carousels_resize = ->
 			console.log "fuck balls"
 			console.log err
 		success: (data) ->
-			console.log "data: #{data}"
+			# console.log "data: #{data}"
 			console.log "It worked!"
 
 

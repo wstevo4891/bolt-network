@@ -14,7 +14,7 @@
       <div class="border-right"></div>
       <ul>
         <% movie_ids = genre.movie_ids %>
-        <% movie_ids.each_slice(@batch) do |batch| %>
+        <% movie_ids.each_slice(@batch.to_i) do |batch| %>
           <li class="max-92">
             <% batch.each do |movie_id| %>
               <% @movie = Movie.find(movie_id) %>

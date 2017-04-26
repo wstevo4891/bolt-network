@@ -23,11 +23,12 @@ class PagesController < ApplicationController
 
   def home
     access_data
-    @batch = 4
+    # @batch = 4
   end
 
   def slide_batch
     @batch = params[:batch]
+    @genres = Genre.all
     render partial: 'pages/carousels'
   end
 
