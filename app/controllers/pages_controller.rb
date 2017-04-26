@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   def slide_batch
     @batch = params[:batch]
     @genres = Genre.all
-    render partial: 'pages/carousels'
+    render partial: 'pages/carousels', locals: {batch: @batch, genres: @genres}
   end
 
   private

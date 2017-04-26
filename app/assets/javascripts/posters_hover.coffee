@@ -2,17 +2,7 @@
 # HOME PAGE CAROUSEL HOVER EFFECTS
 #==============================================
 
-carousels_main =->
-
-  # posters_count = document.getElementsByClassName('poster');
-  # posters_count = $('.poster');
-  # console.log "posters_count: #{JSON.stringify(posters_count)}"
-  # console.log "posters_count_length: #{posters_count.length}"
-
-  $('li.max-92').each ->
-    $(this).css('width', '92vw')
-    $(this).children(':first').addClass 'first-poster'
-    $(this).children(':last').addClass 'last-poster'
+posters_hover =->
   
   carousels_container_exists = document.getElementById('carousels-container')
   genres_container_exists = document.getElementById('genres-container')
@@ -57,5 +47,5 @@ carousels_main =->
         parent_li.removeClass('auto-width')
       ), 1100
 
-$(document).ready carousels_main
+$(document).ready posters_hover
 

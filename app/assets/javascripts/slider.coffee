@@ -75,31 +75,6 @@ slider_main = ->
 
   $(window).ready slider_resize
   $(window).resize slider_resize
-
-
-  # GENRE CAROUSELS
-  #=======================================
-
-  make_carousel = ($target)->
-    $target.unslider arrows:
-      prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-      next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-    return
-
-  # carousel_regex = /\.slider-[A-Z][a-z]+/
-
-  # $("#{carousel_regex}").each ->
-  #   make_carousel($(this))
-
-  make_carousel($('.slider-Action'))
-  make_carousel($('.slider-Comedy'))
-  make_carousel($('.slider-Drama'))
-  make_carousel($('.slider-Animation'))
-  make_carousel($('.slider-Family'))
-  make_carousel($('.slider-Fantasy'))
-  make_carousel($('.slider-Romance'))
-  make_carousel($('.slider-Horror'))
-  make_carousel($('.slider-Sci-Fi'))
   return
 
 $(document).ready slider_main
