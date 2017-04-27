@@ -41,5 +41,5 @@ Rails.application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug
-  # config.lograge.enabled = true
+  config.lograge.enabled = true
 end

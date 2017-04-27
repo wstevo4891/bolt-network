@@ -57,50 +57,35 @@ carousels_init = ->
 			$(this).css('width', '92vw')
 			$(this).children(':first').addClass 'first-poster'
 			$(this).children(':last').addClass 'last-poster'
+		$poster_width = $('.poster').width()
+		poster_percent = ($poster_width / $screen_width) * 100
+		$('#poster-data').data('poster', poster_percent)
+		console.log "poster percent: #{poster_percent}"
 		return
-	), 1000
+	), 2000
 	return
 
 
 carousels_rebuild = ->
 	$screen_width = $(window).width() + 15
-	console.log "screen width: #{$screen_width}"
+	$poster_percent = $('#poster-data').data('poster')
+	$poster_percent_init = parseFloat($poster_percent)
+	console.log "poster init: #{$poster_percent_init}"
 
-	if $screen_width == 1400
-		data = { batch: 6 }
-		console.log "batch: #{JSON.stringify(data)}"
-		carousels_build(data)
+	$poster_width = $('.poster').width()
+	$poster_percent_now = ($poster_width / $screen_width) * 100
+	console.log "poster now: #{$poster_percent_now}"
 
-	else if $screen_width == 1399 or $screen_width == 1200
-		data = { batch: 5 }
-		console.log "batch: #{JSON.stringify(data)}"
-		carousels_build(data)
+	poster_diff = Math.abs($poster_percent_init - $poster_percent_now)
+	console.log "poster diff: #{poster_diff}"
 
-	else if $screen_width == 1199 or $screen_width == 800
-		data = { batch: 4 }
-		console.log "batch: #{JSON.stringify(data)}"
-		carousels_build(data)
-
-	else if $screen_width == 799 or $screen_width == 500
-		data = { batch: 3 }
-		console.log "batch: #{JSON.stringify(data)}"
-		carousels_build(data)
-
-	else if $screen_width == 499
-		data = { batch: 2 }
-		console.log "batch: #{JSON.stringify(data)}"
-		carousels_build(data)
-
-	setTimeout (->
-		$('li.max-92').each ->
-			$(this).css('width', '92vw')
-			$(this).children(':first').addClass 'first-poster'
-			$(this).children(':last').addClass 'last-poster'
-		return
-	), 1000
+	if poster_diff >= 3
+		carousels_init()
+		console.log Array(16).join("wat" - 1) + " Batman!"
 	return
 
 
 $(document).ready carousels_init
 
 $(window).resize carousels_rebuild
+

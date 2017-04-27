@@ -44,7 +44,7 @@ gem 'responders', '~> 2.0'
 gem 'puma'
 
 # Makes logs manageable
-# gem "lograge"
+gem "lograge"
 
 group :development do
   gem 'better_errors'
