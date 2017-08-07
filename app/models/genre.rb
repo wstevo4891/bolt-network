@@ -7,5 +7,12 @@ class Genre < ActiveRecord::Base
 	# include Rails.application.routes.url_helpers
 	# include ActionView::Helpers::UrlHelper
 
+	attr_accessor :movies_hash
 
+	def build_movies_hash
+		@movies_hash = {}
+		self.movie_ids.each do |movie_id|
+			@movies_hash[movie_id] = Movie.find(movie_id)
+		end
+	end
 end

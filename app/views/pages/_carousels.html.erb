@@ -1,24 +1,19 @@
-<div id="poster-data" data-poster=""></div>
 <% @genres.each do |genre| %>
   <div class="row carousel-row">
-    <% if genre.name == "Action" %>
-      <h3>
-        <a href=<%= genre_path(genre) %>>Action &amp; Adventure<i class="fa fa-chevron-right"></i></a>
-      </h3>
-    <% else %>
-      <h3>
-        <a href=<%= genre_path(genre) %>><%= genre.name %><i class="fa fa-chevron-right"></i></a>
-      </h3>
-    <% end %>
+    <h3>
+      <a href=<%= genre_path(genre) %>>
+        <%= genre.name %>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    </h3>
     <div class="slider-<%= genre.name %>">
       <div class="border-left"></div>
       <div class="border-right"></div>
       <ul>
-        <% movie_ids = genre.movie_ids %>
-        <% movie_ids.each_slice(@batch.to_i) do |batch| %>
+        <% genre.movie_ids.each_slice(@batch.to_i) do |batch| %>
           <li class="max-92">
             <% batch.each do |movie_id| %>
-              <% @movie = Movie.find(movie_id) %>
+              <% @movie = genre.movies_hash[movie_id] %>
               <div class="poster">
                 <div class="poster-inner">
                   <%= link_to image_tag(@movie.photo), movie_path(@movie) %>
@@ -31,15 +26,3 @@
     </div>
   </div>
 <% end %>
-
-
-<%# movie_ids = genre.movie_ids %>
-<%# movie_ids.each do |movie_id| %>
-  <%# @movie = Movie.find(movie_id) %>
-  <!-- <div class="poster">
-    <div class="poster-inner">
-      <%#= link_to image_tag(@movie.photo), movie_path(@movie) %>
-    </div>
-  </div> -->
-<%# end %>
-
