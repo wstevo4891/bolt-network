@@ -2,6 +2,9 @@
   <div class="row">
     <% if genre.name == "Action" %>
       <h3><a href=<%= genre_path(genre) %> >Action & Adventure<i class="fa fa-chevron-right"></i></a></h3>
+      <!-- <h3>
+        <%#= link_to "Action & Adventure"<i class="fa fa-chevron-right"></a>, genre_path(genre) %>
+      </h3> -->
     <% else %>
       <h3><a href=<%= genre_path(genre) %> ><%= genre.name %><i class="fa fa-chevron-right"></i></a></h3>
     <% end %>
@@ -12,7 +15,9 @@
 	    <% @movie = Movie.find_by(id: i) %>
 
 		  <div class="poster">
-        <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
+        <div class="poster-inner">
+          <%= link_to image_tag(@movie.photo, class: "img-responsive"), movie_path(@movie) %>
+        </div>
 		  </div>
 
 		<% end %>

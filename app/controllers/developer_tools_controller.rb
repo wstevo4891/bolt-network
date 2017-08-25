@@ -3,12 +3,12 @@ require 'yaml'
 class DeveloperToolsController < ApplicationController
 
   def debug
-    # access_data
+    access_data
     # @genres.each {|genre| genre.build_movies_hash}
 
-    access_genres
-    file = Rails.root.join('db', 'yaml_data', 'movies.yml')
-    @movies = YAML::load_file(file)
+    # access_genres
+    # file = Rails.root.join('db', 'yaml_data', 'movies.yml')
+    # @movies = YAML::load_file(file)
 
     # dir = Rails.root.join('app', 'views').to_s
     # @subdirs = Dir.glob("#{dir}/**/*").select {|f| File.directory? f}
@@ -38,5 +38,10 @@ class DeveloperToolsController < ApplicationController
 
   def access_genres
     @genres = Genre.all
+  end
+
+  def access_data
+    @genres = Genre.all
+    @movies = Movie.all
   end
 end

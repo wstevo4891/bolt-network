@@ -1,23 +1,23 @@
 make_carousel = ($target)->
-  $target.unslider arrows:
-    prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
-    next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
-  return
+	$target.unslider arrows:
+		prev: '<a class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>'
+		next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
+	return
 
 lookup_genres = ->
-  $.ajax
-    type: 'GET'
-    url: "/lookup/genres"
-    data: {}
-    dataType: 'json'
-    converters: { 'text json': true }
-    error: (response, status, err) ->
-      console.log "fuck balls"
-      console.log err
-    success: (data) ->
-      console.log "Successfully looked up genres"
-      console.log "data: #{JSON.stringify(data)}"
-      return data
+	$.ajax
+		type: 'GET'
+		url: "/lookup/genres"
+		data: {}
+		dataType: 'json'
+		converters: { 'text json': true }
+		error: (response, status, err) ->
+			console.log "fuck balls"
+			console.log err
+		success: (data) ->
+			console.log "Successfully looked up genres"
+			console.log "data: #{JSON.stringify(data)}"
+			return data
 
 
 carousels_build = (data, genres) ->
@@ -31,14 +31,16 @@ carousels_build = (data, genres) ->
 			console.log "fuck balls"
 			console.log err
 		success: (data) ->
-      # console.log "data: #{data}"
-      console.log "It worked!"
-      $('#carousels_render').html(data)
-      # Loop through genres and build a carousel
-      # for each one
-      # for genre in genres
-      #   make_carousel($(".slider-#{genre}"))
-      #
+			# console.log "data: #{data}"
+			console.log "It worked!"
+			$('#carousels_render').html(data)
+			# Loop through genres and build a carousel
+			# for each one
+			console.log "Building movie carousels"
+			#
+			# for genre in genres
+			# 	 make_carousel($(".slider-#{genre}"))
+			#
 			make_carousel($('.slider-Action'))
 			make_carousel($('.slider-Comedy'))
 			make_carousel($('.slider-Drama'))
@@ -52,8 +54,10 @@ carousels_build = (data, genres) ->
 
 
 carousels_init = ->
+	console.log "Getting Screen Width"
 	$screen_width = $(window).width() + 15
 
+	console.log "Building data object"
 	if $screen_width >= 1400
 		data = { batch: 6 }
 	else if $screen_width < 1400 and $screen_width >= 1200
@@ -64,10 +68,10 @@ carousels_init = ->
 		data = { batch: 3 }
 	else if $screen_width <= 499
 		data = { batch: 2 }
-  console.log "batch: #{JSON.stringify(data)}\n"
-  $genres = lookup_genres()
-  console.log "genres: #{$genres}"
-  carousels_build(data, $genres)
+	console.log "batch: #{JSON.stringify(data)}\n"
+	$genres = lookup_genres()
+	console.log "genres: #{$genres}\n"
+	carousels_build(data, $genres)
 	setTimeout (->
 		$('li.max-92').each ->
 			$(this).css('width', '92vw')
@@ -87,14 +91,11 @@ carousels_rebuild = ->
 	$poster_percent = $('#poster-data').data('poster')
 	$poster_percent_init = parseFloat($poster_percent)
 	console.log "poster init: #{$poster_percent_init}"
-
 	$poster_width = $('.poster').width()
 	$poster_percent_now = ($poster_width / $screen_width) * 100
 	console.log "poster now: #{$poster_percent_now}"
-
 	poster_diff = Math.abs($poster_percent_init - $poster_percent_now)
 	console.log "poster diff: #{poster_diff}"
-
 	if poster_diff >= 3
 		carousels_init()
 		console.log Array(16).join("wat" - 1) + " Batman!"

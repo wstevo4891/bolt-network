@@ -12,13 +12,15 @@ def seed_image(file_name)
   "https://s3-us-west-2.amazonaws.com/bolt-network/#{file_name}"
 end
 
-Rails.logger.info "Seeding the Database =========================="
+puts "Seeding the Database ==================================="
 
+puts "Loading Genres YAML ==================================="
 genres_data = Rails.root.join('db', 'yaml_data', 'genres.yml')
 genres = YAML::load_file(genres_data)
 
+puts "Creating Genres ==================================="
 genres.each do |genre|
-  Rails.logger.info "Creating genre: #{genre}"
+  puts "Creating genre: #{genre}"
   Genre.create!( name: genre )
 end
 
@@ -32,11 +34,13 @@ end
 # Genre.create!( name: 'Sci-Fi' )     # 8
 # Genre.create!( name: 'Horror' )     # 9
 
+puts "Loading Movies YAML ==================================="
 movies_data = Rails.root.join('db', 'yaml_data', 'movies.yml')
 movies = YAML::load_file(movies_data)
 
+puts "Creating Movies ==================================="
 movies.each do |movie|
-  Rails.logger.info "Creating movie: #{movie['title']}\n"
+  puts "Creating movie: #{movie['title']}\n"
   Movie.create!(
     title: movie['title'],
     remote_photo_url: seed_image(movie['image']),

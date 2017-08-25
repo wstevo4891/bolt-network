@@ -1,10 +1,11 @@
 
-/* UNSLIDER MODS 
+/* UNSLIDER MODS
 =============================================*/
 
 .unslider {
 	width: 100vw;
 	padding: 0 4%;
+	margin-top: 3em;
 	margin-bottom: 2em;
 }
 
@@ -121,7 +122,7 @@ a.unslider-arrow {
 	@include bp-x-large {
 		right: 5%;
 	}
-} 
+}
 
 .unslider-arrow i {
 	font-size: 4em !important;

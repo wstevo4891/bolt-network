@@ -1,5 +1,5 @@
 
-/* CAROUSEL SLIDERS 
+/* CAROUSEL SLIDERS
 ==============================*/
 
 #carousels-container {
@@ -37,7 +37,7 @@
       text-decoration: none;
     }
   }
-  
+
   i {
     font-size: 0.7em;
     margin-left: 0.5em;
@@ -63,11 +63,12 @@
 
 .poster {
   @include bp-poster-width;
+  // @include bp-poster-margin;
   height: 6.5em;
   display: inline-block;
   position: relative;
-  margin-top: 3em;
-  background:transparent; 
+  // margin: 3em 13px 0;
+  background:transparent;
   border: none;
   padding: 0;
   transition: all 0.5s ease;
