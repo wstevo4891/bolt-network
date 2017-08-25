@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   get 'lookup/genres' => 'lookup#lookup_genres', as: :lookup_genres
 
+  get '/debug' => 'developer_tools#debug'
+
   get 'pages/about'
-  get '/debug' => 'pages#debug'
   get 'pages/slide_batch' => 'pages#slide_batch'
   get 'admin/movies_index'
 

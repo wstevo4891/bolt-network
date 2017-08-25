@@ -66,6 +66,7 @@ carousels_init = ->
 		data = { batch: 2 }
   console.log "batch: #{JSON.stringify(data)}\n"
   $genres = lookup_genres()
+  console.log "genres: #{$genres}"
   carousels_build(data, $genres)
 	setTimeout (->
 		$('li.max-92').each ->
