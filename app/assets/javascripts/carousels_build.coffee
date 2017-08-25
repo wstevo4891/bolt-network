@@ -12,9 +12,9 @@ lookup_genres = ->
     dataType: 'json'
     converters: { 'text json': true }
     error: (response, status, err) ->
-			console.log "fuck balls"
-			console.log err
-		success: (data) ->
+      console.log "fuck balls"
+      console.log err
+    success: (data) ->
       console.log "Successfully looked up genres"
       console.log "data: #{JSON.stringify(data)}"
       return data
@@ -31,24 +31,23 @@ carousels_build = (data, genres) ->
 			console.log "fuck balls"
 			console.log err
 		success: (data) ->
-			# console.log "data: #{data}"
-			console.log "It worked!"
-			$('#carousels_render').html(data)
-
-			# Loop through genres and build a carousel
+      # console.log "data: #{data}"
+      console.log "It worked!"
+      $('#carousels_render').html(data)
+      # Loop through genres and build a carousel
       # for each one
-      for genre in genres
-        make_carousel($(".slider-#{genre}"))
-
-			# make_carousel($('.slider-Action'))
-			# make_carousel($('.slider-Comedy'))
-			# make_carousel($('.slider-Drama'))
-			# make_carousel($('.slider-Animation'))
-			# make_carousel($('.slider-Family'))
-			# make_carousel($('.slider-Fantasy'))
-			# make_carousel($('.slider-Romance'))
-			# make_carousel($('.slider-Horror'))
-			# make_carousel($('.slider-Sci-Fi'))
+      # for genre in genres
+      #   make_carousel($(".slider-#{genre}"))
+      #
+			make_carousel($('.slider-Action'))
+			make_carousel($('.slider-Comedy'))
+			make_carousel($('.slider-Drama'))
+			make_carousel($('.slider-Animation'))
+			make_carousel($('.slider-Family'))
+			make_carousel($('.slider-Fantasy'))
+			make_carousel($('.slider-Romance'))
+			make_carousel($('.slider-Horror'))
+			make_carousel($('.slider-Sci-Fi'))
 	return
 
 
@@ -65,12 +64,9 @@ carousels_init = ->
 		data = { batch: 3 }
 	else if $screen_width <= 499
 		data = { batch: 2 }
-
-	console.log "batch: #{JSON.stringify(data)}"
-
-  genres = lookup_genres()
-	carousels_build(data, genres)
-
+  console.log "batch: #{JSON.stringify(data)}\n"
+  $genres = lookup_genres()
+  carousels_build(data, $genres)
 	setTimeout (->
 		$('li.max-92').each ->
 			$(this).css('width', '92vw')
