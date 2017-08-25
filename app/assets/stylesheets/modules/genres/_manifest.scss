@@ -1,0 +1,85 @@
+
+/* GENRE VIEW STYLES
+=======================================*/
+
+@import "modules/genres/mixins";
+
+#genres-container {
+	width: 1380px;
+	margin-top: 7em;
+	margin-left: 5.2%;
+	text-align: left;
+	overflow-x: visible;
+
+	li {
+		display: inline-block;
+	}
+
+	.row {
+		margin-bottom: 2em;
+	}
+
+	.posters-wrapper {
+		margin-bottom: 2em;
+	}
+
+	.poster {
+		@include bp-genre-poster-width;
+		// margin: 3em 13px 2em;
+		&:hover {
+			margin: 2em 6em;
+		}
+	}
+}
+
+.poster-wrapper {
+	display: inline-block;
+}
+
+.show-wrap {
+	margin-top: 7em;
+	margin-bottom: 7em;
+	@include bp-medium {
+		margin: 7em 0.3em;
+	}
+	@include bp-tablet {
+		margin: 7em 2.3em;
+	}
+}
+
+.show-title {
+	margin-top: 6em;
+}
+
+.inline {
+	display: inline;
+	margin-right: 1em;
+}
+
+.show-img {
+	margin: 1em auto;
+	img {
+		width: 20.5em;
+	}
+
+	@media only screen and (min-width: 480px) {
+		margin: 1em 0;
+		img {
+			width: 25em;
+		}
+	}
+}
+
+h2 {
+	a {
+		color: $azure-radiance;
+	}
+	a:hover {
+			text-decoration: none;
+	}
+}
+
+.genre-name {
+  min-width: 9em;
+  margin: 0.5em;
+}

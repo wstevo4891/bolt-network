@@ -1,0 +1,75 @@
+//=======================================
+//       CAROUSEL SLIDERS MANIFEST
+//=======================================
+
+@import 'modules/carousels/mixins';
+
+#carousels-container {
+  width: 100vw;
+  position: relative;
+  overflow-x: visible;
+  margin-bottom: 3em;
+
+  .carousel-row {
+    margin-left: 0.1em;
+    i {
+      display: none;
+    }
+    &:hover {
+      i, .unslider-nav ol {
+        display: inline;
+      }
+    }
+  }
+
+  h3 {
+    position: absolute;
+    line-height: 2;
+    width: 100%;
+    margin: auto auto auto 4%;
+    font-size: 1.2em;
+    font-weight: bold;
+    z-index: 6;
+  }
+
+  h3 a {
+    color: #939393;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  i {
+    font-size: 0.7em;
+    margin-left: 0.5em;
+  }
+}
+
+.border-left, .border-right {
+  @include dark-border;
+}
+
+.border-left {
+  left: -4.2%;
+}
+
+.border-right {
+  right: 4%;
+}
+
+.slide-list {
+  @include slide-transition;
+
+  &:hover {
+    transform: translateX(-4em);
+  }
+}
+
+.last-slide-translate {
+  @include slide-transition;
+
+  &:hover {
+    transform: translateX(-11em);
+  }
+}

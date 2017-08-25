@@ -1,0 +1,36 @@
+//========================================
+// MAIN APPLICATION FILE FOR SASS PROJECT
+//========================================
+
+// _config partial manages the application's smart defaults
+@import "config";
+
+// import gems
+// Rails 5 =====================
+// @import "bootstrap";
+// @import "jquery-ui";
+// @import "select2-bootstrap";
+// @import "vegas";
+// @import "unslider";
+// @import "unslider-dots";
+// @import "font-awesome";
+// Rails 4 =====================
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "select2";
+@import "select2-bootstrap";
+@import "vegas";
+@import "unslider";
+@import "unslider-dots";
+// @import "vendor/**/*";
+
+
+// import primary partials
+@import "color";
+@import "typography";
+@import "forms";
+@import "buttons";
+@import "global_design";
+@import "ui_patterns/**/*";
+@import "modules/**/*";
+@import "layouts/*";

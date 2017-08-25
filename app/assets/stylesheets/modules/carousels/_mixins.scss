@@ -1,0 +1,10 @@
+// CAROUSEL MIXINS
+
+@mixin dark-border {
+  position: absolute;
+  bottom: -2px;
+  width: 4%;
+  height: 75%;
+  background: rgba(20, 20, 20, 0.5);
+  z-index: 20;
+}

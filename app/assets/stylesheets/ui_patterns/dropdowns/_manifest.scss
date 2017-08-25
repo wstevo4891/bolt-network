@@ -1,0 +1,57 @@
+
+/* DROPDOWN MENU STYLES
+=======================================*/
+
+#browse-menu {
+  max-width: inherit;
+}
+
+.dropdown-menu {
+  padding: 0;
+
+  li > a {
+    padding: 5px 15px 5px 25px;
+    line-height: 20px;
+  }
+
+  @include bp-tablet {
+    background-color: #000;
+    border: 2px solid $azure-radiance;
+    border-radius: 5px;
+    min-width: 100px;
+    max-width: 100px;
+
+    li > a {
+      padding: 5px 15px;
+      line-height: 20px;
+    }
+  }
+
+  li > a, li > a:hover {
+    color: #fff;
+  }
+
+  li:hover {
+    background-color: $azure-radiance;
+  }
+}
+
+@include bp-mobile {
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    width: 100%;
+  }
+
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 26px;
+  }
+}
+
+@include bp-tablet {
+  .navbar-nav .open .dropdown-menu > li > a,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px;
+  }
+}

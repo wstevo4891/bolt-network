@@ -1,0 +1,45 @@
+@import "modules/postsers/mixins";
+
+.poster {
+  @include bp-poster-width;
+  @include poster-main;
+  @include slide-transition;
+
+  .poster-inner {
+    margin: 0 2px;
+    @include slide-transition;
+  }
+
+  img {
+    width: 11.2em;
+    height: 6.5em;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 40px $azure-radiance;
+    transform: scale(1.75);
+    z-index: 8;
+    margin: 3em 4.2em 0;
+
+    .poster-inner {
+      margin: 0;
+    }
+
+    img {
+      z-index: 8;
+    }
+  }
+
+  @include bp-tablet {
+    height: 8.13868em;
+
+    &:hover {
+      margin: 3em 5.5em 0;
+    }
+
+    img {
+      width: 14em;
+      height: 8.13868em;
+    }
+  }
+}
