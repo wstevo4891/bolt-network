@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :movies
   resources :genres
 
+  get 'lookup/genres' => 'lookup#lookup_genres', as: :lookup_genres
+
   get 'pages/about'
   get '/debug' => 'pages#debug'
   get 'pages/slide_batch' => 'pages#slide_batch'

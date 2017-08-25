@@ -4,7 +4,23 @@ make_carousel = ($target)->
     next: '<a class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>'
   return
 
-carousels_build = (data) ->
+lookup_genres = ->
+  $.ajax
+    type: 'GET'
+    url: "/lookup/genres"
+    data: {}
+    dataType: 'json'
+    converters: { 'text json': true }
+    error: (response, status, err) ->
+			console.log "fuck balls"
+			console.log err
+		success: (data) ->
+      console.log "Successfully looked up genres"
+      console.log "data: #{JSON.stringify(data)}"
+      return data
+
+
+carousels_build = (data, genres) ->
 	$.ajax
 		type: 'GET'
 		url: "/pages/slide_batch"
@@ -19,19 +35,20 @@ carousels_build = (data) ->
 			console.log "It worked!"
 			$('#carousels_render').html(data)
 
-			# carousel_regex = /\.slider-[A-Z][a-z]+/
-			# $("#{carousel_regex}").each ->
-			#   make_carousel($(this))
+			# Loop through genres and build a carousel
+      # for each one
+      for genre in genres
+        make_carousel($(".slider-#{genre}"))
 
-			make_carousel($('.slider-Action'))
-			make_carousel($('.slider-Comedy'))
-			make_carousel($('.slider-Drama'))
-			make_carousel($('.slider-Animation'))
-			make_carousel($('.slider-Family'))
-			make_carousel($('.slider-Fantasy'))
-			make_carousel($('.slider-Romance'))
-			make_carousel($('.slider-Horror'))
-			make_carousel($('.slider-Sci-Fi'))
+			# make_carousel($('.slider-Action'))
+			# make_carousel($('.slider-Comedy'))
+			# make_carousel($('.slider-Drama'))
+			# make_carousel($('.slider-Animation'))
+			# make_carousel($('.slider-Family'))
+			# make_carousel($('.slider-Fantasy'))
+			# make_carousel($('.slider-Romance'))
+			# make_carousel($('.slider-Horror'))
+			# make_carousel($('.slider-Sci-Fi'))
 	return
 
 
@@ -50,7 +67,9 @@ carousels_init = ->
 		data = { batch: 2 }
 
 	console.log "batch: #{JSON.stringify(data)}"
-	carousels_build(data)
+
+  genres = lookup_genres()
+	carousels_build(data, genres)
 
 	setTimeout (->
 		$('li.max-92').each ->
@@ -88,4 +107,3 @@ carousels_rebuild = ->
 $(document).ready carousels_init
 
 $(window).resize carousels_rebuild
-
