@@ -29,9 +29,14 @@ class DeveloperToolsController < ApplicationController
   end
 
   # Load @page from yaml file
+  # Test homepage
   def sandbox
-    file = Rails.root.join('db', 'yaml_data', 'pages.yml')
-    @page = YAML::load_file(file)
+    @sandbox = true
+    access_data
+    render file: 'pages/home'
+
+    # file = Rails.root.join('db', 'yaml_data', 'pages.yml')
+    # @page = YAML::load_file(file)
   end
 
   private

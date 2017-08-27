@@ -1,0 +1,105 @@
+
+/* HOME PAGE SLIDER STYLES
+=============================================*/
+
+.slider-frame {
+  width: 100vw;
+  max-height: 530px;
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0; /* vertical center */
+  left:0;right:0; /* horizontal center */
+}
+
+#slide-info {
+  width: 35%;
+  height: 18em;
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+//  border: solid 1px #fff;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+
+  span {
+    display: inline;
+    float: left;
+    margin-right: 0.5em;
+    color: $azure-radiance;
+    text-shadow: 2px 2px 4px #333;
+  }
+
+  p {
+    float: left;
+    text-shadow: 2px 2px 4px #333;
+    margin: 0.5em 0 1em 0;
+  }
+}
+
+#movie-content {
+  position: absolute;
+  bottom: 0;
+  margin-left: 1em;
+}
+
+#movie-logo {
+  position: absolute;
+  top: 0;
+}
+
+#slide-buttons {
+  margin: 0.5em 0;
+
+  a {
+    margin-right: 0.5em;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  i {
+    margin-right: 6px;
+  }
+}
+
+.slider-arrow {
+  color: white;
+  font-size: 1em !important;
+  z-index: 5;
+  transition: all .3s ease;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 500px) {
+    font-size: 2em !important;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3em !important;
+  }
+}
+
+.slider-prev {
+  float: left;
+  margin-left: 4%;
+}
+
+.slider-next {
+  float: right;
+  margin-right: 4%;
+}
+
+@media screen and (min-width: 640px) {
+  .slider-prev {
+    margin-left: 1.5%;
+  }
+
+  .slider-next {
+    margin-right: 1.5%;
+  }
+}

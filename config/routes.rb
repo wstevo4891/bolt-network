@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'lookup/genres' => 'lookup#lookup_genres', as: :lookup_genres
 
   get '/debug' => 'developer_tools#debug'
+  get '/sandbox' => 'developer_tools#sandbox'
 
   get 'pages/about'
   get 'pages/slide_batch' => 'pages#slide_batch'
