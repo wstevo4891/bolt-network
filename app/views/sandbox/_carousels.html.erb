@@ -16,10 +16,10 @@
               <% @movie = genre.movies_hash[movie_id] %>
               <div class="poster">
                 <div class="poster-inner">
-                  <%= link_to image_tag(@movie.photo), movie_path(@movie) %>
-                  <%#= link_to movie_path(@movie) do %>
-                    <!-- <div class="poster-image" style="background-image: url(<%= @movie.photo %>);"></div> -->
-                  <%# end %>
+                  <%#= link_to image_tag(@movie.photo), movie_path(@movie) %>
+                  <%= link_to "", movie_path(@movie) do %>
+                    <div class="poster-image" style="background-image: <%= @movie.photo %>"></div>
+                  <% end %>
                 </div>
               </div>
             <% end %>

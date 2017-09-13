@@ -10,6 +10,14 @@
     @include slide-transition;
   }
 
+  .poster-image {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    width: 100%;
+    padding: 28.125% 0;
+  }
+
   img {
     width: 11.2em;
     height: 6.5em;

@@ -18,4 +18,4 @@
 //= require vegas
 //= require unslider
 //= require turbolinks
-//= require_tree ./application
+//= require_tree ./sandbox
